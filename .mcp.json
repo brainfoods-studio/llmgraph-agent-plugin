@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "llmgraph": {
+      "command": "npx",
+      "args": ["-y", "llmgraph-mcp"]
+    }
+  }
+}

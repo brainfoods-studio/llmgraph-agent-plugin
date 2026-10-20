@@ -1,0 +1,12 @@
+{
+  "name": "llmgraph",
+  "description": "LLMGRAPH plugin for Claude Code",
+  "owner": { "name": "LLMGRAPH" },
+  "plugins": [
+    {
+      "name": "llmgraph",
+      "source": "./",
+      "description": "Connects the LLMGRAPH engine (npx -y llmgraph-mcp) and adds a skill on when to ask its five questions and how to read the labels."
+    }
+  ]
+}
