@@ -1,0 +1,1904 @@
+{
+ "requests": {
+  "symbols": {
+   "rebuild_proxies": {
+    "id": "rebuild_proxies",
+    "rg_name": "rebuild_proxies",
+    "commands": {
+     "naive": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\brebuild_proxies\\\\s*\\\\('",
+      "median_ms": 35,
+      "ms": [
+       49,
+       35,
+       33,
+       36,
+       32
+      ],
+      "chars": 307,
+      "tokens_est_chars_div_4": 76,
+      "true_found": 3,
+      "true_total": 3,
+      "recall": "3/3",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 1,
+      "lines": 4,
+      "sample": [
+       "tests/test_requests.py:679:        session.rebuild_proxies(prep, proxies)",
+       "tests/test_requests.py:2687:        proxies = session.rebuild_proxies(prep, {})",
+       "src/requests/sessions.py:272:            proxies = self.rebuild_proxies(prepared_request, proxies)",
+       "src/requests/sessions.py:334:    def rebuild_proxies("
+      ]
+     },
+     "tuned": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\.rebuild_proxies\\\\s*\\\\('",
+      "median_ms": 35,
+      "ms": [
+       38,
+       35,
+       32,
+       39,
+       33
+      ],
+      "chars": 253,
+      "tokens_est_chars_div_4": 63,
+      "true_found": 3,
+      "true_total": 3,
+      "recall": "3/3",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 0,
+      "lines": 3,
+      "sample": [
+       "tests/test_requests.py:679:        session.rebuild_proxies(prep, proxies)",
+       "tests/test_requests.py:2687:        proxies = session.rebuild_proxies(prep, {})",
+       "src/requests/sessions.py:272:            proxies = self.rebuild_proxies(prepared_request, proxies)"
+      ]
+     },
+     "defs": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bdef\\\\s+rebuild_proxies\\\\b'",
+      "median_ms": 34,
+      "ms": [
+       38,
+       37,
+       33,
+       33,
+       34
+      ],
+      "chars": 54,
+      "tokens_est_chars_div_4": 13,
+      "lines": 1,
+      "sample": [
+       "src/requests/sessions.py:334:    def rebuild_proxies("
+      ]
+     }
+    },
+    "same_name_definitions_in_repo": 1
+   },
+   "get_netrc_auth": {
+    "id": "get_netrc_auth",
+    "rg_name": "get_netrc_auth",
+    "commands": {
+     "naive": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bget_netrc_auth\\\\s*\\\\('",
+      "median_ms": 33,
+      "ms": [
+       37,
+       32,
+       33,
+       32,
+       33
+      ],
+      "chars": 462,
+      "tokens_est_chars_div_4": 115,
+      "true_found": 5,
+      "true_total": 5,
+      "recall": "5/5",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 1,
+      "lines": 6,
+      "sample": [
+       "tests/test_utils.py:162:        auth = get_netrc_auth(\"http://example.com/thing\")",
+       "tests/test_utils.py:170:        auth = get_netrc_auth(\"http://example.com:@evil.com/&apos;\")",
+       "tests/test_utils.py:180:        auth = get_netrc_auth(\"http://httpbin.org/\")",
+       "src/requests/sessions.py:330:        new_auth = get_netrc_auth(url) if self.trust_env else None",
+       "src/requests/sessions.py:538:            auth = get_netrc_auth(url)",
+       "src/requests/utils.py:231:def get_netrc_auth("
+      ]
+     },
+     "tuned": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph -P '(?<![.\\\\w])(?<!def )get_netrc_auth\\\\s*\\\\('",
+      "median_ms": 35,
+      "ms": [
+       41,
+       32,
+       31,
+       35,
+       36
+      ],
+      "chars": 416,
+      "tokens_est_chars_div_4": 104,
+      "true_found": 5,
+      "true_total": 5,
+      "recall": "5/5",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 0,
+      "lines": 5,
+      "sample": [
+       "src/requests/sessions.py:330:        new_auth = get_netrc_auth(url) if self.trust_env else None",
+       "src/requests/sessions.py:538:            auth = get_netrc_auth(url)",
+       "tests/test_utils.py:162:        auth = get_netrc_auth(\"http://example.com/thing\")",
+       "tests/test_utils.py:170:        auth = get_netrc_auth(\"http://example.com:@evil.com/&apos;\")",
+       "tests/test_utils.py:180:        auth = get_netrc_auth(\"http://httpbin.org/\")"
+      ]
+     },
+     "defs": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bdef\\\\s+get_netrc_auth\\\\b'",
+      "median_ms": 35,
+      "ms": [
+       37,
+       33,
+       35,
+       35,
+       36
+      ],
+      "chars": 46,
+      "tokens_est_chars_div_4": 11,
+      "lines": 1,
+      "sample": [
+       "src/requests/utils.py:231:def get_netrc_auth("
+      ]
+     }
+    },
+    "same_name_definitions_in_repo": 1
+   },
+   "Session.close": {
+    "id": "Session.close",
+    "rg_name": "close",
+    "commands": {
+     "naive": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bclose\\\\s*\\\\('",
+      "median_ms": 33,
+      "ms": [
+       34,
+       33,
+       33,
+       33,
+       34
+      ],
+      "chars": 1234,
+      "tokens_est_chars_div_4": 308,
+      "true_found": 2,
+      "true_total": 2,
+      "recall": "2/2",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 17,
+      "non_call_lines": 4,
+      "lines": 23,
+      "sample": [
+       "src/requests/adapters.py:153:    def close(self) -> None:",
+       "src/requests/adapters.py:555:    def close(self) -> None:",
+       "src/requests/auth.py:301:            r.close()",
+       "tests/testserver/server.py:90:            self.server_sock.close()",
+       "tests/testserver/server.py:103:            sock.close()",
+       "src/requests/models.py:816:        self.close()",
+       "src/requests/models.py:1173:    def close(self) -> None:",
+       "src/requests/models.py:1180:            self.raw.close()"
+      ]
+     },
+     "tuned": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\.close\\\\s*\\\\('",
+      "median_ms": 35,
+      "ms": [
+       37,
+       35,
+       37,
+       32,
+       33
+      ],
+      "chars": 1003,
+      "tokens_est_chars_div_4": 250,
+      "true_found": 2,
+      "true_total": 2,
+      "recall": "2/2",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 17,
+      "non_call_lines": 0,
+      "lines": 19,
+      "sample": [
+       "src/requests/auth.py:301:            r.close()",
+       "src/requests/models.py:816:        self.close()",
+       "src/requests/models.py:1180:            self.raw.close()",
+       "tests/testserver/server.py:90:            self.server_sock.close()",
+       "tests/testserver/server.py:103:            sock.close()",
+       "tests/test_requests.py:732:            fp.close()",
+       "tests/test_requests.py:1466:        io.close()",
+       "tests/test_requests.py:2216:            session.close()"
+      ]
+     },
+     "defs": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bdef\\\\s+close\\\\b'",
+      "median_ms": 33,
+      "ms": [
+       36,
+       36,
+       32,
+       32,
+       33
+      ],
+      "chars": 231,
+      "tokens_est_chars_div_4": 57,
+      "lines": 4,
+      "sample": [
+       "src/requests/models.py:1173:    def close(self) -> None:",
+       "src/requests/adapters.py:153:    def close(self) -> None:",
+       "src/requests/adapters.py:555:    def close(self) -> None:",
+       "src/requests/sessions.py:883:    def close(self) -> None:"
+      ]
+     }
+    },
+    "same_name_definitions_in_repo": 4
+   },
+   "HTTPAdapter.send": {
+    "id": "HTTPAdapter.send",
+    "rg_name": "send",
+    "commands": {
+     "naive": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bsend\\\\s*\\\\('",
+      "median_ms": 36,
+      "ms": [
+       37,
+       32,
+       32,
+       36,
+       37
+      ],
+      "chars": 3148,
+      "tokens_est_chars_div_4": 787,
+      "true_found": 1,
+      "true_total": 1,
+      "recall": "1/1",
+      "undecidable_mixed_in": 1,
+      "wrong_call_lines": 41,
+      "non_call_lines": 10,
+      "lines": 53,
+      "sample": [
+       "docs/user/advanced.rst:143:    resp = s.send(prepped,",
+       "docs/user/advanced.rst:180:    resp = s.send(prepped,",
+       "docs/user/advanced.rst:205:    resp = s.send(prepped, **settings)",
+       "tests/testserver/server.py:55:            sock.send(text.encode(\"utf-8\"))",
+       "tests/test_lowlevel.py:21:    sock.send(text_200)",
+       "tests/test_lowlevel.py:46:        sock.send(",
+       "tests/test_lowlevel.py:113:        sock.send(response)",
+       "tests/test_lowlevel.py:156:        sock.send(text_401)"
+      ]
+     },
+     "tuned": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\.send\\\\s*\\\\('",
+      "median_ms": 34,
+      "ms": [
+       39,
+       34,
+       36,
+       33,
+       34
+      ],
+      "chars": 2690,
+      "tokens_est_chars_div_4": 672,
+      "true_found": 1,
+      "true_total": 1,
+      "recall": "1/1",
+      "undecidable_mixed_in": 1,
+      "wrong_call_lines": 41,
+      "non_call_lines": 4,
+      "lines": 47,
+      "sample": [
+       "docs/user/advanced.rst:143:    resp = s.send(prepped,",
+       "docs/user/advanced.rst:180:    resp = s.send(prepped,",
+       "docs/user/advanced.rst:205:    resp = s.send(prepped, **settings)",
+       "src/requests/auth.py:312:            _r = r.connection.send(prep, **kwargs)",
+       "src/requests/models.py:395:      >>> s.send(r)",
+       "tests/test_requests.py:202:        r = s.send(r.prepare())",
+       "tests/test_requests.py:210:        r = s.send(r.prepare())",
+       "tests/test_requests.py:325:        resp = ses.send(prep)"
+      ]
+     },
+     "defs": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bdef\\\\s+send\\\\b'",
+      "median_ms": 38,
+      "ms": [
+       39,
+       38,
+       37,
+       38,
+       35
+      ],
+      "chars": 359,
+      "tokens_est_chars_div_4": 89,
+      "lines": 5,
+      "sample": [
+       "tests/test_requests.py:2616:    def send(self, *args, **kwargs):",
+       "src/requests/adapters.py:128:    def send(",
+       "src/requests/adapters.py:634:    def send(",
+       "src/requests/sessions.py:132:    def send(self, request: PreparedRequest, **kwargs: Any) -> Response: ...",
+       "src/requests/sessions.py:752:    def send(self, request: PreparedRequest, **kwargs: Any) -> Response:"
+      ]
+     }
+    },
+    "same_name_definitions_in_repo": 5
+   },
+   "Response.json": {
+    "id": "Response.json",
+    "rg_name": "json",
+    "commands": {
+     "naive": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bjson\\\\s*\\\\('",
+      "median_ms": 37,
+      "ms": [
+       41,
+       38,
+       34,
+       34,
+       37
+      ],
+      "chars": 2627,
+      "tokens_est_chars_div_4": 656,
+      "true_found": 20,
+      "true_total": 20,
+      "recall": "20/20",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 16,
+      "lines": 36,
+      "sample": [
+       "docs/api.rst:132:      r.json()   # This *call* raises an exception if JSON decoding fails",
+       "docs/index.rst:47:    >>> r.json()",
+       "HISTORY.md:287:  an encoding to make `json()` API consistent. (#6097)",
+       "HISTORY.md:320:  Python 2 and 3. This gets raised in the `response.json()` method, and is",
+       "HISTORY.md:1500:    `Response.json()` method",
+       "HISTORY.md:1550:-   Make Response.json() callable, not property.",
+       "README.md:22:>>> r.json()",
+       "docs/user/advanced.rst:766:    >>> commit_data = r.json()"
+      ]
+     },
+     "tuned": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\.json\\\\s*\\\\('",
+      "median_ms": 33,
+      "ms": [
+       38,
+       32,
+       32,
+       35,
+       33
+      ],
+      "chars": 2487,
+      "tokens_est_chars_div_4": 621,
+      "true_found": 20,
+      "true_total": 20,
+      "recall": "20/20",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 14,
+      "lines": 34,
+      "sample": [
+       "HISTORY.md:320:  Python 2 and 3. This gets raised in the `response.json()` method, and is",
+       "HISTORY.md:1500:    `Response.json()` method",
+       "HISTORY.md:1550:-   Make Response.json() callable, not property.",
+       "docs/index.rst:47:    >>> r.json()",
+       "docs/api.rst:132:      r.json()   # This *call* raises an exception if JSON decoding fails",
+       "README.md:22:>>> r.json()",
+       "docs/user/advanced.rst:766:    >>> commit_data = r.json()",
+       "docs/user/advanced.rst:831:    >>> comments = r.json()"
+      ]
+     },
+     "defs": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bdef\\\\s+json\\\\b'",
+      "median_ms": 34,
+      "ms": [
+       36,
+       34,
+       33,
+       32,
+       36
+      ],
+      "chars": 70,
+      "tokens_est_chars_div_4": 17,
+      "lines": 1,
+      "sample": [
+       "src/requests/models.py:1091:    def json(self, **kwargs: Any) -> Any:"
+      ]
+     }
+    },
+    "same_name_definitions_in_repo": 1
+   }
+  },
+  "job1": {
+   "symbol": "get_netrc_auth",
+   "callers_found_by_heuristic": [
+    "test_works",
+    "test_not_vulnerable_to_bad_url_parsing",
+    "test_empty_default_credentials_ignored",
+    "rebuild_auth",
+    "prepare_request"
+   ],
+   "searches_run": 6,
+   "capped_at_25": false,
+   "total_lines": 29,
+   "total_tokens_est": 546,
+   "call_site_lines_among_them": 19,
+   "searches_on_ambiguous_names": 0,
+   "per_search": [
+    {
+     "name": "get_netrc_auth",
+     "lines": 6,
+     "chars": 462
+    },
+    {
+     "name": "test_works",
+     "lines": 1,
+     "chars": 73,
+     "defs_in_repo": 1,
+     "call_lines": 0
+    },
+    {
+     "name": "test_not_vulnerable_to_bad_url_parsing",
+     "lines": 1,
+     "chars": 101,
+     "defs_in_repo": 1,
+     "call_lines": 0
+    },
+    {
+     "name": "test_empty_default_credentials_ignored",
+     "lines": 1,
+     "chars": 101,
+     "defs_in_repo": 1,
+     "call_lines": 0
+    },
+    {
+     "name": "rebuild_auth",
+     "lines": 2,
+     "chars": 134,
+     "defs_in_repo": 1,
+     "call_lines": 1
+    },
+    {
+     "name": "prepare_request",
+     "lines": 18,
+     "chars": 1316,
+     "defs_in_repo": 1,
+     "call_lines": 13
+    }
+   ]
+  },
+  "job2": {
+   "function": "get_netrc_auth",
+   "diff_lines": 7,
+   "git_diff_plus_rg_ms": 91,
+   "candidates_listed": 5,
+   "truly_broken": 5,
+   "truly_broken_found": 5,
+   "extra_candidates_not_broken": 0,
+   "tokens_est_diff_plus_rg": 188,
+   "tool_calls": 2,
+   "git_status_after_revert": []
+  }
+ },
+ "rich": {
+  "symbols": {
+   "strip_control_codes": {
+    "id": "strip_control_codes",
+    "rg_name": "strip_control_codes",
+    "commands": {
+     "naive": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bstrip_control_codes\\\\s*\\\\('",
+      "median_ms": 92,
+      "ms": [
+       139,
+       92,
+       91,
+       94,
+       92
+      ],
+      "chars": 592,
+      "tokens_est_chars_div_4": 148,
+      "true_found": 7,
+      "true_total": 7,
+      "recall": "7/7",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 1,
+      "lines": 8,
+      "sample": [
+       "rich/control.py:181:def strip_control_codes(",
+       "tests/test_control.py:11:    assert strip_control_codes(\"\") == \"\"",
+       "tests/test_control.py:12:    assert strip_control_codes(\"foo\\rbar\") == \"foobar\"",
+       "tests/test_control.py:13:    assert strip_control_codes(\"Fear is the mind killer\") == \"Fear is the mind killer\"",
+       "rich/text.py:156:        sanitized_text = strip_control_codes(text)",
+       "rich/text.py:413:            sanitized_text = strip_control_codes(new_text)",
+       "rich/text.py:982:                sanitized_text = strip_control_codes(text)",
+       "rich/text.py:1046:            content = strip_control_codes(content)"
+      ]
+     },
+     "tuned": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph -P '(?<![.\\\\w])(?<!def )strip_control_codes\\\\s*\\\\('",
+      "median_ms": 91,
+      "ms": [
+       96,
+       91,
+       93,
+       91,
+       91
+      ],
+      "chars": 547,
+      "tokens_est_chars_div_4": 136,
+      "true_found": 7,
+      "true_total": 7,
+      "recall": "7/7",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 0,
+      "lines": 7,
+      "sample": [
+       "tests/test_control.py:11:    assert strip_control_codes(\"\") == \"\"",
+       "tests/test_control.py:12:    assert strip_control_codes(\"foo\\rbar\") == \"foobar\"",
+       "tests/test_control.py:13:    assert strip_control_codes(\"Fear is the mind killer\") == \"Fear is the mind killer\"",
+       "rich/text.py:156:        sanitized_text = strip_control_codes(text)",
+       "rich/text.py:413:            sanitized_text = strip_control_codes(new_text)",
+       "rich/text.py:982:                sanitized_text = strip_control_codes(text)",
+       "rich/text.py:1046:            content = strip_control_codes(content)"
+      ]
+     },
+     "defs": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bdef\\\\s+strip_control_codes\\\\b'",
+      "median_ms": 95,
+      "ms": [
+       95,
+       94,
+       90,
+       96,
+       95
+      ],
+      "chars": 45,
+      "tokens_est_chars_div_4": 11,
+      "lines": 1,
+      "sample": [
+       "rich/control.py:181:def strip_control_codes("
+      ]
+     }
+    },
+    "same_name_definitions_in_repo": 1
+   },
+   "Console.render_str": {
+    "id": "Console.render_str",
+    "rg_name": "render_str",
+    "commands": {
+     "naive": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\brender_str\\\\s*\\\\('",
+      "median_ms": 97,
+      "ms": [
+       104,
+       98,
+       93,
+       91,
+       97
+      ],
+      "chars": 590,
+      "tokens_est_chars_div_4": 147,
+      "true_found": 7,
+      "true_total": 7,
+      "recall": "7/7",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 1,
+      "lines": 8,
+      "sample": [
+       "rich/columns.py:67:            render_str(renderable) if isinstance(renderable, str) else renderable",
+       "rich/console.py:1321:            text_renderable = self.render_str(",
+       "rich/console.py:1409:    def render_str(",
+       "rich/console.py:1560:                    self.render_str(",
+       "rich/live.py:238:            renderable = self.console.render_str(renderable)",
+       "rich/measure.py:99:            renderable = console.render_str(",
+       "rich/rule.py:68:            title_text = console.render_str(self.title, style=\"rule.text\")",
+       "rich/table.py:501:                console.render_str(text, style=style, highlight=False)"
+      ]
+     },
+     "tuned": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\.render_str\\\\s*\\\\('",
+      "median_ms": 98,
+      "ms": [
+       98,
+       102,
+       100,
+       95,
+       90
+      ],
+      "chars": 448,
+      "tokens_est_chars_div_4": 112,
+      "true_found": 6,
+      "true_total": 7,
+      "recall": "6/7",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 0,
+      "lines": 6,
+      "sample": [
+       "rich/console.py:1321:            text_renderable = self.render_str(",
+       "rich/console.py:1560:                    self.render_str(",
+       "rich/live.py:238:            renderable = self.console.render_str(renderable)",
+       "rich/measure.py:99:            renderable = console.render_str(",
+       "rich/rule.py:68:            title_text = console.render_str(self.title, style=\"rule.text\")",
+       "rich/table.py:501:                console.render_str(text, style=style, highlight=False)"
+      ]
+     },
+     "defs": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bdef\\\\s+render_str\\\\b'",
+      "median_ms": 95,
+      "ms": [
+       99,
+       95,
+       92,
+       94,
+       100
+      ],
+      "chars": 41,
+      "tokens_est_chars_div_4": 10,
+      "lines": 1,
+      "sample": [
+       "rich/console.py:1409:    def render_str("
+      ]
+     }
+    },
+    "same_name_definitions_in_repo": 1
+   },
+   "Console.render": {
+    "id": "Console.render",
+    "rg_name": "render",
+    "commands": {
+     "naive": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\brender\\\\s*\\\\('",
+      "median_ms": 92,
+      "ms": [
+       92,
+       103,
+       89,
+       91,
+       102
+      ],
+      "chars": 12391,
+      "tokens_est_chars_div_4": 3097,
+      "true_found": 20,
+      "true_total": 20,
+      "recall": "20/20",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 113,
+      "non_call_lines": 35,
+      "lines": 168,
+      "sample": [
+       "benchmarks/benchmarks.py:41:        list(self.text.render(self.console))",
+       "benchmarks/benchmarks.py:61:        list(Text(snippets.UNICODE_HEAVY_TEXT).render(self.console))",
+       "benchmarks/results/benchmarks.json:419:        \"code\": \"class TextSuite:\\n    def time_render(self):\\n        list(self.text.render(self.con",
+       "benchmarks/results/benchmarks.json:435:        \"code\": \"class TextSuite:\\n    def time_render_unicode_heavy(self):\\n        list(Text(snippe",
+       "docs/source/tables.rst:46:    You are not limited to adding text in the ``add_row`` method. You can add anything that Rich knows how to rend",
+       "rich/align.py:148:        rendered = console.render(",
+       "tests/render.py:18:def render(renderable: RenderableType, no_wrap: bool = False) -> str:",
+       "tests/test_bar.py:35:    bar_render = render(bar)"
+      ]
+     },
+     "tuned": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\.render\\\\s*\\\\('",
+      "median_ms": 99,
+      "ms": [
+       101,
+       99,
+       99,
+       95,
+       100
+      ],
+      "chars": 4123,
+      "tokens_est_chars_div_4": 1030,
+      "true_found": 17,
+      "true_total": 20,
+      "recall": "17/20",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 27,
+      "non_call_lines": 2,
+      "lines": 46,
+      "sample": [
+       "benchmarks/benchmarks.py:41:        list(self.text.render(self.console))",
+       "benchmarks/benchmarks.py:61:        list(Text(snippets.UNICODE_HEAVY_TEXT).render(self.console))",
+       "benchmarks/results/benchmarks.json:419:        \"code\": \"class TextSuite:\\n    def time_render(self):\\n        list(self.text.render(self.con",
+       "benchmarks/results/benchmarks.json:435:        \"code\": \"class TextSuite:\\n    def time_render_unicode_heavy(self):\\n        list(Text(snippe",
+       "rich/align.py:148:        rendered = console.render(",
+       "rich/console.py:1343:                yield from self.render(render_output, _options)",
+       "rich/console.py:1371:            _rendered = self.render(renderable, render_options)",
+       "rich/console.py:1869:        segments = self.render(screen_update)"
+      ]
+     },
+     "defs": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bdef\\\\s+render\\\\b'",
+      "median_ms": 108,
+      "ms": [
+       104,
+       98,
+       114,
+       111,
+       108
+      ],
+      "chars": 1871,
+      "tokens_est_chars_div_4": 467,
+      "lines": 29,
+      "sample": [
+       "tests/render.py:18:def render(renderable: RenderableType, no_wrap: bool = False) -> str:",
+       "rich/console.py:1294:    def render(",
+       "tests/test_card.py:20:def render(renderable: RenderableType) -> str:",
+       "tests/test_columns.py:31:def render():",
+       "tests/test_columns_align.py:11:def render():",
+       "rich/layout.py:366:    def render(self, console: Console, options: ConsoleOptions) -> RenderMap:",
+       "rich/logging.py:215:    def render(",
+       "tests/test_inspect.py:58:def render(obj, methods=False, value=False, width=50) -> str:"
+      ]
+     }
+    },
+    "same_name_definitions_in_repo": 29
+   },
+   "ProgressColumn.render": {
+    "id": "ProgressColumn.render",
+    "rg_name": "render",
+    "commands": {
+     "naive": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\brender\\\\s*\\\\('",
+      "median_ms": 103,
+      "ms": [
+       107,
+       101,
+       103,
+       103,
+       103
+      ],
+      "chars": 12391,
+      "tokens_est_chars_div_4": 3097,
+      "true_found": 1,
+      "true_total": 1,
+      "recall": "1/1",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 132,
+      "non_call_lines": 35,
+      "lines": 168,
+      "sample": [
+       "benchmarks/benchmarks.py:41:        list(self.text.render(self.console))",
+       "benchmarks/benchmarks.py:61:        list(Text(snippets.UNICODE_HEAVY_TEXT).render(self.console))",
+       "benchmarks/results/benchmarks.json:419:        \"code\": \"class TextSuite:\\n    def time_render(self):\\n        list(self.text.render(self.con",
+       "benchmarks/results/benchmarks.json:435:        \"code\": \"class TextSuite:\\n    def time_render_unicode_heavy(self):\\n        list(Text(snippe",
+       "docs/source/tables.rst:46:    You are not limited to adding text in the ``add_row`` method. You can add anything that Rich knows how to rend",
+       "rich/align.py:148:        rendered = console.render(",
+       "tests/render.py:18:def render(renderable: RenderableType, no_wrap: bool = False) -> str:",
+       "tests/test_block_bar.py:21:    bar_render = render(bar)"
+      ]
+     },
+     "tuned": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\.render\\\\s*\\\\('",
+      "median_ms": 108,
+      "ms": [
+       105,
+       108,
+       112,
+       130,
+       103
+      ],
+      "chars": 4123,
+      "tokens_est_chars_div_4": 1030,
+      "true_found": 1,
+      "true_total": 1,
+      "recall": "1/1",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 43,
+      "non_call_lines": 2,
+      "lines": 46,
+      "sample": [
+       "benchmarks/benchmarks.py:41:        list(self.text.render(self.console))",
+       "benchmarks/benchmarks.py:61:        list(Text(snippets.UNICODE_HEAVY_TEXT).render(self.console))",
+       "benchmarks/results/benchmarks.json:419:        \"code\": \"class TextSuite:\\n    def time_render(self):\\n        list(self.text.render(self.con",
+       "benchmarks/results/benchmarks.json:435:        \"code\": \"class TextSuite:\\n    def time_render_unicode_heavy(self):\\n        list(Text(snippe",
+       "rich/align.py:148:        rendered = console.render(",
+       "rich/console.py:1343:                yield from self.render(render_output, _options)",
+       "rich/console.py:1371:            _rendered = self.render(renderable, render_options)",
+       "rich/console.py:1869:        segments = self.render(screen_update)"
+      ]
+     },
+     "defs": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bdef\\\\s+render\\\\b'",
+      "median_ms": 99,
+      "ms": [
+       102,
+       99,
+       96,
+       98,
+       100
+      ],
+      "chars": 1871,
+      "tokens_est_chars_div_4": 467,
+      "lines": 29,
+      "sample": [
+       "tests/render.py:18:def render(renderable: RenderableType, no_wrap: bool = False) -> str:",
+       "tests/test_card.py:20:def render(renderable: RenderableType) -> str:",
+       "tests/test_columns_align.py:11:def render():",
+       "tests/test_columns.py:31:def render():",
+       "rich/console.py:1294:    def render(",
+       "rich/layout.py:366:    def render(self, console: Console, options: ConsoleOptions) -> RenderMap:",
+       "rich/logging.py:215:    def render(",
+       "rich/markup.py:106:def render("
+      ]
+     }
+    },
+    "same_name_definitions_in_repo": 29
+   }
+  },
+  "job1": {
+   "symbol": "render_str",
+   "callers_found_by_heuristic": [
+    "__rich_console__",
+    "update",
+    "render",
+    "check_text",
+    "get",
+    "render_annotation"
+   ],
+   "searches_run": 7,
+   "capped_at_25": false,
+   "total_lines": 441,
+   "total_tokens_est": 7948,
+   "call_site_lines_among_them": 330,
+   "searches_on_ambiguous_names": 4,
+   "per_search": [
+    {
+     "name": "render_str",
+     "lines": 8,
+     "chars": 590
+    },
+    {
+     "name": "__rich_console__",
+     "lines": 57,
+     "chars": 3322,
+     "defs_in_repo": 45,
+     "call_lines": 10
+    },
+    {
+     "name": "update",
+     "lines": 107,
+     "chars": 8009,
+     "defs_in_repo": 8,
+     "call_lines": 86
+    },
+    {
+     "name": "render",
+     "lines": 168,
+     "chars": 12391,
+     "defs_in_repo": 29,
+     "call_lines": 133
+    },
+    {
+     "name": "check_text",
+     "lines": 4,
+     "chars": 197,
+     "defs_in_repo": 1,
+     "call_lines": 3
+    },
+    {
+     "name": "get",
+     "lines": 94,
+     "chars": 7115,
+     "defs_in_repo": 3,
+     "call_lines": 89
+    },
+    {
+     "name": "render_annotation",
+     "lines": 3,
+     "chars": 169,
+     "defs_in_repo": 1,
+     "call_lines": 2
+    }
+   ]
+  },
+  "job2": {
+   "function": "strip_control_codes",
+   "diff_lines": 7,
+   "git_diff_plus_rg_ms": 164,
+   "candidates_listed": 7,
+   "truly_broken": 7,
+   "truly_broken_found": 7,
+   "extra_candidates_not_broken": 0,
+   "tokens_est_diff_plus_rg": 230,
+   "tool_calls": 2,
+   "git_status_after_revert": []
+  }
+ },
+ "werkzeug": {
+  "symbols": {
+   "safe_join": {
+    "id": "safe_join",
+    "rg_name": "safe_join",
+    "commands": {
+     "naive": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bsafe_join\\\\s*\\\\('",
+      "median_ms": 50,
+      "ms": [
+       280,
+       51,
+       50,
+       48,
+       46
+      ],
+      "chars": 727,
+      "tokens_est_chars_div_4": 181,
+      "true_found": 8,
+      "true_total": 8,
+      "recall": "8/8",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 1,
+      "lines": 9,
+      "sample": [
+       "tests/test_security.py:55:    assert safe_join(\"a\", path) == expect",
+       "tests/test_security.py:63:    assert safe_join(\"foo\", \"bar/baz*\") is None",
+       "tests/test_security.py:68:    assert safe_join(\"\", \"c:test.txt\") == \"./c:test.txt\"",
+       "tests/test_security.py:77:    assert safe_join(\"a\", name) is None",
+       "tests/test_security.py:82:    assert safe_join(\"a\", \"CON\") == \"a/CON\"",
+       "src/werkzeug/utils.py:583:    path_str = safe_join(os.fspath(directory), os.fspath(path))",
+       "src/werkzeug/middleware/shared_data.py:159:            path = safe_join(package_path, path)",
+       "src/werkzeug/middleware/shared_data.py:195:                path = safe_join(directory, path)"
+      ]
+     },
+     "tuned": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph -P '(?<![.\\\\w])(?<!def )safe_join\\\\s*\\\\('",
+      "median_ms": 46,
+      "ms": [
+       51,
+       49,
+       46,
+       46,
+       44
+      ],
+      "chars": 636,
+      "tokens_est_chars_div_4": 159,
+      "true_found": 8,
+      "true_total": 8,
+      "recall": "8/8",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 0,
+      "lines": 8,
+      "sample": [
+       "tests/test_security.py:55:    assert safe_join(\"a\", path) == expect",
+       "tests/test_security.py:63:    assert safe_join(\"foo\", \"bar/baz*\") is None",
+       "tests/test_security.py:68:    assert safe_join(\"\", \"c:test.txt\") == \"./c:test.txt\"",
+       "tests/test_security.py:77:    assert safe_join(\"a\", name) is None",
+       "tests/test_security.py:82:    assert safe_join(\"a\", \"CON\") == \"a/CON\"",
+       "src/werkzeug/utils.py:583:    path_str = safe_join(os.fspath(directory), os.fspath(path))",
+       "src/werkzeug/middleware/shared_data.py:159:            path = safe_join(package_path, path)",
+       "src/werkzeug/middleware/shared_data.py:195:                path = safe_join(directory, path)"
+      ]
+     },
+     "defs": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bdef\\\\s+safe_join\\\\b'",
+      "median_ms": 50,
+      "ms": [
+       50,
+       47,
+       46,
+       51,
+       53
+      ],
+      "chars": 91,
+      "tokens_est_chars_div_4": 22,
+      "lines": 1,
+      "sample": [
+       "src/werkzeug/security.py:143:def safe_join(directory: str, *untrusted: str) -> str | None:"
+      ]
+     }
+    },
+    "same_name_definitions_in_repo": 1
+   },
+   "http_date": {
+    "id": "http_date",
+    "rg_name": "http_date",
+    "commands": {
+     "naive": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bhttp_date\\\\s*\\\\('",
+      "median_ms": 48,
+      "ms": [
+       49,
+       48,
+       46,
+       45,
+       51
+      ],
+      "chars": 737,
+      "tokens_est_chars_div_4": 184,
+      "true_found": 8,
+      "true_total": 8,
+      "recall": "8/8",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 1,
+      "lines": 9,
+      "sample": [
+       "tests/test_http.py:697:    assert http.http_date(value) == expect",
+       "tests/test_apply_conditions.py:33:        headers[\"If-Unmodified-Since\"] = http_date(if_unmodified_since)",
+       "tests/test_apply_conditions.py:39:        headers[\"If-Modified-Since\"] = http_date(if_modified_since)",
+       "tests/test_send_file.py:127:            headers={\"If-Modified-Since\": http_date(datetime.datetime(2020, 7, 12))}",
+       "src/werkzeug/datastructures/range.py:75:            return http_date(self.date)",
+       "src/werkzeug/http.py:1033:def http_date(",
+       "src/werkzeug/http.py:1109:        return http_date(value)",
+       "src/werkzeug/http.py:1416:            expires = http_date(expires)"
+      ]
+     },
+     "tuned": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph -P '(?<![.\\\\w])(?<!def )http_date\\\\s*\\\\('",
+      "median_ms": 50,
+      "ms": [
+       50,
+       45,
+       52,
+       55,
+       48
+      ],
+      "chars": 630,
+      "tokens_est_chars_div_4": 157,
+      "true_found": 7,
+      "true_total": 8,
+      "recall": "7/8",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 0,
+      "lines": 7,
+      "sample": [
+       "tests/test_apply_conditions.py:33:        headers[\"If-Unmodified-Since\"] = http_date(if_unmodified_since)",
+       "tests/test_apply_conditions.py:39:        headers[\"If-Modified-Since\"] = http_date(if_modified_since)",
+       "tests/test_send_file.py:127:            headers={\"If-Modified-Since\": http_date(datetime.datetime(2020, 7, 12))}",
+       "src/werkzeug/datastructures/range.py:75:            return http_date(self.date)",
+       "src/werkzeug/http.py:1109:        return http_date(value)",
+       "src/werkzeug/http.py:1416:            expires = http_date(expires)",
+       "src/werkzeug/http.py:1418:        expires = http_date(dt.datetime.now(tz=dt.UTC).timestamp() + max_age)"
+      ]
+     },
+     "defs": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bdef\\\\s+http_date\\\\b'",
+      "median_ms": 51,
+      "ms": [
+       55,
+       51,
+       51,
+       49,
+       48
+      ],
+      "chars": 41,
+      "tokens_est_chars_div_4": 10,
+      "lines": 1,
+      "sample": [
+       "src/werkzeug/http.py:1033:def http_date("
+      ]
+     }
+    },
+    "same_name_definitions_in_repo": 1
+   },
+   "run_wsgi_app (function)": {
+    "id": "run_wsgi_app (function)",
+    "rg_name": "run_wsgi_app",
+    "commands": {
+     "naive": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\brun_wsgi_app\\\\s*\\\\('",
+      "median_ms": 50,
+      "ms": [
+       50,
+       50,
+       45,
+       50,
+       46
+      ],
+      "chars": 2108,
+      "tokens_est_chars_div_4": 527,
+      "true_found": 19,
+      "true_total": 19,
+      "recall": "19/19",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 1,
+      "non_call_lines": 2,
+      "lines": 22,
+      "sample": [
+       "src/werkzeug/test.py:991:    def run_wsgi_app(self, request: Request, buffered: bool = False) -> TestResponse:",
+       "src/werkzeug/test.py:997:        app_iter, status, headers = run_wsgi_app(",
+       "src/werkzeug/test.py:1125:        response = self.run_wsgi_app(request, buffered=buffered)",
+       "src/werkzeug/test.py:1231:def run_wsgi_app(",
+       "tests/test_wsgi.py:312:    app_iter, status, headers = run_wsgi_app(app, create_environ(), buffered=True)",
+       "tests/test_wrappers.py:277:    app_iter, status, headers = run_wsgi_app(response, create_environ(), buffered=True)",
+       "tests/test_test.py:648:        app_iter, status, headers = run_wsgi_app(app, {}, buffered=buffered)",
+       "tests/test_test.py:677:    app_iter, status, headers = run_wsgi_app(app, {}, buffered=buffered)"
+      ]
+     },
+     "tuned": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph -P '(?<![.\\\\w])(?<!def )run_wsgi_app\\\\s*\\\\('",
+      "median_ms": 47,
+      "ms": [
+       48,
+       46,
+       47,
+       46,
+       50
+      ],
+      "chars": 1862,
+      "tokens_est_chars_div_4": 465,
+      "true_found": 19,
+      "true_total": 19,
+      "recall": "19/19",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 0,
+      "lines": 19,
+      "sample": [
+       "tests/test_wsgi.py:312:    app_iter, status, headers = run_wsgi_app(app, create_environ(), buffered=True)",
+       "tests/test_wrappers.py:277:    app_iter, status, headers = run_wsgi_app(response, create_environ(), buffered=True)",
+       "tests/test_test.py:648:        app_iter, status, headers = run_wsgi_app(app, {}, buffered=buffered)",
+       "tests/test_test.py:677:    app_iter, status, headers = run_wsgi_app(app, {}, buffered=buffered)",
+       "tests/test_test.py:706:    app_iter, status, headers = run_wsgi_app(bar, {})",
+       "tests/test_test.py:716:    assert run_wsgi_app(bar, {}, True)[0] == [\"bar\"]",
+       "src/werkzeug/wrappers/response.py:286:            response = Response(*run_wsgi_app(response, environ))",
+       "src/werkzeug/wrappers/response.py:312:        return cls(*run_wsgi_app(app, environ, buffered))"
+      ]
+     },
+     "defs": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bdef\\\\s+run_wsgi_app\\\\b'",
+      "median_ms": 47,
+      "ms": [
+       51,
+       50,
+       46,
+       47,
+       46
+      ],
+      "chars": 155,
+      "tokens_est_chars_div_4": 38,
+      "lines": 2,
+      "sample": [
+       "src/werkzeug/test.py:991:    def run_wsgi_app(self, request: Request, buffered: bool = False) -> TestResponse:",
+       "src/werkzeug/test.py:1231:def run_wsgi_app("
+      ]
+     }
+    },
+    "same_name_definitions_in_repo": 2
+   },
+   "Client.run_wsgi_app (method)": {
+    "id": "Client.run_wsgi_app (method)",
+    "rg_name": "run_wsgi_app",
+    "commands": {
+     "naive": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\brun_wsgi_app\\\\s*\\\\('",
+      "median_ms": 48,
+      "ms": [
+       53,
+       48,
+       47,
+       47,
+       53
+      ],
+      "chars": 2108,
+      "tokens_est_chars_div_4": 527,
+      "true_found": 1,
+      "true_total": 1,
+      "recall": "1/1",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 19,
+      "non_call_lines": 2,
+      "lines": 22,
+      "sample": [
+       "tests/test_wsgi.py:312:    app_iter, status, headers = run_wsgi_app(app, create_environ(), buffered=True)",
+       "tests/test_wrappers.py:277:    app_iter, status, headers = run_wsgi_app(response, create_environ(), buffered=True)",
+       "tests/test_test.py:648:        app_iter, status, headers = run_wsgi_app(app, {}, buffered=buffered)",
+       "tests/test_test.py:677:    app_iter, status, headers = run_wsgi_app(app, {}, buffered=buffered)",
+       "tests/test_test.py:706:    app_iter, status, headers = run_wsgi_app(bar, {})",
+       "tests/test_test.py:716:    assert run_wsgi_app(bar, {}, True)[0] == [\"bar\"]",
+       "src/werkzeug/wrappers/response.py:286:            response = Response(*run_wsgi_app(response, environ))",
+       "src/werkzeug/wrappers/response.py:312:        return cls(*run_wsgi_app(app, environ, buffered))"
+      ]
+     },
+     "tuned": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\.run_wsgi_app\\\\s*\\\\('",
+      "median_ms": 51,
+      "ms": [
+       51,
+       53,
+       53,
+       50,
+       50
+      ],
+      "chars": 91,
+      "tokens_est_chars_div_4": 22,
+      "true_found": 1,
+      "true_total": 1,
+      "recall": "1/1",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 0,
+      "lines": 1,
+      "sample": [
+       "src/werkzeug/test.py:1125:        response = self.run_wsgi_app(request, buffered=buffered)"
+      ]
+     },
+     "defs": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bdef\\\\s+run_wsgi_app\\\\b'",
+      "median_ms": 48,
+      "ms": [
+       47,
+       44,
+       49,
+       48,
+       54
+      ],
+      "chars": 155,
+      "tokens_est_chars_div_4": 38,
+      "lines": 2,
+      "sample": [
+       "src/werkzeug/test.py:991:    def run_wsgi_app(self, request: Request, buffered: bool = False) -> TestResponse:",
+       "src/werkzeug/test.py:1231:def run_wsgi_app("
+      ]
+     }
+    },
+    "same_name_definitions_in_repo": 2
+   },
+   "Response.close": {
+    "id": "Response.close",
+    "rg_name": "close",
+    "commands": {
+     "naive": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bclose\\\\s*\\\\('",
+      "median_ms": 49,
+      "ms": [
+       49,
+       42,
+       52,
+       47,
+       50
+      ],
+      "chars": 3776,
+      "tokens_est_chars_div_4": 944,
+      "true_found": 3,
+      "true_total": 3,
+      "recall": "3/3",
+      "undecidable_mixed_in": 5,
+      "wrong_call_lines": 32,
+      "non_call_lines": 23,
+      "lines": 63,
+      "sample": [
+       "CHANGES.rst:1219:-   Calling ``response.close()`` on a response from the test ``Client``",
+       "tests/test_wsgi.py:152:    data.close()",
+       "tests/test_wsgi.py:303:        def close(self):",
+       "tests/test_wrappers.py:272:        def close(self):",
+       "tests/test_test.py:396:        def close(self):",
+       "tests/test_test.py:398:            super().close()",
+       "tests/test_test.py:639:            def close(self):",
+       "tests/test_test.py:656:                app_iter.close()"
+      ]
+     },
+     "tuned": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\.close\\\\s*\\\\('",
+      "median_ms": 45,
+      "ms": [
+       45,
+       45,
+       48,
+       45,
+       48
+      ],
+      "chars": 2441,
+      "tokens_est_chars_div_4": 610,
+      "true_found": 3,
+      "true_total": 3,
+      "recall": "3/3",
+      "undecidable_mixed_in": 5,
+      "wrong_call_lines": 31,
+      "non_call_lines": 2,
+      "lines": 41,
+      "sample": [
+       "CHANGES.rst:1219:-   Calling ``response.close()`` on a response from the test ``Client``",
+       "examples/cupoftee/network.py:50:        s.close()",
+       "examples/cupoftee/network.py:82:        s.close()",
+       "examples/cupoftee/db.py:38:        self.close()",
+       "examples/cupoftee/db.py:65:            self._fs.close()",
+       "src/werkzeug/datastructures/file_storage.py:137:                dst.close()",
+       "src/werkzeug/datastructures/file_storage.py:142:            self.stream.close()",
+       "src/werkzeug/datastructures/file_storage.py:216:                    value.close()"
+      ]
+     },
+     "defs": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bdef\\\\s+close\\\\b'",
+      "median_ms": 46,
+      "ms": [
+       45,
+       46,
+       47,
+       49,
+       46
+      ],
+      "chars": 1179,
+      "tokens_est_chars_div_4": 294,
+      "lines": 20,
+      "sample": [
+       "examples/cupoftee/db.py:62:    def close(self):",
+       "tests/test_wsgi.py:303:        def close(self):",
+       "tests/test_wrappers.py:272:        def close(self):",
+       "src/werkzeug/wsgi.py:277:    def close(self) -> None:",
+       "src/werkzeug/wsgi.py:332:    def close(self) -> None:",
+       "src/werkzeug/wsgi.py:428:    def close(self) -> None:",
+       "tests/test_test.py:396:        def close(self):",
+       "tests/test_test.py:639:            def close(self):"
+      ]
+     }
+    },
+    "same_name_definitions_in_repo": 20
+   }
+  },
+  "job1": {
+   "symbol": "safe_join",
+   "callers_found_by_heuristic": [
+    "test_safe_join",
+    "test_safe_join_os_sep",
+    "test_safe_join_empty_trusted",
+    "test_safe_join_windows_special",
+    "test_safe_join_not_windows_special",
+    "loader",
+    "send_from_directory"
+   ],
+   "searches_run": 8,
+   "capped_at_25": false,
+   "total_lines": 22,
+   "total_tokens_est": 446,
+   "call_site_lines_among_them": 13,
+   "searches_on_ambiguous_names": 1,
+   "per_search": [
+    {
+     "name": "safe_join",
+     "lines": 9,
+     "chars": 727
+    },
+    {
+     "name": "test_safe_join",
+     "lines": 1,
+     "chars": 60,
+     "defs_in_repo": 1,
+     "call_lines": 0
+    },
+    {
+     "name": "test_safe_join_os_sep",
+     "lines": 1,
+     "chars": 55,
+     "defs_in_repo": 1,
+     "call_lines": 0
+    },
+    {
+     "name": "test_safe_join_empty_trusted",
+     "lines": 1,
+     "chars": 62,
+     "defs_in_repo": 1,
+     "call_lines": 0
+    },
+    {
+     "name": "test_safe_join_windows_special",
+     "lines": 1,
+     "chars": 114,
+     "defs_in_repo": 1,
+     "call_lines": 0
+    },
+    {
+     "name": "test_safe_join_not_windows_special",
+     "lines": 1,
+     "chars": 107,
+     "defs_in_repo": 1,
+     "call_lines": 0
+    },
+    {
+     "name": "loader",
+     "lines": 4,
+     "chars": 328,
+     "defs_in_repo": 2,
+     "call_lines": 2
+    },
+    {
+     "name": "send_from_directory",
+     "lines": 4,
+     "chars": 333,
+     "defs_in_repo": 1,
+     "call_lines": 3
+    }
+   ]
+  },
+  "job2": {
+   "function": "http_date",
+   "diff_lines": 8,
+   "git_diff_plus_rg_ms": 117,
+   "candidates_listed": 8,
+   "truly_broken": 8,
+   "truly_broken_found": 8,
+   "extra_candidates_not_broken": 0,
+   "tokens_est_diff_plus_rg": 271,
+   "tool_calls": 2,
+   "git_status_after_revert": []
+  }
+ },
+ "hono": {
+  "symbols": {
+   "getCookie": {
+    "id": "getCookie",
+    "rg_name": "getCookie",
+    "commands": {
+     "naive": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bgetCookie\\\\s*\\\\('",
+      "median_ms": 41,
+      "ms": [
+       50,
+       37,
+       40,
+       45,
+       41
+      ],
+      "chars": 785,
+      "tokens_est_chars_div_4": 196,
+      "true_found": 9,
+      "true_total": 9,
+      "recall": "9/9",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 0,
+      "lines": 9,
+      "sample": [
+       "src/helper/cookie/index.ts:142:  const deletedCookie = getCookie(c, name, opt?.prefix)",
+       "src/validator/validator.ts:158:        value = getCookie(c)",
+       "src/middleware/jwt/jwt.ts:101:        token = getCookie(ctx, options.cookie)",
+       "src/middleware/jwt/jwt.ts:115:          token = getCookie(ctx, options.cookie.key, options.cookie.prefixOptions)",
+       "src/middleware/jwt/jwt.ts:117:          token = getCookie(ctx, options.cookie.key)",
+       "src/middleware/jwk/jwk.ts:101:        token = getCookie(ctx, options.cookie)",
+       "src/middleware/jwk/jwk.ts:115:          token = getCookie(ctx, options.cookie.key, options.cookie.prefixOptions)",
+       "src/middleware/jwk/jwk.ts:117:          token = getCookie(ctx, options.cookie.key)"
+      ]
+     },
+     "tuned": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph -P '(?<![.\\\\w])(?<!function )getCookie\\\\s*\\\\('",
+      "median_ms": 42,
+      "ms": [
+       46,
+       47,
+       40,
+       42,
+       42
+      ],
+      "chars": 785,
+      "tokens_est_chars_div_4": 196,
+      "true_found": 9,
+      "true_total": 9,
+      "recall": "9/9",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 0,
+      "lines": 9,
+      "sample": [
+       "src/validator/validator.ts:158:        value = getCookie(c)",
+       "src/helper/cookie/index.ts:142:  const deletedCookie = getCookie(c, name, opt?.prefix)",
+       "src/middleware/language/language.ts:146:  const cookie = getCookie(c, options.lookupCookie)",
+       "src/middleware/jwt/jwt.ts:101:        token = getCookie(ctx, options.cookie)",
+       "src/middleware/jwt/jwt.ts:115:          token = getCookie(ctx, options.cookie.key, options.cookie.prefixOptions)",
+       "src/middleware/jwt/jwt.ts:117:          token = getCookie(ctx, options.cookie.key)",
+       "src/middleware/jwk/jwk.ts:101:        token = getCookie(ctx, options.cookie)",
+       "src/middleware/jwk/jwk.ts:115:          token = getCookie(ctx, options.cookie.key, options.cookie.prefixOptions)"
+      ]
+     },
+     "defs": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '(function\\\\s+getCookie\\\\b|(const|let)\\\\s+getCookie\\\\b|^\\\\s*(public |private |protected |static |async |readonly )*getCookie\\\\s*[(<=:!])'",
+      "median_ms": 43,
+      "ms": [
+       61,
+       43,
+       43,
+       42,
+       47
+      ],
+      "chars": 111,
+      "tokens_est_chars_div_4": 27,
+      "lines": 1,
+      "sample": [
+       "src/helper/cookie/index.ts:27:export const getCookie: GetCookie = (c, key?, prefix?: CookiePrefixOptions) => {"
+      ]
+     }
+    },
+    "same_name_definitions_in_repo": 1
+   },
+   "Context.notFound": {
+    "id": "Context.notFound",
+    "rg_name": "notFound",
+    "commands": {
+     "naive": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bnotFound\\\\s*\\\\('",
+      "median_ms": 42,
+      "ms": [
+       50,
+       41,
+       42,
+       45,
+       42
+      ],
+      "chars": 649,
+      "tokens_est_chars_div_4": 162,
+      "true_found": 4,
+      "true_total": 4,
+      "recall": "4/4",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 5,
+      "lines": 9,
+      "sample": [
+       "src/context.ts:782:   * `.notFound()` can return the Not Found Response.",
+       "src/context.ts:789:   *   return c.notFound()",
+       "src/hono-base.ts:295:   * `.notFound()` allows you to customize a Not Found Response.",
+       "src/hono-base.ts:304:   * app.notFound((c) => {",
+       "src/helper/ssg/middleware.ts:46:    return c.notFound() // Prevent subsequent handler execution after ssgParams",
+       "src/helper/ssg/middleware.ts:67:      return c.notFound()",
+       "src/helper/ssg/middleware.ts:80:      return c.notFound()",
+       "src/adapter/cloudflare-pages/handler.ts:129:      return c.notFound()"
+      ]
+     },
+     "tuned": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\.notFound\\\\s*\\\\('",
+      "median_ms": 44,
+      "ms": [
+       50,
+       41,
+       39,
+       48,
+       44
+      ],
+      "chars": 649,
+      "tokens_est_chars_div_4": 162,
+      "true_found": 4,
+      "true_total": 4,
+      "recall": "4/4",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 5,
+      "lines": 9,
+      "sample": [
+       "src/context.ts:782:   * `.notFound()` can return the Not Found Response.",
+       "src/context.ts:789:   *   return c.notFound()",
+       "src/hono-base.ts:295:   * `.notFound()` allows you to customize a Not Found Response.",
+       "src/hono-base.ts:304:   * app.notFound((c) => {",
+       "src/adapter/cloudflare-pages/handler.ts:129:      return c.notFound()",
+       "src/helper/ssg/middleware.ts:46:    return c.notFound() // Prevent subsequent handler execution after ssgParams",
+       "src/helper/ssg/middleware.ts:67:      return c.notFound()",
+       "src/helper/ssg/middleware.ts:80:      return c.notFound()"
+      ]
+     },
+     "defs": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '(function\\\\s+notFound\\\\b|(const|let)\\\\s+notFound\\\\b|^\\\\s*(public |private |protected |static |async |readonly )*notFound\\\\s*[(<=:!])'",
+      "median_ms": 46,
+      "ms": [
+       47,
+       46,
+       47,
+       43,
+       43
+      ],
+      "chars": 173,
+      "tokens_est_chars_div_4": 43,
+      "lines": 2,
+      "sample": [
+       "src/context.ts:793:  notFound = (): ReturnType<NotFoundHandler> => {",
+       "src/hono-base.ts:309:  notFound = (handler: NotFoundHandler<E>): Hono<E, S, BasePath, CurrentPath> => {"
+      ]
+     }
+    },
+    "same_name_definitions_in_repo": 2
+   },
+   "getPath (url.ts)": {
+    "id": "getPath (url.ts)",
+    "rg_name": "getPath",
+    "commands": {
+     "naive": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bgetPath\\\\s*\\\\('",
+      "median_ms": 43,
+      "ms": [
+       54,
+       40,
+       47,
+       42,
+       43
+      ],
+      "chars": 763,
+      "tokens_est_chars_div_4": 190,
+      "true_found": 1,
+      "true_total": 1,
+      "recall": "1/1",
+      "undecidable_mixed_in": 2,
+      "wrong_call_lines": 1,
+      "non_call_lines": 5,
+      "lines": 9,
+      "sample": [
+       "src/hono-base.ts:387:        url.pathname = this.getPath(request).slice(pathPrefixLength) || '/'",
+       "src/hono-base.ts:437:    const path = this.getPath(request, { env })",
+       "src/adapter/aws-lambda/handler.ts:308:  protected abstract getPath(event: E): string",
+       "src/adapter/aws-lambda/handler.ts:350:    const path = this.getPath(event)",
+       "src/adapter/aws-lambda/handler.ts:437:  protected getPath(event: APIGatewayProxyEventV2): string {",
+       "src/adapter/aws-lambda/handler.ts:479:  protected getPath(event: APIGatewayProxyEvent): string {",
+       "src/adapter/aws-lambda/handler.ts:564:  protected getPath(event: ALBProxyEvent): string {",
+       "src/adapter/aws-lambda/handler.ts:626:  protected getPath(event: LatticeProxyEventV2): string {"
+      ]
+     },
+     "tuned": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph -P '(?<![.\\\\w])(?<!function )getPath\\\\s*\\\\('",
+      "median_ms": 45,
+      "ms": [
+       49,
+       45,
+       45,
+       40,
+       43
+      ],
+      "chars": 522,
+      "tokens_est_chars_div_4": 130,
+      "true_found": 1,
+      "true_total": 1,
+      "recall": "1/1",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 5,
+      "lines": 6,
+      "sample": [
+       "src/adapter/aws-lambda/handler.ts:308:  protected abstract getPath(event: E): string",
+       "src/adapter/aws-lambda/handler.ts:437:  protected getPath(event: APIGatewayProxyEventV2): string {",
+       "src/adapter/aws-lambda/handler.ts:479:  protected getPath(event: APIGatewayProxyEvent): string {",
+       "src/adapter/aws-lambda/handler.ts:564:  protected getPath(event: ALBProxyEvent): string {",
+       "src/adapter/aws-lambda/handler.ts:626:  protected getPath(event: LatticeProxyEventV2): string {",
+       "src/utils/url.ts:155:  const result = getPath(request)"
+      ]
+     },
+     "defs": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '(function\\\\s+getPath\\\\b|(const|let)\\\\s+getPath\\\\b|^\\\\s*(public |private |protected |static |async |readonly )*getPath\\\\s*[(<=:!])'",
+      "median_ms": 46,
+      "ms": [
+       53,
+       48,
+       46,
+       44,
+       46
+      ],
+      "chars": 560,
+      "tokens_est_chars_div_4": 140,
+      "lines": 7,
+      "sample": [
+       "src/hono-base.ts:135:  readonly getPath: GetPath<E>",
+       "src/hono-base.ts:196:      getPath: this.getPath,",
+       "src/adapter/aws-lambda/handler.ts:437:  protected getPath(event: APIGatewayProxyEventV2): string {",
+       "src/adapter/aws-lambda/handler.ts:479:  protected getPath(event: APIGatewayProxyEvent): string {",
+       "src/adapter/aws-lambda/handler.ts:564:  protected getPath(event: ALBProxyEvent): string {",
+       "src/adapter/aws-lambda/handler.ts:626:  protected getPath(event: LatticeProxyEventV2): string {",
+       "src/utils/url.ts:106:export const getPath = (request: Request): string => {"
+      ]
+     }
+    },
+    "same_name_definitions_in_repo": 8
+   },
+   "parseBody (utils/body.ts)": {
+    "id": "parseBody (utils/body.ts)",
+    "rg_name": "parseBody",
+    "commands": {
+     "naive": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bparseBody\\\\s*\\\\('",
+      "median_ms": 44,
+      "ms": [
+       44,
+       45,
+       40,
+       47,
+       44
+      ],
+      "chars": 407,
+      "tokens_est_chars_div_4": 101,
+      "true_found": 1,
+      "true_total": 2,
+      "recall": "1/2",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 4,
+      "lines": 5,
+      "sample": [
+       "src/middleware/body-limit/index.ts:41: *     const body = await c.req.parseBody()",
+       "src/request.ts:198:   * `.parseBody()` can parse Request body of type `multipart/form-data` or `application/x-www-form-urlencoded`",
+       "src/request.ts:205:   *   const body = await c.req.parseBody()",
+       "src/request.ts:213:  async parseBody(options?: Partial<ParseBodyOptions>) {",
+       "src/request.ts:214:    return parseBody(this, options)"
+      ]
+     },
+     "tuned": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph -P '(?<![.\\\\w])(?<!function )parseBody\\\\s*\\\\('",
+      "median_ms": 43,
+      "ms": [
+       48,
+       43,
+       49,
+       40,
+       41
+      ],
+      "chars": 131,
+      "tokens_est_chars_div_4": 32,
+      "true_found": 1,
+      "true_total": 2,
+      "recall": "1/2",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 0,
+      "non_call_lines": 1,
+      "lines": 2,
+      "sample": [
+       "src/request.ts:213:  async parseBody(options?: Partial<ParseBodyOptions>) {",
+       "src/request.ts:214:    return parseBody(this, options)"
+      ]
+     },
+     "defs": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '(function\\\\s+parseBody\\\\b|(const|let)\\\\s+parseBody\\\\b|^\\\\s*(public |private |protected |static |async |readonly )*parseBody\\\\s*[(<=:!])'",
+      "median_ms": 47,
+      "ms": [
+       50,
+       40,
+       47,
+       43,
+       50
+      ],
+      "chars": 358,
+      "tokens_est_chars_div_4": 89,
+      "lines": 4,
+      "sample": [
+       "src/request.ts:209:  async parseBody<Options extends Partial<ParseBodyOptions>, T extends BodyData<Options>>(",
+       "src/request.ts:212:  async parseBody<T extends BodyData>(options?: Partial<ParseBodyOptions>): Promise<T>",
+       "src/request.ts:213:  async parseBody(options?: Partial<ParseBodyOptions>) {",
+       "src/utils/body.ts:100:export const parseBody: ParseBody = async ("
+      ]
+     }
+    },
+    "same_name_definitions_in_repo": 4
+   },
+   "Context.get": {
+    "id": "Context.get",
+    "rg_name": "get",
+    "commands": {
+     "naive": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\bget\\\\s*\\\\('",
+      "median_ms": 47,
+      "ms": [
+       47,
+       51,
+       47,
+       42,
+       41
+      ],
+      "chars": 11030,
+      "tokens_est_chars_div_4": 2757,
+      "true_found": 5,
+      "true_total": 5,
+      "recall": "5/5",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 57,
+      "non_call_lines": 87,
+      "lines": 149,
+      "sample": [
+       "src/hono-base.ts:77:       *   '/' + req.headers.get('host') + req.url.replace(/^https?:\\/\\/[^/]+(\\/[^?]*)/, '$1'),",
+       "src/hono-base.ts:80:       * app.get('/www1.example.com/hello', () => c.text('hello www1'))",
+       "src/hono-base.ts:143:    // Implementation of app.get(...handlers[]) or app.get(path, ...handlers[])",
+       "src/hono-base.ts:222:   * app2.get(\"/user\", (c) => c.text(\"user\"))",
+       "src/hono-base.ts:333:   * ittyRouter.get('/hello', () => new Response('Hello from itty-router'))",
+       "src/index.ts:11: * app.get('/', (c) => c.text('Hono!'))",
+       "src/client/client.ts:17:    get(_obj, key) {",
+       "src/client/fetch-result-please.ts:81:  const _contentType = response.headers.get('content-type')"
+      ]
+     },
+     "tuned": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '\\\\.get\\\\s*\\\\('",
+      "median_ms": 41,
+      "ms": [
+       55,
+       41,
+       43,
+       38,
+       40
+      ],
+      "chars": 10894,
+      "tokens_est_chars_div_4": 2723,
+      "true_found": 5,
+      "true_total": 5,
+      "recall": "5/5",
+      "undecidable_mixed_in": 0,
+      "wrong_call_lines": 57,
+      "non_call_lines": 85,
+      "lines": 147,
+      "sample": [
+       "src/context.ts:310:   * app.get('*', async c => {",
+       "src/context.ts:443:   * app.get('/', (c) => {",
+       "src/context.ts:506:   * app.get('/welcome', (c) => {",
+       "src/context.ts:563:   * `.get()` can use the value specified by the key.",
+       "src/context.ts:569:   * app.get('/', (c) => {",
+       "src/context.ts:570:   *   const message = c.get('message')",
+       "src/context.ts:583:    return this.#var ? this.#var.get(key) : undefined",
+       "src/context.ts:669:   * app.get('/welcome', (c) => {"
+      ]
+     },
+     "defs": {
+      "cmd": "rg -n --no-heading --path-separator / -g !.llmgraph '(function\\\\s+get\\\\b|(const|let)\\\\s+get\\\\b|^\\\\s*(public |private |protected |static |async |readonly )*get\\\\s*[(<=:!])'",
+      "median_ms": 46,
+      "ms": [
+       53,
+       44,
+       47,
+       44,
+       46
+      ],
+      "chars": 158,
+      "tokens_est_chars_div_4": 39,
+      "lines": 3,
+      "sample": [
+       "src/hono-base.ts:119:  get!: HandlerInterface<E, 'get', S, BasePath, CurrentPath>",
+       "src/context.ts:575:  get: Get<",
+       "src/client/client.ts:17:    get(_obj, key) {"
+      ]
+     }
+    },
+    "same_name_definitions_in_repo": 3
+   }
+  },
+  "job1": {
+   "symbol": "getCookie",
+   "callers_found_by_heuristic": [
+    "deleteCookie",
+    "jwt",
+    "detectFromCookie",
+    "jwk"
+   ],
+   "searches_run": 5,
+   "capped_at_25": false,
+   "total_lines": 13,
+   "total_tokens_est": 255,
+   "call_site_lines_among_them": 9,
+   "searches_on_ambiguous_names": 1,
+   "per_search": [
+    {
+     "name": "getCookie",
+     "lines": 9,
+     "chars": 785
+    },
+    {
+     "name": "deleteCookie",
+     "lines": 0,
+     "chars": 0,
+     "defs_in_repo": 1,
+     "call_lines": 0
+    },
+    {
+     "name": "jwt",
+     "lines": 2,
+     "chars": 110,
+     "defs_in_repo": 1,
+     "call_lines": 0
+    },
+    {
+     "name": "detectFromCookie",
+     "lines": 0,
+     "chars": 0,
+     "defs_in_repo": 1,
+     "call_lines": 0
+    },
+    {
+     "name": "jwk",
+     "lines": 2,
+     "chars": 127,
+     "defs_in_repo": 2,
+     "call_lines": 0
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,66 @@
+=== who_calls {"symbol":"super_len"} (305 ms)
+llmgraph · who_calls super_len (src/requests/utils.py:135): 16 in a set
+  ◇ within_these 16 calls -> one of 1 super_len (closed: repo only) [c] w1
+  ⚠ plus 9 dynamic calls nearby that could reach anything w2
+  assumes [c]: our own reading, not confirmed by the checker
+  detail: .llmgraph/e810eb-1.md (warning: 1266 tokens if read in full)
+engine: llmgraph-engine.exe PID 12500, shared, since 22:59
+
+=== what_breaks_if_changed {"symbol":"super_len"} (420 ms)
+llmgraph · what_breaks_if_changed super_len (depth 3): 22 places depend on it
+  ✓ certain src/requests/models.py:526 PreparedRequest.prepare_body w3
+  ✓ certain src/requests/models.py:575 PreparedRequest.prepare_content_length w4
+  +12 more certain in 1 files w5
+  ⚠ plus 9 dynamic calls nearby that could reach anything w6
+  depth 2, each as strong as its weakest step:
+  ◇ +2 more places at depth 2, as weak as within_these [a][c] w7
+  depth 3, each as strong as its weakest step:
+  ◇ +6 more places at depth 3, as weak as within_these [a][c] w8
+  ⚠ 7 more deeper calls we can't see: not followed w9
+  ⚠ 2 places beyond depth 3 not followed w10
+  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure
+  assumes [a]: all subclasses are in this repo (project setting)
+  assumes [c]: our own reading, not confirmed by the checker
+  detail: .llmgraph/e810eb-2.md (warning: 1645 tokens if read in full)
+
+=== what_is_unknown {} (33 ms)
+llmgraph · what_is_unknown (whole repo): 617 blind spots
+  ⚠ dynamic call 174: tests/test_requests.py (161), tests/test_utils.py (6), +6 files w11
+  ⚠ type unknown 443: tests/test_requests.py (286), src/requests/cookies.py (21), +17 files w12
+
+=== explain {"handle":"w1"} (22 ms)
+llmgraph · explain w1: a collapsed line
+  w1 stands for several lines that share one rule and one label; expand w1 lists them w13
+
+=== check_my_changes {"paths":["src/requests/utils.py"]} (742 ms)
+llmgraph · check_my_changes: 1 file changed, 16 calls break
+  [delta] files that differ from the last commit (git HEAD): src/requests/utils.py: super_len signature differs (parameters, types)
+  16 breaks: misses "strict" w14
+  ⚠ breaks if it runs super_len src/requests/models.py:526 PreparedRequest.prepare_body (within_these, one of 1, closed: repo only) [c] w15
+  ⚠ breaks if it runs super_len src/requests/models.py:575 PreparedRequest.prepare_content_length (within_these, one of 1, closed: repo only) [c] w16
+  ⚠ breaks if it runs super_len tests/test_utils.py:62 TestSuperLen.test_io_streams (within_these, one of 1, closed: repo only) [c] w17
+  ⚠ breaks if it runs super_len tests/test_utils.py:63 TestSuperLen.test_io_streams (within_these, one of 1, closed: repo only) [c] w18
+  ⚠ breaks if it runs super_len tests/test_utils.py:69 TestSuperLen.test_super_len_correctly_calculates_len_of_partially_read_file (within_these, one of 1, closed: repo only) [c] w19
+  ⚠ breaks if it runs super_len tests/test_utils.py:82 TestSuperLen.test_super_len_handles_files_raising_weird_errors_in_tell (within_these, one of 1, closed: repo only) [c] w20
+  ⚠ breaks if it runs super_len tests/test_utils.py:95 TestSuperLen.test_super_len_tell_ioerror (within_these, one of 1, closed: repo only) [c] w21
+  ⚠ breaks if it runs super_len tests/test_utils.py:98 TestSuperLen.test_string (within_these, one of 1, closed: repo only) [c] w22
+  ⚠ breaks if it runs super_len tests/test_utils.py:111 TestSuperLen.test_file (within_these, one of 1, closed: repo only) [c] w23
+  ⚠ breaks if it runs super_len tests/test_utils.py:124 TestSuperLen.test_tarfile_member (within_these, one of 1, closed: repo only) [c] w24
+  ⚠ breaks if it runs super_len tests/test_utils.py:128 TestSuperLen.test_super_len_with__len__ (within_these, one of 1, closed: repo only) [c] w25
+  ⚠ breaks if it runs super_len tests/test_utils.py:136 TestSuperLen.test_super_len_with_no__len__ (within_these, one of 1, closed: repo only) [c] w26
+  ⚠ breaks if it runs super_len tests/test_utils.py:140 TestSuperLen.test_super_len_with_tell (within_these, one of 1, closed: repo only) [c] w27
+  ⚠ breaks if it runs super_len tests/test_utils.py:142 TestSuperLen.test_super_len_with_tell (within_these, one of 1, closed: repo only) [c] w28
+  ⚠ breaks if it runs super_len tests/test_utils.py:146 TestSuperLen.test_super_len_with_fileno (within_these, one of 1, closed: repo only) [c] w29
+  ⚠ breaks if it runs super_len tests/test_utils.py:152 TestSuperLen.test_super_len_with_no_matches (within_these, one of 1, closed: repo only) [c] w30
+  ⚠ plus 9 dynamic calls nearby that could reach super_len w31
+  assumes [c]: our own reading, not confirmed by the checker
+
+=== who_calls {"symbol":"super_len"} (105 ms)
+llmgraph · who_calls super_len (src/requests/utils.py:135): 16 certain
+  ✓ certain src/requests/models.py:526 PreparedRequest.prepare_body w33
+  +1 more (all certain, same file) w34
+  ✓ certain tests/test_utils.py:62 TestSuperLen.test_io_streams w35
+  +13 more (all certain, same file) w36
+  ⚠ plus 9 dynamic calls nearby that could reach anything w37
+  still open from earlier: 16 breaks (w32 lists them)
+  detail: .llmgraph/e810eb-6.md (warning: 745 tokens if read in full)

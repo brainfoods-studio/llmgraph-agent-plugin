@@ -1,0 +1,345 @@
+{
+ "when": "2026-10-20T13:57:58.963Z",
+ "repo": "rich",
+ "marks": {
+  "initialize": 346,
+  "first_answer": 6415,
+  "settled": 6415
+ },
+ "symbols": {
+  "strip_control_codes": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "strip_control_codes",
+     "expand": "reset"
+    },
+    "ms": 61,
+    "chars": 356,
+    "text": "llmgraph · who_calls strip_control_codes (rich/control.py:181): 7 in a set\n  ◇ within_these 7 calls -> one of 1 strip_control_codes (closed: repo only) [c] w174\n  ⚠ plus 25 dynamic calls nearby that could reach anything w175\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/0b3cfe-37.md (warning: 612 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    57,
+    61,
+    61
+   ],
+   "steps": [
+    {
+     "handle": "w174",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "strip_control_codes",
+      "expand": "w174"
+     },
+     "ms": 50,
+     "chars": 918,
+     "text": "llmgraph · w174 lists 7 items\n  ◇ within_these, one of 1 rich/text.py:156 Text.__init__ -> strip_control_codes (closed: repo only) [c] w176\n  ◇ within_these, one of 1 rich/text.py:413 Text.plain -> strip_control_codes (closed: repo only) [c] w177\n  ◇ within_these, one of 1 rich/text.py:982 Text.append -> strip_control_codes (closed: repo only) [c] w178\n  ◇ within_these, one of 1 rich/text.py:1046 Text.append_tokens -> strip_control_codes (closed: repo only) [c] w179\n  ◇ within_these, one of 1 tests/test_control.py:11 test_strip_control_codes -> strip_control_codes (closed: repo only) [c] w180\n  ◇ within_these, one of 1 tests/test_control.py:12 test_strip_control_codes -> strip_control_codes (closed: repo only) [c] w181\n  ◇ within_these, one of 1 tests/test_control.py:13 test_strip_control_codes -> strip_control_codes (closed: repo only) [c] w182\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    }
+   ]
+  },
+  "Console.render_str": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "rich/console.py:1409",
+     "expand": "reset"
+    },
+    "ms": 65,
+    "chars": 668,
+    "text": "llmgraph · who_calls Console.render_str (rich/console.py:1409): 5 in a set, 1 open\n  ◇ within_these 5 calls -> one of 1 (closed: repo only) [a][c] w191\n  ⚠ maybe_more rich/live.py:238 Live.update (open: type unknown) w192\n  ⚠ same-name attribute uses, not checked: 1 w193\n  ⚠ plus 97 dynamic calls nearby that could reach anything w194\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/0b3cfe-41.md (warning: 685 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    64,
+    62,
+    65
+   ],
+   "steps": [
+    {
+     "handle": "w191",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "rich/console.py:1409",
+      "expand": "w191"
+     },
+     "ms": 50,
+     "chars": 778,
+     "text": "llmgraph · w191 lists 5 items\n  ◇ within_these, one of 1 rich/console.py:1321 Console.render -> Console.render_str (closed: repo only) [a][c] w195\n  ◇ within_these, one of 1 rich/console.py:1560 Console._collect_renderables -> Console.render_str (closed: repo only) [a][c] w196\n  ◇ within_these, one of 1 rich/measure.py:99 Measurement.get -> Console.render_str (closed: repo only) [a][c] w197\n  ◇ within_these, one of 1 rich/rule.py:68 Rule.__rich_console__ -> Console.render_str (closed: repo only) [a][c] w198\n  ◇ within_these, one of 1 rich/table.py:501 Table.__rich_console__.render_annotation -> Console.render_str (closed: repo only) [a][c] w199\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    }
+   ]
+  },
+  "Console.render": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "rich/console.py:1294",
+     "expand": "reset"
+    },
+    "ms": 91,
+    "chars": 740,
+    "text": "llmgraph · who_calls Console.render (rich/console.py:1294): 16 in a set, 9 open\n  ◇ within_these 16 calls -> one of 1 (closed: repo only) [a][c] w210\n  ⚠ maybe_more: 9 calls (open: type unknown) w211\n  ⚠ passed as a value in 13 places: calls through it are not visible w212\n  ⚠ plus 97 dynamic calls nearby that could reach anything w213\n  – ruled out: 19 same-name calls (proven: other target) [a][c] w214\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/0b3cfe-45.md (warning: 1969 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    89,
+    84,
+    91
+   ],
+   "steps": [
+    {
+     "handle": "w210",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "rich/console.py:1294",
+      "expand": "w210"
+     },
+     "ms": 51,
+     "chars": 2082,
+     "text": "llmgraph · w210 lists 16 items\n  ◇ within_these, one of 1 rich/align.py:148 Align.__rich_console__ -> Console.render (closed: repo only) [a][c] w215\n  ◇ within_these, one of 1 rich/console.py:1343 Console.render -> Console.render (closed: repo only) [a][c] w216\n  ◇ within_these, one of 1 rich/console.py:1371 Console.render_lines -> Console.render (closed: repo only) [a][c] w217\n  ◇ within_these, one of 1 rich/console.py:1869 Console.update_screen_lines -> Console.render (closed: repo only) [a][c] w218\n  ◇ within_these, one of 1 rich/constrain.py:29 Constrain.__rich_console__ -> Console.render (closed: repo only) [a][c] w219\n  ◇ within_these, one of 1 rich/live_render.py:108 LiveRender.__rich_console__ -> Console.render (closed: repo only) [a][c] w220\n  ◇ within_these, one of 1 rich/markdown.py:685 Markdown.__rich_console__ -> Console.render (closed: repo only) [a][c] w221\n  ◇ within_these, one of 1 rich/markdown.py:700 Markdown.__rich_console__ -> Console.render (closed: repo only) [a][c] w222\n  ◇ within_these, one of 1 rich/panel.py:245 Panel.__rich_console__ -> Console.render (closed: repo only) [a][c] w223\n  ◇ within_these, one of 1 rich/panel.py:270 Panel.__rich_console__ -> Console.render (closed: repo only) [a][c] w224\n  ◇ within_these, one of 1 rich/segment.py:773 -> Console.render (closed: repo only) [c] w225\n  ◇ within_these, one of 1 rich/styled.py:27 Styled.__rich_console__ -> Console.render (closed: repo only) [a][c] w226\n  ◇ within_these, one of 1 rich/syntax.py:692 Syntax._get_syntax -> Console.render (closed: repo only) [a][c] w227\n  ◇ within_these, one of 1 rich/table.py:505 Table.__rich_console__.render_annotation -> Console.render (closed: repo only) [a][c] w228\n  ◇ within_these, one of 1 tests/test_console.py:373 test_render_error -> Console.render (closed: repo only) [c] w229\n  ◇ within_these, one of 1 tests/test_console.py:508 test_render_broken_renderable -> Console.render (closed: repo only) [c] w230\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    },
+    {
+     "handle": "w211",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "rich/console.py:1294",
+      "expand": "w211"
+     },
+     "ms": 49,
+     "chars": 769,
+     "text": "llmgraph · w211 lists 9 items\n  ⚠ maybe_more rich/console.py:2144 Console._render_buffer (open: type unknown) w231\n  ⚠ maybe_more rich/console.py:2211 Console.export_text (open: type unknown) w232\n  ⚠ maybe_more rich/jupyter.py:48 JupyterMixin._repr_mimebundle_ (open: type unknown) w233\n  ⚠ maybe_more rich/pretty.py:912 pretty_repr (open: type unknown) w234\n  ⚠ maybe_more rich/progress.py:611 SpinnerColumn.render (open: type unknown) w235\n  ⚠ maybe_more rich/syntax.py:755 Syntax._get_syntax (open: type unknown) w236\n  ⚠ maybe_more rich/text.py:705 Text.__rich_console__ (open: type unknown) w237\n  ⚠ maybe_more tests/test_progress.py:67 test_text_column (open: type unknown) w238\n  ⚠ maybe_more tests/test_progress.py:72 test_text_column (open: type unknown) w239",
+     "rpc_error": null
+    }
+   ]
+  },
+  "ProgressColumn.render": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "rich/progress.py:545",
+     "expand": "reset"
+    },
+    "ms": 83,
+    "chars": 829,
+    "text": "llmgraph · who_calls ProgressColumn.render (rich/progress.py:545): 1 in a set, 9 open\n  ◇ within_these, one of 13 rich/progress.py:540 ProgressColumn.__call__ (closed: repo only) [a][c] w252\n  ⚠ maybe_more: 9 calls (open: type unknown) w253\n  ⚠ passed as a value in 11 places: calls through it are not visible w254\n  ⚠ same-name attribute uses, not checked: 2 w255\n  ⚠ plus 7 dynamic calls nearby that could reach anything w256\n  – ruled out: 34 same-name calls (proven: other target) [a][c] w257\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/0b3cfe-50.md (warning: 845 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    83,
+    85,
+    83
+   ],
+   "steps": [
+    {
+     "handle": "w253",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "rich/progress.py:545",
+      "expand": "w253"
+     },
+     "ms": 67,
+     "chars": 769,
+     "text": "llmgraph · w253 lists 9 items\n  ⚠ maybe_more rich/console.py:2144 Console._render_buffer (open: type unknown) w258\n  ⚠ maybe_more rich/console.py:2211 Console.export_text (open: type unknown) w259\n  ⚠ maybe_more rich/jupyter.py:48 JupyterMixin._repr_mimebundle_ (open: type unknown) w260\n  ⚠ maybe_more rich/pretty.py:912 pretty_repr (open: type unknown) w261\n  ⚠ maybe_more rich/progress.py:611 SpinnerColumn.render (open: type unknown) w262\n  ⚠ maybe_more rich/syntax.py:755 Syntax._get_syntax (open: type unknown) w263\n  ⚠ maybe_more rich/text.py:705 Text.__rich_console__ (open: type unknown) w264\n  ⚠ maybe_more tests/test_progress.py:67 test_text_column (open: type unknown) w265\n  ⚠ maybe_more tests/test_progress.py:72 test_text_column (open: type unknown) w266",
+     "rpc_error": null
+    }
+   ]
+  }
+ },
+ "job1": {
+  "symbol": "rich/console.py:1409",
+  "head": {
+   "name": "what_breaks_if_changed",
+   "arguments": {
+    "symbol": "rich/console.py:1409",
+    "depth": 2,
+    "expand": "reset"
+   },
+   "ms": 180,
+   "chars": 904,
+   "text": "llmgraph · what_breaks_if_changed Console.render_str (depth 2): 21 places depend on it, 1 open\n  ◇ within_these 5 calls -> one of 1 (closed: repo only) [a][c] w267\n  ⚠ maybe_more rich/live.py:238 Live.update (open: type unknown) w268\n  ⚠ same-name attribute uses, not checked: 1 w269\n  ⚠ plus 97 dynamic calls nearby that could reach anything w270\n  depth 2, each as strong as its weakest step:\n  ◇ +15 more places at depth 2, as weak as within_these [a][c] w271\n  ⚠ 147 or more deeper calls we can't see: not followed w272\n  ⚠ 12 places beyond depth 2 not followed w273\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/0b3cfe-52.md (warning: 2182 tokens if read in full)",
+   "rpc_error": null
+  },
+  "steps": [
+   {
+    "handle": "w267",
+    "name": "what_breaks_if_changed",
+    "arguments": {
+     "symbol": "rich/console.py:1409",
+     "expand": "w267",
+     "depth": 2
+    },
+    "ms": 52,
+    "chars": 668,
+    "text": "llmgraph · w267 lists 5 items\n  ◇ within_these, one of 1 rich/console.py:1321 Console.render (closed: repo only) [a][c] w274\n  ◇ within_these, one of 1 rich/console.py:1560 Console._collect_renderables (closed: repo only) [a][c] w275\n  ◇ within_these, one of 1 rich/measure.py:99 Measurement.get (closed: repo only) [a][c] w276\n  ◇ within_these, one of 1 rich/rule.py:68 Rule.__rich_console__ (closed: repo only) [a][c] w277\n  ◇ within_these, one of 1 rich/table.py:501 Table.__rich_console__.render_annotation (closed: repo only) [a][c] w278\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker",
+    "rpc_error": null
+   }
+  ]
+ },
+ "job2": {
+  "file": "rich/control.py",
+  "head": {
+   "name": "check_my_changes",
+   "arguments": {
+    "paths": [
+     "rich/control.py"
+    ],
+    "expand": "reset"
+   },
+   "ms": 2559,
+   "chars": 1303,
+   "text": "llmgraph · check_my_changes: 1 file changed, 7 calls break\n  [delta] files that differ from the last commit (git HEAD): rich/control.py: strip_control_codes signature differs (parameters, types)\n  7 breaks: misses \"strict\" w279\n  ⚠ breaks if it runs strip_control_codes rich/text.py:156 Text.__init__ (within_these, one of 1, closed: repo only) [c] w280\n  ⚠ breaks if it runs strip_control_codes rich/text.py:413 Text.plain (within_these, one of 1, closed: repo only) [c] w281\n  ⚠ breaks if it runs strip_control_codes rich/text.py:982 Text.append (within_these, one of 1, closed: repo only) [c] w282\n  ⚠ breaks if it runs strip_control_codes rich/text.py:1046 Text.append_tokens (within_these, one of 1, closed: repo only) [c] w283\n  ⚠ breaks if it runs strip_control_codes tests/test_control.py:11 test_strip_control_codes (within_these, one of 1, closed: repo only) [c] w284\n  ⚠ breaks if it runs strip_control_codes tests/test_control.py:12 test_strip_control_codes (within_these, one of 1, closed: repo only) [c] w285\n  ⚠ breaks if it runs strip_control_codes tests/test_control.py:13 test_strip_control_codes (within_these, one of 1, closed: repo only) [c] w286\n  ⚠ plus 25 dynamic calls nearby that could reach strip_control_codes w287\n  assumes [c]: our own reading, not confirmed by the checker",
+   "rpc_error": null
+  },
+  "steps": []
+ },
+ "error": null,
+ "symbols_early": {
+  "strip_control_codes": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "strip_control_codes",
+     "expand": "reset"
+    },
+    "ms": 65,
+    "chars": 351,
+    "text": "llmgraph · who_calls strip_control_codes (rich/control.py:181): 7 in a set\n  ◇ within_these 7 calls -> one of 1 strip_control_codes (closed: repo only) [c] w7\n  ⚠ plus 25 dynamic calls nearby that could reach anything w8\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/0b3cfe-4.md (warning: 607 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    67,
+    70,
+    65
+   ],
+   "steps": [
+    {
+     "handle": "w7",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "strip_control_codes",
+      "expand": "w7"
+     },
+     "ms": 59,
+     "chars": 908,
+     "text": "llmgraph · w7 lists 7 items\n  ◇ within_these, one of 1 rich/text.py:156 Text.__init__ -> strip_control_codes (closed: repo only) [c] w9\n  ◇ within_these, one of 1 rich/text.py:413 Text.plain -> strip_control_codes (closed: repo only) [c] w10\n  ◇ within_these, one of 1 rich/text.py:982 Text.append -> strip_control_codes (closed: repo only) [c] w11\n  ◇ within_these, one of 1 rich/text.py:1046 Text.append_tokens -> strip_control_codes (closed: repo only) [c] w12\n  ◇ within_these, one of 1 tests/test_control.py:11 test_strip_control_codes -> strip_control_codes (closed: repo only) [c] w13\n  ◇ within_these, one of 1 tests/test_control.py:12 test_strip_control_codes -> strip_control_codes (closed: repo only) [c] w14\n  ◇ within_these, one of 1 tests/test_control.py:13 test_strip_control_codes -> strip_control_codes (closed: repo only) [c] w15\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    }
+   ]
+  },
+  "Console.render_str": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "rich/console.py:1409",
+     "expand": "reset"
+    },
+    "ms": 88,
+    "chars": 663,
+    "text": "llmgraph · who_calls Console.render_str (rich/console.py:1409): 5 in a set, 1 open\n  ◇ within_these 5 calls -> one of 1 (closed: repo only) [a][c] w24\n  ⚠ maybe_more rich/live.py:238 Live.update (open: type unknown) w25\n  ⚠ same-name attribute uses, not checked: 1 w26\n  ⚠ plus 97 dynamic calls nearby that could reach anything w27\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/0b3cfe-8.md (warning: 683 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    92,
+    105,
+    88
+   ],
+   "steps": [
+    {
+     "handle": "w24",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "rich/console.py:1409",
+      "expand": "w24"
+     },
+     "ms": 65,
+     "chars": 772,
+     "text": "llmgraph · w24 lists 5 items\n  ◇ within_these, one of 1 rich/console.py:1321 Console.render -> Console.render_str (closed: repo only) [a][c] w28\n  ◇ within_these, one of 1 rich/console.py:1560 Console._collect_renderables -> Console.render_str (closed: repo only) [a][c] w29\n  ◇ within_these, one of 1 rich/measure.py:99 Measurement.get -> Console.render_str (closed: repo only) [a][c] w30\n  ◇ within_these, one of 1 rich/rule.py:68 Rule.__rich_console__ -> Console.render_str (closed: repo only) [a][c] w31\n  ◇ within_these, one of 1 rich/table.py:501 Table.__rich_console__.render_annotation -> Console.render_str (closed: repo only) [a][c] w32\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    }
+   ]
+  },
+  "Console.render": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "rich/console.py:1294",
+     "expand": "reset"
+    },
+    "ms": 117,
+    "chars": 737,
+    "text": "llmgraph · who_calls Console.render (rich/console.py:1294): 16 in a set, 10 open\n  ◇ within_these 16 calls -> one of 1 (closed: repo only) [a][c] w43\n  ⚠ maybe_more: 10 calls (open: type unknown) w44\n  ⚠ passed as a value in 13 places: calls through it are not visible w45\n  ⚠ plus 97 dynamic calls nearby that could reach anything w46\n  – ruled out: 18 same-name calls (proven: other target) [a][c] w47\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/0b3cfe-12.md (warning: 2005 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    128,
+    209,
+    117
+   ],
+   "steps": [
+    {
+     "handle": "w43",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "rich/console.py:1294",
+      "expand": "w43"
+     },
+     "ms": 65,
+     "chars": 2065,
+     "text": "llmgraph · w43 lists 16 items\n  ◇ within_these, one of 1 rich/align.py:148 Align.__rich_console__ -> Console.render (closed: repo only) [a][c] w48\n  ◇ within_these, one of 1 rich/console.py:1343 Console.render -> Console.render (closed: repo only) [a][c] w49\n  ◇ within_these, one of 1 rich/console.py:1371 Console.render_lines -> Console.render (closed: repo only) [a][c] w50\n  ◇ within_these, one of 1 rich/console.py:1869 Console.update_screen_lines -> Console.render (closed: repo only) [a][c] w51\n  ◇ within_these, one of 1 rich/constrain.py:29 Constrain.__rich_console__ -> Console.render (closed: repo only) [a][c] w52\n  ◇ within_these, one of 1 rich/live_render.py:108 LiveRender.__rich_console__ -> Console.render (closed: repo only) [a][c] w53\n  ◇ within_these, one of 1 rich/markdown.py:685 Markdown.__rich_console__ -> Console.render (closed: repo only) [a][c] w54\n  ◇ within_these, one of 1 rich/markdown.py:700 Markdown.__rich_console__ -> Console.render (closed: repo only) [a][c] w55\n  ◇ within_these, one of 1 rich/panel.py:245 Panel.__rich_console__ -> Console.render (closed: repo only) [a][c] w56\n  ◇ within_these, one of 1 rich/panel.py:270 Panel.__rich_console__ -> Console.render (closed: repo only) [a][c] w57\n  ◇ within_these, one of 1 rich/segment.py:773 -> Console.render (closed: repo only) [c] w58\n  ◇ within_these, one of 1 rich/styled.py:27 Styled.__rich_console__ -> Console.render (closed: repo only) [a][c] w59\n  ◇ within_these, one of 1 rich/syntax.py:692 Syntax._get_syntax -> Console.render (closed: repo only) [a][c] w60\n  ◇ within_these, one of 1 rich/table.py:505 Table.__rich_console__.render_annotation -> Console.render (closed: repo only) [a][c] w61\n  ◇ within_these, one of 1 tests/test_console.py:373 test_render_error -> Console.render (closed: repo only) [c] w62\n  ◇ within_these, one of 1 tests/test_console.py:508 test_render_broken_renderable -> Console.render (closed: repo only) [c] w63\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    },
+    {
+     "handle": "w44",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "rich/console.py:1294",
+      "expand": "w44"
+     },
+     "ms": 51,
+     "chars": 850,
+     "text": "llmgraph · w44 lists 10 items\n  ⚠ maybe_more benchmarks/benchmarks.py:41 TextSuite.time_render (open: type unknown) w64\n  ⚠ maybe_more rich/console.py:2144 Console._render_buffer (open: type unknown) w65\n  ⚠ maybe_more rich/console.py:2211 Console.export_text (open: type unknown) w66\n  ⚠ maybe_more rich/jupyter.py:48 JupyterMixin._repr_mimebundle_ (open: type unknown) w67\n  ⚠ maybe_more rich/pretty.py:912 pretty_repr (open: type unknown) w68\n  ⚠ maybe_more rich/progress.py:611 SpinnerColumn.render (open: type unknown) w69\n  ⚠ maybe_more rich/syntax.py:755 Syntax._get_syntax (open: type unknown) w70\n  ⚠ maybe_more rich/text.py:705 Text.__rich_console__ (open: type unknown) w71\n  ⚠ maybe_more tests/test_progress.py:67 test_text_column (open: type unknown) w72\n  ⚠ maybe_more tests/test_progress.py:72 test_text_column (open: type unknown) w73",
+     "rpc_error": null
+    }
+   ]
+  },
+  "ProgressColumn.render": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "rich/progress.py:545",
+     "expand": "reset"
+    },
+    "ms": 83,
+    "chars": 825,
+    "text": "llmgraph · who_calls ProgressColumn.render (rich/progress.py:545): 1 in a set, 10 open\n  ◇ within_these, one of 13 rich/progress.py:540 ProgressColumn.__call__ (closed: repo only) [a][c] w86\n  ⚠ maybe_more: 10 calls (open: type unknown) w87\n  ⚠ passed as a value in 11 places: calls through it are not visible w88\n  ⚠ same-name attribute uses, not checked: 2 w89\n  ⚠ plus 7 dynamic calls nearby that could reach anything w90\n  – ruled out: 33 same-name calls (proven: other target) [a][c] w91\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/0b3cfe-17.md (warning: 885 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    81,
+    85,
+    83
+   ],
+   "steps": [
+    {
+     "handle": "w87",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "rich/progress.py:545",
+      "expand": "w87"
+     },
+     "ms": 51,
+     "chars": 852,
+     "text": "llmgraph · w87 lists 10 items\n  ⚠ maybe_more benchmarks/benchmarks.py:41 TextSuite.time_render (open: type unknown) w92\n  ⚠ maybe_more rich/console.py:2144 Console._render_buffer (open: type unknown) w93\n  ⚠ maybe_more rich/console.py:2211 Console.export_text (open: type unknown) w94\n  ⚠ maybe_more rich/jupyter.py:48 JupyterMixin._repr_mimebundle_ (open: type unknown) w95\n  ⚠ maybe_more rich/pretty.py:912 pretty_repr (open: type unknown) w96\n  ⚠ maybe_more rich/progress.py:611 SpinnerColumn.render (open: type unknown) w97\n  ⚠ maybe_more rich/syntax.py:755 Syntax._get_syntax (open: type unknown) w98\n  ⚠ maybe_more rich/text.py:705 Text.__rich_console__ (open: type unknown) w99\n  ⚠ maybe_more tests/test_progress.py:67 test_text_column (open: type unknown) w100\n  ⚠ maybe_more tests/test_progress.py:72 test_text_column (open: type unknown) w101",
+     "rpc_error": null
+    }
+   ]
+  }
+ },
+ "catchup_wait_ms": 41305,
+ "catchup_converged": true,
+ "exit_ms": 984,
+ "engines_after": 0
+}

@@ -87,6 +87,8 @@ Answers carry no numbers about chance; they say what is ruled out.
 
 Callers are confirmed by the type checker in under a second after your agent asks (Python), and `check_my_changes` answers in under a second once LLMGRAPH has caught up with a save. On names that also appear in unrelated code, it named no wrong callers where a plain text search returned hundreds of wrong lines, and the agent read less than half as many tokens; on clean, unique names there is no saving.
 
+How we measured, the raw data, and where LLMGRAPH loses: [BENCHMARKS.md](BENCHMARKS.md).
+
 ## What your agent can ask
 
 | Tool | What it answers |

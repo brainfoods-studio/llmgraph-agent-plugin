@@ -1,0 +1,16 @@
+=== who_calls {"symbol":"super_len"} (6 ms)
+llmgraph · not indexed: the plan allows 3 repositories on this computer and 3 are already indexed. Ask the user to remove one with "npx -y llmgraph-mcp repos", or change plan at https://beta.llmgraph.in/account.
+
+=== what_breaks_if_changed {"symbol":"super_len"} (6 ms)
+llmgraph · not indexed: the plan allows 3 repositories on this computer and 3 are already indexed. Ask the user to remove one with "npx -y llmgraph-mcp repos", or change plan at https://beta.llmgraph.in/account.
+
+=== what_is_unknown {} (5 ms)
+llmgraph · not indexed: the plan allows 3 repositories on this computer and 3 are already indexed. Ask the user to remove one with "npx -y llmgraph-mcp repos", or change plan at https://beta.llmgraph.in/account.
+
+=== explain: no line with a handle was returned by the first answer
+
+=== check_my_changes {"paths":["src/requests/utils.py"]} (5 ms)
+llmgraph · not indexed: the plan allows 3 repositories on this computer and 3 are already indexed. Ask the user to remove one with "npx -y llmgraph-mcp repos", or change plan at https://beta.llmgraph.in/account.
+
+=== who_calls {"symbol":"super_len"} (6 ms)
+llmgraph · not indexed: the plan allows 3 repositories on this computer and 3 are already indexed. Ask the user to remove one with "npx -y llmgraph-mcp repos", or change plan at https://beta.llmgraph.in/account.

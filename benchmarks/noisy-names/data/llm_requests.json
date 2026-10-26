@@ -1,0 +1,409 @@
+{
+ "when": "2026-10-20T13:57:05.277Z",
+ "repo": "requests",
+ "marks": {
+  "initialize": 412,
+  "first_answer": 6341,
+  "settled": 6341
+ },
+ "symbols": {
+  "rebuild_proxies": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "rebuild_proxies",
+     "expand": "reset"
+    },
+    "ms": 29,
+    "chars": 567,
+    "text": "llmgraph · who_calls SessionRedirectMixin.rebuild_proxies (src/requests/sessions.py:334): 3 in a set\n  ◇ within_these 3 calls -> one of 1 (closed: repo only) [a][c] w166\n  ⚠ plus 168 dynamic calls nearby that could reach anything w167\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/a3202b-40.md (warning: 464 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    86,
+    27,
+    29
+   ],
+   "steps": [
+    {
+     "handle": "w166",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "rebuild_proxies",
+      "expand": "w166"
+     },
+     "ms": 17,
+     "chars": 674,
+     "text": "llmgraph · w166 lists 3 items\n  ◇ within_these, one of 1 src/requests/sessions.py:272 SessionRedirectMixin.resolve_redirects -> SessionRedirectMixin.rebuild_proxies (closed: repo only) [a][c] w168\n  ◇ within_these, one of 1 tests/test_requests.py:679 TestRequests.test_proxy_authorization_not_appended_to_https_request -> SessionRedirectMixin.rebuild_proxies (closed: repo only) [c] w169\n  ◇ within_these, one of 1 tests/test_requests.py:2687 test_proxy_env_vars_override_default -> SessionRedirectMixin.rebuild_proxies (closed: repo only) [c] w170\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    }
+   ]
+  },
+  "get_netrc_auth": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "get_netrc_auth",
+     "expand": "reset"
+    },
+    "ms": 32,
+    "chars": 403,
+    "text": "llmgraph · who_calls get_netrc_auth (src/requests/utils.py:231): 5 in a set\n  ◇ within_these 5 calls -> one of 1 get_netrc_auth (closed: repo only) [c] w177\n  ⚠ same-name attribute uses, not checked: 1 w178\n  ⚠ plus 174 dynamic calls nearby that could reach anything w179\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/a3202b-44.md (warning: 538 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    24,
+    24,
+    32
+   ],
+   "steps": [
+    {
+     "handle": "w177",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "get_netrc_auth",
+      "expand": "w177"
+     },
+     "ms": 23,
+     "chars": 788,
+     "text": "llmgraph · w177 lists 5 items\n  ◇ within_these, one of 1 src/requests/sessions.py:330 SessionRedirectMixin.rebuild_auth -> get_netrc_auth (closed: repo only) [c] w180\n  ◇ within_these, one of 1 src/requests/sessions.py:538 Session.prepare_request -> get_netrc_auth (closed: repo only) [c] w181\n  ◇ within_these, one of 1 tests/test_utils.py:162 TestGetNetrcAuth.test_works -> get_netrc_auth (closed: repo only) [c] w182\n  ◇ within_these, one of 1 tests/test_utils.py:170 TestGetNetrcAuth.test_not_vulnerable_to_bad_url_parsing -> get_netrc_auth (closed: repo only) [c] w183\n  ◇ within_these, one of 1 tests/test_utils.py:180 TestGetNetrcAuth.test_empty_default_credentials_ignored -> get_netrc_auth (closed: repo only) [c] w184\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    }
+   ]
+  },
+  "Session.close": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/requests/sessions.py:883",
+     "expand": "reset"
+    },
+    "ms": 45,
+    "chars": 685,
+    "text": "llmgraph · who_calls Session.close (src/requests/sessions.py:883): 2 in a set, 13 open\n  ◇ within_these 2 calls -> one of 1 (closed: repo only) [a][c] w193\n  ⚠ maybe_more: 13 calls (open: type unknown) w194\n  ⚠ plus 168 dynamic calls nearby that could reach anything w195\n  – ruled out: 4 same-name calls (proven: 3 other target, 1 stdlib) [a][c] w196\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/a3202b-48.md (warning: 1041 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    39,
+    41,
+    45
+   ],
+   "steps": [
+    {
+     "handle": "w193",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/requests/sessions.py:883",
+      "expand": "w193"
+     },
+     "ms": 28,
+     "chars": 422,
+     "text": "llmgraph · w193 lists 2 items\n  ◇ within_these, one of 1 src/requests/sessions.py:509 Session.__exit__ -> Session.close (closed: repo only) [a][c] w197\n  ◇ within_these, one of 1 tests/test_requests.py:2216 TestRequests.test_session_close_proxy_clear -> Session.close (closed: repo only) [c] w198\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    },
+    {
+     "handle": "w194",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/requests/sessions.py:883",
+      "expand": "w194"
+     },
+     "ms": 27,
+     "chars": 1403,
+     "text": "llmgraph · w194 lists 13 items\n  ⚠ maybe_more src/requests/models.py:1180 Response.close (open: type unknown) w199\n  ⚠ maybe_more src/requests/sessions.py:222 SessionRedirectMixin.resolve_redirects (open: type unknown) w200\n  ⚠ maybe_more src/requests/sessions.py:886 Session.close (open: type unknown) w201\n  ⚠ maybe_more tests/test_requests.py:732 TestRequests.test_basicauth_with_netrc_leak (open: type unknown) w202\n  ⚠ maybe_more tests/test_requests.py:1466 TestRequests.test_response_is_iterable (open: type unknown) w203\n  ⚠ maybe_more tests/test_testserver.py:28 TestTestServer.test_basic (open: type unknown) w204\n  ⚠ maybe_more tests/test_testserver.py:36 TestTestServer.test_server_closes (open: type unknown) w205\n  ⚠ maybe_more tests/test_testserver.py:108 TestTestServer.test_request_recovery (open: type unknown) w206\n  ⚠ maybe_more tests/test_testserver.py:112 TestTestServer.test_request_recovery (open: type unknown) w207\n  ⚠ maybe_more tests/test_testserver.py:126 TestTestServer.test_requests_after_timeout_are_not_received (open: type unknown) w208\n  ⚠ maybe_more tests/test_testserver.py:140 TestTestServer.test_request_recovery_with_bigger_timeout (open: type unknown) w209\n  ⚠ maybe_more tests/testserver/server.py:90 Server._close_server_sock_ignore_errors (open: type unknown) w210\n  ⚠ maybe_more tests/testserver/server.py:103 Server._handle_requests (open: type unknown) w211",
+     "rpc_error": null
+    }
+   ]
+  },
+  "HTTPAdapter.send": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/requests/adapters.py:634",
+     "expand": "reset"
+    },
+    "ms": 79,
+    "chars": 596,
+    "text": "llmgraph · who_calls HTTPAdapter.send (src/requests/adapters.py:634): 24 open\n  ⚠ maybe_more: 24 calls (open: type unknown) w218\n  ⚠ plus 167 dynamic calls nearby that could reach anything w219\n  – ruled out: 19 same-name calls (proven: other target) [a][c] w220\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/a3202b-53.md (warning: 1514 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    76,
+    78,
+    79
+   ],
+   "steps": [
+    {
+     "handle": "w218",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/requests/adapters.py:634",
+      "expand": "w218"
+     },
+     "ms": 21,
+     "chars": 2384,
+     "text": "llmgraph · w218 lists 19 of 24 items\n  ⚠ maybe_more src/requests/auth.py:312 HTTPDigestAuth.handle_401 (open: type unknown) w221\n  ⚠ maybe_more src/requests/sessions.py:784 Session.send (open: type unknown) w222\n  ⚠ maybe_more tests/test_lowlevel.py:21 echo_response_handler (open: type unknown) w223\n  ⚠ maybe_more tests/test_lowlevel.py:46 test_chunked_encoding_error.incomplete_chunked_response_handler (open: type unknown) w224\n  ⚠ maybe_more tests/test_lowlevel.py:113 test_conflicting_content_lengths.multiple_content_length_response_handler (open: type unknown) w225\n  ⚠ maybe_more tests/test_lowlevel.py:156 test_digestauth_401_count_reset_on_redirect.digest_response_handler (open: type unknown) w226\n  ⚠ maybe_more tests/test_lowlevel.py:161 test_digestauth_401_count_reset_on_redirect.digest_response_handler (open: type unknown) w227\n  ⚠ maybe_more tests/test_lowlevel.py:167 test_digestauth_401_count_reset_on_redirect.digest_response_handler (open: type unknown) w228\n  ⚠ maybe_more tests/test_lowlevel.py:172 test_digestauth_401_count_reset_on_redirect.digest_response_handler (open: type unknown) w229\n  ⚠ maybe_more tests/test_lowlevel.py:212 test_digestauth_401_only_sent_once.digest_failed_response_handler (open: type unknown) w230\n  ⚠ maybe_more tests/test_lowlevel.py:218 test_digestauth_401_only_sent_once.digest_failed_response_handler (open: type unknown) w231\n  ⚠ maybe_more tests/test_lowlevel.py:255 test_digestauth_only_on_4xx.digest_response_handler (open: type unknown) w232\n  ⚠ maybe_more tests/test_lowlevel.py:316 test_redirect_rfc1808_to_non_ascii_location.redirect_resp_handler (open: type unknown) w233\n  ⚠ maybe_more tests/test_lowlevel.py:325 test_redirect_rfc1808_to_non_ascii_location.redirect_resp_handler (open: type unknown) w234\n  ⚠ maybe_more tests/test_lowlevel.py:372 test_fragment_update_on_redirect.response_handler (open: type unknown) w235\n  ⚠ maybe_more tests/test_lowlevel.py:378 test_fragment_update_on_redirect.response_handler (open: type unknown) w236\n  ⚠ maybe_more tests/test_lowlevel.py:384 test_fragment_update_on_redirect.response_handler (open: type unknown) w237\n  ⚠ maybe_more tests/test_lowlevel.py:411 test_json_decode_compatibility_for_alt_utf_encodings.response_handler (open: type unknown) w238\n  ⚠ maybe_more tests/test_requests.py:1626 TestRequests.test_session_pickling (open: type unknown) w239\n  +5 more w240",
+     "rpc_error": null
+    }
+   ]
+  },
+  "Response.json": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/requests/models.py:1091",
+     "expand": "reset"
+    },
+    "ms": 37,
+    "chars": 384,
+    "text": "llmgraph · who_calls Response.json (src/requests/models.py:1091): 20 open\n  ⚠ maybe_more: 20 calls (open: type unknown) w249\n  ⚠ passed as a value in 6 places: calls through it are not visible w250\n  ⚠ same-name attribute uses, not checked: 2 w251\n  ⚠ plus 170 dynamic calls nearby that could reach anything w252\n  detail: .llmgraph/a3202b-57.md (warning: 1178 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    58,
+    37,
+    37
+   ],
+   "steps": [
+    {
+     "handle": "w249",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/requests/models.py:1091",
+      "expand": "w249"
+     },
+     "ms": 19,
+     "chars": 2390,
+     "text": "llmgraph · w249 lists 20 items\n  ⚠ maybe_more tests/test_lowlevel.py:425 test_json_decode_compatibility_for_alt_utf_encodings (open: type unknown) w253\n  ⚠ maybe_more tests/test_requests.py:237 TestRequests.test_HTTP_307_ALLOW_REDIRECT_POST (open: type unknown) w254\n  ⚠ maybe_more tests/test_requests.py:249 TestRequests.test_HTTP_307_ALLOW_REDIRECT_POST_WITH_SEEKABLE (open: type unknown) w255\n  ⚠ maybe_more tests/test_requests.py:394 TestRequests.test_cookie_sent_on_redirect (open: type unknown) w256\n  ⚠ maybe_more tests/test_requests.py:421 TestRequests.test_request_cookie_overrides_session_cookie (open: type unknown) w257\n  ⚠ maybe_more tests/test_requests.py:438 TestRequests.test_generic_cookiejar_works (open: type unknown) w258\n  ⚠ maybe_more tests/test_requests.py:448 TestRequests.test_param_cookiejar_works (open: type unknown) w259\n  ⚠ maybe_more tests/test_requests.py:658 TestRequests.test_proxy_authorization_preserved_on_request (open: type unknown) w260\n  ⚠ maybe_more tests/test_requests.py:874 TestRequests.test_POSTBIN_SEEKED_OBJECT_WITH_NO_ITER (open: type unknown) w261\n  ⚠ maybe_more tests/test_requests.py:880 TestRequests.test_POSTBIN_SEEKED_OBJECT_WITH_NO_ITER (open: type unknown) w262\n  ⚠ maybe_more tests/test_requests.py:921 TestRequests.test_post_with_custom_mapping (open: type unknown) w263\n  ⚠ maybe_more tests/test_requests.py:1099 TestRequests.test_post_named_tempfile (open: type unknown) w264\n  ⚠ maybe_more tests/test_requests.py:1114 TestRequests.test_post_getattr_proxy_read_only (open: type unknown) w265\n  ⚠ maybe_more tests/test_requests.py:1254 TestRequests.test_prepared_from_session (open: type unknown) w266\n  ⚠ maybe_more tests/test_requests.py:1768 TestRequests.test_params_are_merged_case_sensitive (open: type unknown) w267\n  ⚠ maybe_more tests/test_requests.py:2115 TestRequests.test_getattr_proxy_stream_follows_redirect (open: type unknown) w268\n  ⚠ maybe_more tests/test_requests.py:2165 TestRequests.test_json_param_post_content_type_works (open: type unknown) w269\n  ⚠ maybe_more tests/test_requests.py:2239 TestRequests.test_response_json_when_content_is_None (open: type unknown) w270\n  ⚠ maybe_more tests/test_requests.py:2902 TestPreparingURLs.test_json_decode_compatibility (open: type unknown) w271\n  ⚠ maybe_more tests/test_requests.py:2910 TestPreparingURLs.test_json_decode_persists_doc_attr (open: type unknown) w272",
+     "rpc_error": null
+    }
+   ]
+  }
+ },
+ "job1": {
+  "symbol": "get_netrc_auth",
+  "head": {
+   "name": "what_breaks_if_changed",
+   "arguments": {
+    "symbol": "get_netrc_auth",
+    "depth": 2,
+    "expand": "reset"
+   },
+   "ms": 103,
+   "chars": 758,
+   "text": "llmgraph · what_breaks_if_changed get_netrc_auth (depth 2): 19 places depend on it\n  ◇ within_these 5 calls -> one of 1 (closed: repo only) [c] w273\n  ⚠ same-name attribute uses, not checked: 1 w274\n  ⚠ plus 174 dynamic calls nearby that could reach anything w275\n  depth 2, each as strong as its weakest step:\n  ◇ +14 more places at depth 2, as weak as within_these [a][c] w276\n  ⚠ 2 places beyond depth 2 not followed w277\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/a3202b-59.md (warning: 1917 tokens if read in full)",
+   "rpc_error": null
+  },
+  "steps": [
+   {
+    "handle": "w273",
+    "name": "what_breaks_if_changed",
+    "arguments": {
+     "symbol": "get_netrc_auth",
+     "expand": "w273",
+     "depth": 2
+    },
+    "ms": 17,
+    "chars": 698,
+    "text": "llmgraph · w273 lists 5 items\n  ◇ within_these, one of 1 src/requests/sessions.py:330 SessionRedirectMixin.rebuild_auth (closed: repo only) [c] w278\n  ◇ within_these, one of 1 src/requests/sessions.py:538 Session.prepare_request (closed: repo only) [c] w279\n  ◇ within_these, one of 1 tests/test_utils.py:162 TestGetNetrcAuth.test_works (closed: repo only) [c] w280\n  ◇ within_these, one of 1 tests/test_utils.py:170 TestGetNetrcAuth.test_not_vulnerable_to_bad_url_parsing (closed: repo only) [c] w281\n  ◇ within_these, one of 1 tests/test_utils.py:180 TestGetNetrcAuth.test_empty_default_credentials_ignored (closed: repo only) [c] w282\n  assumes [c]: our own reading, not confirmed by the checker",
+    "rpc_error": null
+   }
+  ]
+ },
+ "job2": {
+  "file": "src/requests/utils.py",
+  "head": {
+   "name": "check_my_changes",
+   "arguments": {
+    "paths": [
+     "src/requests/utils.py"
+    ],
+    "expand": "reset"
+   },
+   "ms": 1762,
+   "chars": 1228,
+   "text": "llmgraph · check_my_changes: 1 file changed, 5 calls break\n  [delta] files that differ from the last commit (git HEAD): src/requests/utils.py: get_netrc_auth signature differs (parameters, types)\n  5 breaks: misses \"strict\" w283\n  ⚠ breaks if it runs get_netrc_auth src/requests/sessions.py:330 SessionRedirectMixin.rebuild_auth (within_these, one of 1, closed: repo only) [c] w284\n  ⚠ breaks if it runs get_netrc_auth src/requests/sessions.py:538 Session.prepare_request (within_these, one of 1, closed: repo only) [c] w285\n  ⚠ breaks if it runs get_netrc_auth tests/test_utils.py:162 TestGetNetrcAuth.test_works (within_these, one of 1, closed: repo only) [c] w286\n  ⚠ breaks if it runs get_netrc_auth tests/test_utils.py:170 TestGetNetrcAuth.test_not_vulnerable_to_bad_url_parsing (within_these, one of 1, closed: repo only) [c] w287\n  ⚠ breaks if it runs get_netrc_auth tests/test_utils.py:180 TestGetNetrcAuth.test_empty_default_credentials_ignored (within_these, one of 1, closed: repo only) [c] w288\n  ⚠ get_netrc_auth is passed as a value in 1 place: calls through it are not checked w289\n  ⚠ plus 174 dynamic calls nearby that could reach get_netrc_auth w290\n  assumes [c]: our own reading, not confirmed by the checker",
+   "rpc_error": null
+  },
+  "steps": []
+ },
+ "error": null,
+ "symbols_early": {
+  "rebuild_proxies": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "rebuild_proxies",
+     "expand": "reset"
+    },
+    "ms": 39,
+    "chars": 599,
+    "text": "llmgraph · who_calls SessionRedirectMixin.rebuild_proxies (src/requests/sessions.py:334): 3 in a set\n  ◇ within_these 3 calls -> one of 1 SessionRedirectMixin.rebuild_proxies (closed: repo only) [a][c] w7\n  ⚠ plus 167 dynamic calls nearby that could reach anything w8\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/a3202b-4.md (warning: 461 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    373,
+    45,
+    39
+   ],
+   "steps": [
+    {
+     "handle": "w7",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "rebuild_proxies",
+      "expand": "w7"
+     },
+     "ms": 20,
+     "chars": 668,
+     "text": "llmgraph · w7 lists 3 items\n  ◇ within_these, one of 1 src/requests/sessions.py:272 SessionRedirectMixin.resolve_redirects -> SessionRedirectMixin.rebuild_proxies (closed: repo only) [a][c] w9\n  ◇ within_these, one of 1 tests/test_requests.py:679 TestRequests.test_proxy_authorization_not_appended_to_https_request -> SessionRedirectMixin.rebuild_proxies (closed: repo only) [c] w10\n  ◇ within_these, one of 1 tests/test_requests.py:2687 test_proxy_env_vars_override_default -> SessionRedirectMixin.rebuild_proxies (closed: repo only) [c] w11\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    }
+   ]
+  },
+  "get_netrc_auth": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "get_netrc_auth",
+     "expand": "reset"
+    },
+    "ms": 29,
+    "chars": 399,
+    "text": "llmgraph · who_calls get_netrc_auth (src/requests/utils.py:231): 5 in a set\n  ◇ within_these 5 calls -> one of 1 get_netrc_auth (closed: repo only) [c] w18\n  ⚠ same-name attribute uses, not checked: 1 w19\n  ⚠ plus 174 dynamic calls nearby that could reach anything w20\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/a3202b-8.md (warning: 535 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    26,
+    32,
+    29
+   ],
+   "steps": [
+    {
+     "handle": "w18",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "get_netrc_auth",
+      "expand": "w18"
+     },
+     "ms": 28,
+     "chars": 782,
+     "text": "llmgraph · w18 lists 5 items\n  ◇ within_these, one of 1 src/requests/sessions.py:330 SessionRedirectMixin.rebuild_auth -> get_netrc_auth (closed: repo only) [c] w21\n  ◇ within_these, one of 1 src/requests/sessions.py:538 Session.prepare_request -> get_netrc_auth (closed: repo only) [c] w22\n  ◇ within_these, one of 1 tests/test_utils.py:162 TestGetNetrcAuth.test_works -> get_netrc_auth (closed: repo only) [c] w23\n  ◇ within_these, one of 1 tests/test_utils.py:170 TestGetNetrcAuth.test_not_vulnerable_to_bad_url_parsing -> get_netrc_auth (closed: repo only) [c] w24\n  ◇ within_these, one of 1 tests/test_utils.py:180 TestGetNetrcAuth.test_empty_default_credentials_ignored -> get_netrc_auth (closed: repo only) [c] w25\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    }
+   ]
+  },
+  "Session.close": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/requests/sessions.py:883",
+     "expand": "reset"
+    },
+    "ms": 51,
+    "chars": 681,
+    "text": "llmgraph · who_calls Session.close (src/requests/sessions.py:883): 2 in a set, 13 open\n  ◇ within_these 2 calls -> one of 1 (closed: repo only) [a][c] w34\n  ⚠ maybe_more: 13 calls (open: type unknown) w35\n  ⚠ plus 167 dynamic calls nearby that could reach anything w36\n  – ruled out: 4 same-name calls (proven: 3 other target, 1 stdlib) [a][c] w37\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/a3202b-12.md (warning: 1036 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    60,
+    49,
+    51
+   ],
+   "steps": [
+    {
+     "handle": "w34",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/requests/sessions.py:883",
+      "expand": "w34"
+     },
+     "ms": 27,
+     "chars": 419,
+     "text": "llmgraph · w34 lists 2 items\n  ◇ within_these, one of 1 src/requests/sessions.py:509 Session.__exit__ -> Session.close (closed: repo only) [a][c] w38\n  ◇ within_these, one of 1 tests/test_requests.py:2216 TestRequests.test_session_close_proxy_clear -> Session.close (closed: repo only) [c] w39\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    },
+    {
+     "handle": "w35",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/requests/sessions.py:883",
+      "expand": "w35"
+     },
+     "ms": 19,
+     "chars": 1389,
+     "text": "llmgraph · w35 lists 13 items\n  ⚠ maybe_more src/requests/models.py:1180 Response.close (open: type unknown) w40\n  ⚠ maybe_more src/requests/sessions.py:222 SessionRedirectMixin.resolve_redirects (open: type unknown) w41\n  ⚠ maybe_more src/requests/sessions.py:886 Session.close (open: type unknown) w42\n  ⚠ maybe_more tests/test_requests.py:732 TestRequests.test_basicauth_with_netrc_leak (open: type unknown) w43\n  ⚠ maybe_more tests/test_requests.py:1466 TestRequests.test_response_is_iterable (open: type unknown) w44\n  ⚠ maybe_more tests/test_testserver.py:28 TestTestServer.test_basic (open: type unknown) w45\n  ⚠ maybe_more tests/test_testserver.py:36 TestTestServer.test_server_closes (open: type unknown) w46\n  ⚠ maybe_more tests/test_testserver.py:108 TestTestServer.test_request_recovery (open: type unknown) w47\n  ⚠ maybe_more tests/test_testserver.py:112 TestTestServer.test_request_recovery (open: type unknown) w48\n  ⚠ maybe_more tests/test_testserver.py:126 TestTestServer.test_requests_after_timeout_are_not_received (open: type unknown) w49\n  ⚠ maybe_more tests/test_testserver.py:140 TestTestServer.test_request_recovery_with_bigger_timeout (open: type unknown) w50\n  ⚠ maybe_more tests/testserver/server.py:90 Server._close_server_sock_ignore_errors (open: type unknown) w51\n  ⚠ maybe_more tests/testserver/server.py:103 Server._handle_requests (open: type unknown) w52",
+     "rpc_error": null
+    }
+   ]
+  },
+  "HTTPAdapter.send": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/requests/adapters.py:634",
+     "expand": "reset"
+    },
+    "ms": 67,
+    "chars": 593,
+    "text": "llmgraph · who_calls HTTPAdapter.send (src/requests/adapters.py:634): 24 open\n  ⚠ maybe_more: 24 calls (open: type unknown) w59\n  ⚠ plus 167 dynamic calls nearby that could reach anything w60\n  – ruled out: 19 same-name calls (proven: other target) [a][c] w61\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/a3202b-17.md (warning: 1507 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    296,
+    77,
+    67
+   ],
+   "steps": [
+    {
+     "handle": "w59",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/requests/adapters.py:634",
+      "expand": "w59"
+     },
+     "ms": 30,
+     "chars": 2363,
+     "text": "llmgraph · w59 lists 19 of 24 items\n  ⚠ maybe_more src/requests/auth.py:312 HTTPDigestAuth.handle_401 (open: type unknown) w62\n  ⚠ maybe_more src/requests/sessions.py:784 Session.send (open: type unknown) w63\n  ⚠ maybe_more tests/test_lowlevel.py:21 echo_response_handler (open: type unknown) w64\n  ⚠ maybe_more tests/test_lowlevel.py:46 test_chunked_encoding_error.incomplete_chunked_response_handler (open: type unknown) w65\n  ⚠ maybe_more tests/test_lowlevel.py:113 test_conflicting_content_lengths.multiple_content_length_response_handler (open: type unknown) w66\n  ⚠ maybe_more tests/test_lowlevel.py:156 test_digestauth_401_count_reset_on_redirect.digest_response_handler (open: type unknown) w67\n  ⚠ maybe_more tests/test_lowlevel.py:161 test_digestauth_401_count_reset_on_redirect.digest_response_handler (open: type unknown) w68\n  ⚠ maybe_more tests/test_lowlevel.py:167 test_digestauth_401_count_reset_on_redirect.digest_response_handler (open: type unknown) w69\n  ⚠ maybe_more tests/test_lowlevel.py:172 test_digestauth_401_count_reset_on_redirect.digest_response_handler (open: type unknown) w70\n  ⚠ maybe_more tests/test_lowlevel.py:212 test_digestauth_401_only_sent_once.digest_failed_response_handler (open: type unknown) w71\n  ⚠ maybe_more tests/test_lowlevel.py:218 test_digestauth_401_only_sent_once.digest_failed_response_handler (open: type unknown) w72\n  ⚠ maybe_more tests/test_lowlevel.py:255 test_digestauth_only_on_4xx.digest_response_handler (open: type unknown) w73\n  ⚠ maybe_more tests/test_lowlevel.py:316 test_redirect_rfc1808_to_non_ascii_location.redirect_resp_handler (open: type unknown) w74\n  ⚠ maybe_more tests/test_lowlevel.py:325 test_redirect_rfc1808_to_non_ascii_location.redirect_resp_handler (open: type unknown) w75\n  ⚠ maybe_more tests/test_lowlevel.py:372 test_fragment_update_on_redirect.response_handler (open: type unknown) w76\n  ⚠ maybe_more tests/test_lowlevel.py:378 test_fragment_update_on_redirect.response_handler (open: type unknown) w77\n  ⚠ maybe_more tests/test_lowlevel.py:384 test_fragment_update_on_redirect.response_handler (open: type unknown) w78\n  ⚠ maybe_more tests/test_lowlevel.py:411 test_json_decode_compatibility_for_alt_utf_encodings.response_handler (open: type unknown) w79\n  ⚠ maybe_more tests/test_requests.py:1626 TestRequests.test_session_pickling (open: type unknown) w80\n  +5 more w81",
+     "rpc_error": null
+    }
+   ]
+  },
+  "Response.json": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/requests/models.py:1091",
+     "expand": "reset"
+    },
+    "ms": 51,
+    "chars": 380,
+    "text": "llmgraph · who_calls Response.json (src/requests/models.py:1091): 20 open\n  ⚠ maybe_more: 20 calls (open: type unknown) w90\n  ⚠ passed as a value in 6 places: calls through it are not visible w91\n  ⚠ same-name attribute uses, not checked: 2 w92\n  ⚠ plus 169 dynamic calls nearby that could reach anything w93\n  detail: .llmgraph/a3202b-21.md (warning: 1172 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    100,
+    59,
+    51
+   ],
+   "steps": [
+    {
+     "handle": "w90",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/requests/models.py:1091",
+      "expand": "w90"
+     },
+     "ms": 24,
+     "chars": 2383,
+     "text": "llmgraph · w90 lists 20 items\n  ⚠ maybe_more tests/test_lowlevel.py:425 test_json_decode_compatibility_for_alt_utf_encodings (open: type unknown) w94\n  ⚠ maybe_more tests/test_requests.py:237 TestRequests.test_HTTP_307_ALLOW_REDIRECT_POST (open: type unknown) w95\n  ⚠ maybe_more tests/test_requests.py:249 TestRequests.test_HTTP_307_ALLOW_REDIRECT_POST_WITH_SEEKABLE (open: type unknown) w96\n  ⚠ maybe_more tests/test_requests.py:394 TestRequests.test_cookie_sent_on_redirect (open: type unknown) w97\n  ⚠ maybe_more tests/test_requests.py:421 TestRequests.test_request_cookie_overrides_session_cookie (open: type unknown) w98\n  ⚠ maybe_more tests/test_requests.py:438 TestRequests.test_generic_cookiejar_works (open: type unknown) w99\n  ⚠ maybe_more tests/test_requests.py:448 TestRequests.test_param_cookiejar_works (open: type unknown) w100\n  ⚠ maybe_more tests/test_requests.py:658 TestRequests.test_proxy_authorization_preserved_on_request (open: type unknown) w101\n  ⚠ maybe_more tests/test_requests.py:874 TestRequests.test_POSTBIN_SEEKED_OBJECT_WITH_NO_ITER (open: type unknown) w102\n  ⚠ maybe_more tests/test_requests.py:880 TestRequests.test_POSTBIN_SEEKED_OBJECT_WITH_NO_ITER (open: type unknown) w103\n  ⚠ maybe_more tests/test_requests.py:921 TestRequests.test_post_with_custom_mapping (open: type unknown) w104\n  ⚠ maybe_more tests/test_requests.py:1099 TestRequests.test_post_named_tempfile (open: type unknown) w105\n  ⚠ maybe_more tests/test_requests.py:1114 TestRequests.test_post_getattr_proxy_read_only (open: type unknown) w106\n  ⚠ maybe_more tests/test_requests.py:1254 TestRequests.test_prepared_from_session (open: type unknown) w107\n  ⚠ maybe_more tests/test_requests.py:1768 TestRequests.test_params_are_merged_case_sensitive (open: type unknown) w108\n  ⚠ maybe_more tests/test_requests.py:2115 TestRequests.test_getattr_proxy_stream_follows_redirect (open: type unknown) w109\n  ⚠ maybe_more tests/test_requests.py:2165 TestRequests.test_json_param_post_content_type_works (open: type unknown) w110\n  ⚠ maybe_more tests/test_requests.py:2239 TestRequests.test_response_json_when_content_is_None (open: type unknown) w111\n  ⚠ maybe_more tests/test_requests.py:2902 TestPreparingURLs.test_json_decode_compatibility (open: type unknown) w112\n  ⚠ maybe_more tests/test_requests.py:2910 TestPreparingURLs.test_json_decode_persists_doc_attr (open: type unknown) w113",
+     "rpc_error": null
+    }
+   ]
+  }
+ },
+ "catchup_wait_ms": 30704,
+ "catchup_converged": true,
+ "exit_ms": 548,
+ "engines_after": 0
+}

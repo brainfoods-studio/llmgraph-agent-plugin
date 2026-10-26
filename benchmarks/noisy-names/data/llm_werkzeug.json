@@ -1,0 +1,383 @@
+{
+ "when": "2026-10-20T13:58:55.112Z",
+ "repo": "werkzeug",
+ "marks": {
+  "initialize": 352,
+  "first_answer": 6437,
+  "settled": 6437
+ },
+ "symbols": {
+  "safe_join": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "safe_join",
+     "expand": "reset"
+    },
+    "ms": 68,
+    "chars": 344,
+    "text": "llmgraph · who_calls safe_join (src/werkzeug/security.py:143): 8 in a set\n  ◇ within_these 8 calls -> one of 1 safe_join (closed: repo only) [c] w169\n  ⚠ plus 5 dynamic calls nearby that could reach anything w170\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/1b1b75-39.md (warning: 700 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    43,
+    68,
+    68
+   ],
+   "steps": [
+    {
+     "handle": "w169",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "safe_join",
+      "expand": "w169"
+     },
+     "ms": 52,
+     "chars": 1132,
+     "text": "llmgraph · w169 lists 8 items\n  ◇ within_these, one of 1 src/werkzeug/middleware/shared_data.py:159 SharedDataMiddleware.get_package_loader.loader -> safe_join (closed: repo only) [c] w171\n  ◇ within_these, one of 1 src/werkzeug/middleware/shared_data.py:195 SharedDataMiddleware.get_directory_loader.loader -> safe_join (closed: repo only) [c] w172\n  ◇ within_these, one of 1 src/werkzeug/utils.py:583 send_from_directory -> safe_join (closed: repo only) [c] w173\n  ◇ within_these, one of 1 tests/test_security.py:55 test_safe_join -> safe_join (closed: repo only) [c] w174\n  ◇ within_these, one of 1 tests/test_security.py:63 test_safe_join_os_sep -> safe_join (closed: repo only) [c] w175\n  ◇ within_these, one of 1 tests/test_security.py:68 test_safe_join_empty_trusted -> safe_join (closed: repo only) [c] w176\n  ◇ within_these, one of 1 tests/test_security.py:77 test_safe_join_windows_special -> safe_join (closed: repo only) [c] w177\n  ◇ within_these, one of 1 tests/test_security.py:82 test_safe_join_not_windows_special -> safe_join (closed: repo only) [c] w178\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    }
+   ]
+  },
+  "http_date": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/werkzeug/http.py:1033",
+     "expand": "reset"
+    },
+    "ms": 69,
+    "chars": 416,
+    "text": "llmgraph · who_calls http_date (src/werkzeug/http.py:1033): 8 in a set\n  ◇ within_these 8 calls -> one of 1 http_date (closed: repo only) [c] w185\n  ⚠ passed as a value in 4 places: calls through it are not visible w186\n  ⚠ plus 133 dynamic calls nearby that could reach anything w187\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/1b1b75-43.md (warning: 711 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    69,
+    70,
+    69
+   ],
+   "steps": [
+    {
+     "handle": "w185",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/werkzeug/http.py:1033",
+      "expand": "w185"
+     },
+     "ms": 51,
+     "chars": 1016,
+     "text": "llmgraph · w185 lists 8 items\n  ◇ within_these, one of 1 src/werkzeug/datastructures/range.py:75 IfRange.to_header -> http_date (closed: repo only) [c] w188\n  ◇ within_these, one of 1 src/werkzeug/http.py:1109 _dump_retry_after -> http_date (closed: repo only) [c] w189\n  ◇ within_these, one of 1 src/werkzeug/http.py:1416 dump_cookie -> http_date (closed: repo only) [c] w190\n  ◇ within_these, one of 1 src/werkzeug/http.py:1418 dump_cookie -> http_date (closed: repo only) [c] w191\n  ◇ within_these, one of 1 tests/test_apply_conditions.py:33 make_response -> http_date (closed: repo only) [c] w192\n  ◇ within_these, one of 1 tests/test_apply_conditions.py:39 make_response -> http_date (closed: repo only) [c] w193\n  ◇ within_these, one of 1 tests/test_http.py:697 test_http_date -> http_date (closed: repo only) [c] w194\n  ◇ within_these, one of 1 tests/test_send_file.py:127 test_no_cache_conditional_default -> http_date (closed: repo only) [c] w195\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    }
+   ]
+  },
+  "run_wsgi_app (function)": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/werkzeug/test.py:1231",
+     "expand": "reset"
+    },
+    "ms": 141,
+    "chars": 664,
+    "text": "llmgraph · who_calls run_wsgi_app (src/werkzeug/test.py:1231): 17 in a set, 2 open\n  ◇ within_these 17 calls -> one of 1 (closed: repo only) [c] w204\n  ⚠ maybe_more: 2 calls (open: type unknown) w205\n  ⚠ plus 44 dynamic calls nearby that could reach anything w206\n  – ruled out: 1 same-name call (proven: other target) [a][c] w207\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/1b1b75-47.md (warning: 1565 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    74,
+    72,
+    141
+   ],
+   "steps": [
+    {
+     "handle": "w204",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/werkzeug/test.py:1231",
+      "expand": "w204"
+     },
+     "ms": 59,
+     "chars": 2319,
+     "text": "llmgraph · w204 lists 17 items\n  ◇ within_these, one of 1 src/werkzeug/test.py:997 Client.run_wsgi_app -> run_wsgi_app (closed: repo only) [c] w208\n  ◇ within_these, one of 1 tests/middleware/test_dispatcher.py:27 test_dispatcher -> run_wsgi_app (closed: repo only) [c] w209\n  ◇ within_these, one of 1 tests/middleware/test_dispatcher.py:31 test_dispatcher -> run_wsgi_app (closed: repo only) [c] w210\n  ◇ within_these, one of 1 tests/middleware/test_lint.py:20 test_lint_middleware -> run_wsgi_app (closed: repo only) [c] w211\n  ◇ within_these, one of 1 tests/middleware/test_lint.py:38 test_lint_middleware_check_environ -> run_wsgi_app (closed: repo only) [c] w212\n  ◇ within_these, one of 1 tests/middleware/test_lint.py:51 test_lint_middleware_invalid_status -> run_wsgi_app (closed: repo only) [c] w213\n  ◇ within_these, one of 1 tests/middleware/test_lint.py:74 test_lint_middleware_http_headers -> run_wsgi_app (closed: repo only) [c] w214\n  ◇ within_these, one of 1 tests/middleware/test_lint.py:86 test_lint_middleware_invalid_location -> run_wsgi_app (closed: repo only) [c] w215\n  ◇ within_these, one of 1 tests/middleware/test_shared_data.py:38 test_shared_data_middleware -> run_wsgi_app (closed: repo only) [c] w216\n  ◇ within_these, one of 1 tests/middleware/test_shared_data.py:50 test_shared_data_middleware -> run_wsgi_app (closed: repo only) [c] w217\n  ◇ within_these, one of 1 tests/middleware/test_shared_data.py:60 test_shared_data_middleware -> run_wsgi_app (closed: repo only) [c] w218\n  ◇ within_these, one of 1 tests/test_test.py:648 test_run_wsgi_apps -> run_wsgi_app (closed: repo only) [c] w219\n  ◇ within_these, one of 1 tests/test_test.py:677 test_lazy_start_response_empty_response_app -> run_wsgi_app (closed: repo only) [c] w220\n  ◇ within_these, one of 1 tests/test_test.py:706 test_run_wsgi_app_closing_iterator -> run_wsgi_app (closed: repo only) [c] w221\n  ◇ within_these, one of 1 tests/test_test.py:716 test_run_wsgi_app_closing_iterator -> run_wsgi_app (closed: repo only) [c] w222\n  ◇ within_these, one of 1 tests/test_wrappers.py:277 test_base_response -> run_wsgi_app (closed: repo only) [c] w223\n  ◇ within_these, one of 1 tests/test_wsgi.py:312 test_closing_iterator -> run_wsgi_app (closed: repo only) [c] w224\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    },
+    {
+     "handle": "w205",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/werkzeug/test.py:1231",
+      "expand": "w205"
+     },
+     "ms": 52,
+     "chars": 225,
+     "text": "llmgraph · w205 lists 2 items\n  ⚠ maybe_more src/werkzeug/wrappers/response.py:286 Response.force_type (open: type unknown) w225\n  ⚠ maybe_more src/werkzeug/wrappers/response.py:312 Response.from_app (open: type unknown) w226",
+     "rpc_error": null
+    }
+   ]
+  },
+  "Client.run_wsgi_app (method)": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/werkzeug/test.py:991",
+     "expand": "reset"
+    },
+    "ms": 64,
+    "chars": 525,
+    "text": "llmgraph · who_calls Client.run_wsgi_app (src/werkzeug/test.py:991): 1 in a set\n  ◇ within_these, one of 1 src/werkzeug/test.py:1125 Client.open -> Client.run_wsgi_app (closed: repo only) [a][c] w231\n  ⚠ plus 44 dynamic calls nearby that could reach anything w232\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    66,
+    63,
+    64
+   ],
+   "steps": []
+  },
+  "Response.close": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/werkzeug/wrappers/response.py:496",
+     "expand": "reset"
+    },
+    "ms": 88,
+    "chars": 880,
+    "text": "llmgraph · who_calls Response.close (src/werkzeug/wrappers/response.py:496): 1 in a set, 31 open\n  ◇ within_these, one of 1 src/werkzeug/wrappers/response.py:517 Response.__exit__ -> Response.close (closed: repo only) [a][c] w245\n  ⚠ maybe_more: 31 calls (open: type unknown) w246\n  ⚠ passed as a value in 1 place: calls through it are not visible w247\n  ⚠ same-name attribute uses, not checked: 1 w248\n  ⚠ plus 19 dynamic calls nearby that could reach anything w249\n  – ruled out: 7 same-name calls (proven: 5 other target, 2 stdlib) [a][c] w250\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/1b1b75-55.md (warning: 1769 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    85,
+    92,
+    88
+   ],
+   "steps": [
+    {
+     "handle": "w246",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/werkzeug/wrappers/response.py:496",
+      "expand": "w246"
+     },
+     "ms": 63,
+     "chars": 2323,
+     "text": "llmgraph · w246 lists 24 of 31 items\n  ⚠ maybe_more examples/cupoftee/db.py:65 Database.close (open: type unknown) w251\n  ⚠ maybe_more examples/cupoftee/network.py:50 ServerBrowser._sync_server_browser (open: type unknown) w252\n  ⚠ maybe_more examples/cupoftee/network.py:82 Server._sync (open: type unknown) w253\n  ⚠ maybe_more src/werkzeug/datastructures/file_storage.py:137 FileStorage.save (open: type unknown) w254\n  ⚠ maybe_more src/werkzeug/datastructures/file_storage.py:142 FileStorage.close (open: type unknown) w255\n  ⚠ maybe_more src/werkzeug/datastructures/file_storage.py:216 FileMultiDict.close (open: type unknown) w256\n  ⚠ maybe_more src/werkzeug/debug/__init__.py:344 DebuggedApplication.debug_application (open: type unknown) w257\n  ⚠ maybe_more src/werkzeug/debug/__init__.py:347 DebuggedApplication.debug_application (open: type unknown) w258\n  ⚠ maybe_more src/werkzeug/formparser.py:379 MultiPartParser.__exit__ (open: type unknown) w259\n  ⚠ maybe_more src/werkzeug/middleware/lint.py:93 InputStream.close (open: type unknown) w260\n  ⚠ maybe_more src/werkzeug/middleware/lint.py:113 ErrorStream.close (open: type unknown) w261\n  ⚠ maybe_more src/werkzeug/middleware/lint.py:164 GuardedIterator.close (open: type unknown) w262\n  ⚠ maybe_more src/werkzeug/middleware/profiler.py:127 ProfilerMiddleware.__call__.runapp (open: type unknown) w263\n  ⚠ maybe_more src/werkzeug/test.py:672 EnvironBuilder.close (open: type unknown) w264\n  ⚠ maybe_more src/werkzeug/test.py:1058 Client.resolve_redirect (open: type unknown) w265\n  ⚠ maybe_more src/werkzeug/test.py:1138 Client.open (open: type unknown) w266\n  ⚠ maybe_more src/werkzeug/utils.py:499 send_file (open: type unknown) w267\n  ⚠ maybe_more src/werkzeug/utils.py:548 send_file (open: type unknown) w268\n  ⚠ maybe_more src/werkzeug/wrappers/request.py:490 Request.close (open: type unknown) w269\n  ⚠ maybe_more src/werkzeug/wrappers/response.py:504 Response.close (open: type unknown) w270\n  ⚠ maybe_more src/werkzeug/wsgi.py:334 _FileWrapper.close (open: type unknown) w271\n  ⚠ maybe_more src/werkzeug/wsgi.py:430 _RangeWrapper.close (open: type unknown) w272\n  ⚠ maybe_more tests/conftest.py:130 DevServerClient.__exit__ (open: type unknown) w273\n  ⚠ maybe_more tests/conftest.py:133 DevServerClient.__exit__ (open: type unknown) w274\n  +7 more w275",
+     "rpc_error": null
+    }
+   ]
+  }
+ },
+ "job1": {
+  "symbol": "safe_join",
+  "head": {
+   "name": "what_breaks_if_changed",
+   "arguments": {
+    "symbol": "safe_join",
+    "depth": 2,
+    "expand": "reset"
+   },
+   "ms": 101,
+   "chars": 505,
+   "text": "llmgraph · what_breaks_if_changed safe_join (depth 2): 11 places depend on it\n  ◇ within_these 8 calls -> one of 1 (closed: repo only) [c] w276\n  ⚠ plus 5 dynamic calls nearby that could reach anything w277\n  depth 2, each as strong as its weakest step:\n  ◇ +3 more places at depth 2, as weak as within_these [c] w278\n  ⚠ 2 more deeper calls we can't see: not followed w279\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/1b1b75-57.md (warning: 975 tokens if read in full)",
+   "rpc_error": null
+  },
+  "steps": [
+   {
+    "handle": "w276",
+    "name": "what_breaks_if_changed",
+    "arguments": {
+     "symbol": "safe_join",
+     "expand": "w276",
+     "depth": 2
+    },
+    "ms": 65,
+    "chars": 1028,
+    "text": "llmgraph · w276 lists 8 items\n  ◇ within_these, one of 1 src/werkzeug/middleware/shared_data.py:159 SharedDataMiddleware.get_package_loader.loader (closed: repo only) [c] w280\n  ◇ within_these, one of 1 src/werkzeug/middleware/shared_data.py:195 SharedDataMiddleware.get_directory_loader.loader (closed: repo only) [c] w281\n  ◇ within_these, one of 1 src/werkzeug/utils.py:583 send_from_directory (closed: repo only) [c] w282\n  ◇ within_these, one of 1 tests/test_security.py:55 test_safe_join (closed: repo only) [c] w283\n  ◇ within_these, one of 1 tests/test_security.py:63 test_safe_join_os_sep (closed: repo only) [c] w284\n  ◇ within_these, one of 1 tests/test_security.py:68 test_safe_join_empty_trusted (closed: repo only) [c] w285\n  ◇ within_these, one of 1 tests/test_security.py:77 test_safe_join_windows_special (closed: repo only) [c] w286\n  ◇ within_these, one of 1 tests/test_security.py:82 test_safe_join_not_windows_special (closed: repo only) [c] w287\n  assumes [c]: our own reading, not confirmed by the checker",
+    "rpc_error": null
+   }
+  ]
+ },
+ "job2": {
+  "file": "src/werkzeug/http.py",
+  "head": {
+   "name": "check_my_changes",
+   "arguments": {
+    "paths": [
+     "src/werkzeug/http.py"
+    ],
+    "expand": "reset"
+   },
+   "ms": 2778,
+   "chars": 1712,
+   "text": "llmgraph · check_my_changes: 1 file changed, 8 calls break\n  [delta] files that differ from the last commit (git HEAD): src/werkzeug/http.py: <module> body differs; http_date signature differs (parameters, defaults, types)\n  ⚠ type checker is down: now structure-only; 8 calls unchecked\n  module-level code in src/werkzeug/http.py changed (constants, types, interfaces): not checked; importers to retest: 25 w288\n  8 breaks: misses \"strict\" w289\n  ⚠ breaks if it runs http_date src/werkzeug/datastructures/range.py:75 IfRange.to_header (within_these, one of 1, closed: repo only) [c] w290\n  ⚠ breaks if it runs http_date src/werkzeug/http.py:1110 _dump_retry_after (within_these, one of 1, closed: repo only) [c] w291\n  ⚠ breaks if it runs http_date src/werkzeug/http.py:1417 dump_cookie (within_these, one of 1, closed: repo only) [c] w292\n  ⚠ breaks if it runs http_date src/werkzeug/http.py:1419 dump_cookie (within_these, one of 1, closed: repo only) [c] w293\n  ⚠ breaks if it runs http_date tests/test_apply_conditions.py:33 make_response (within_these, one of 1, closed: repo only) [c] w294\n  ⚠ breaks if it runs http_date tests/test_apply_conditions.py:39 make_response (within_these, one of 1, closed: repo only) [c] w295\n  ⚠ breaks if it runs http_date tests/test_http.py:697 test_http_date (within_these, one of 1, closed: repo only) [c] w296\n  ⚠ breaks if it runs http_date tests/test_send_file.py:127 test_no_cache_conditional_default (within_these, one of 1, closed: repo only) [c] w297\n  ⚠ http_date is passed as a value in 4 places: calls through it are not checked w298\n  ⚠ plus 133 dynamic calls nearby that could reach http_date w299\n  assumes [c]: our own reading, not confirmed by the checker",
+   "rpc_error": null
+  },
+  "steps": []
+ },
+ "error": null,
+ "symbols_early": {
+  "safe_join": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "safe_join",
+     "expand": "reset"
+    },
+    "ms": 72,
+    "chars": 339,
+    "text": "llmgraph · who_calls safe_join (src/werkzeug/security.py:143): 8 in a set\n  ◇ within_these 8 calls -> one of 1 safe_join (closed: repo only) [c] w7\n  ⚠ plus 5 dynamic calls nearby that could reach anything w8\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/1b1b75-4.md (warning: 695 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    57,
+    64,
+    72
+   ],
+   "steps": [
+    {
+     "handle": "w7",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "safe_join",
+      "expand": "w7"
+     },
+     "ms": 70,
+     "chars": 1121,
+     "text": "llmgraph · w7 lists 8 items\n  ◇ within_these, one of 1 src/werkzeug/middleware/shared_data.py:159 SharedDataMiddleware.get_package_loader.loader -> safe_join (closed: repo only) [c] w9\n  ◇ within_these, one of 1 src/werkzeug/middleware/shared_data.py:195 SharedDataMiddleware.get_directory_loader.loader -> safe_join (closed: repo only) [c] w10\n  ◇ within_these, one of 1 src/werkzeug/utils.py:583 send_from_directory -> safe_join (closed: repo only) [c] w11\n  ◇ within_these, one of 1 tests/test_security.py:55 test_safe_join -> safe_join (closed: repo only) [c] w12\n  ◇ within_these, one of 1 tests/test_security.py:63 test_safe_join_os_sep -> safe_join (closed: repo only) [c] w13\n  ◇ within_these, one of 1 tests/test_security.py:68 test_safe_join_empty_trusted -> safe_join (closed: repo only) [c] w14\n  ◇ within_these, one of 1 tests/test_security.py:77 test_safe_join_windows_special -> safe_join (closed: repo only) [c] w15\n  ◇ within_these, one of 1 tests/test_security.py:82 test_safe_join_not_windows_special -> safe_join (closed: repo only) [c] w16\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    }
+   ]
+  },
+  "http_date": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/werkzeug/http.py:1033",
+     "expand": "reset"
+    },
+    "ms": 64,
+    "chars": 412,
+    "text": "llmgraph · who_calls http_date (src/werkzeug/http.py:1033): 8 in a set\n  ◇ within_these 8 calls -> one of 1 http_date (closed: repo only) [c] w23\n  ⚠ passed as a value in 4 places: calls through it are not visible w24\n  ⚠ plus 133 dynamic calls nearby that could reach anything w25\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/1b1b75-8.md (warning: 708 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    92,
+    62,
+    64
+   ],
+   "steps": [
+    {
+     "handle": "w23",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/werkzeug/http.py:1033",
+      "expand": "w23"
+     },
+     "ms": 46,
+     "chars": 1007,
+     "text": "llmgraph · w23 lists 8 items\n  ◇ within_these, one of 1 src/werkzeug/datastructures/range.py:75 IfRange.to_header -> http_date (closed: repo only) [c] w26\n  ◇ within_these, one of 1 src/werkzeug/http.py:1109 _dump_retry_after -> http_date (closed: repo only) [c] w27\n  ◇ within_these, one of 1 src/werkzeug/http.py:1416 dump_cookie -> http_date (closed: repo only) [c] w28\n  ◇ within_these, one of 1 src/werkzeug/http.py:1418 dump_cookie -> http_date (closed: repo only) [c] w29\n  ◇ within_these, one of 1 tests/test_apply_conditions.py:33 make_response -> http_date (closed: repo only) [c] w30\n  ◇ within_these, one of 1 tests/test_apply_conditions.py:39 make_response -> http_date (closed: repo only) [c] w31\n  ◇ within_these, one of 1 tests/test_http.py:697 test_http_date -> http_date (closed: repo only) [c] w32\n  ◇ within_these, one of 1 tests/test_send_file.py:127 test_no_cache_conditional_default -> http_date (closed: repo only) [c] w33\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    }
+   ]
+  },
+  "run_wsgi_app (function)": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/werkzeug/test.py:1231",
+     "expand": "reset"
+    },
+    "ms": 88,
+    "chars": 660,
+    "text": "llmgraph · who_calls run_wsgi_app (src/werkzeug/test.py:1231): 17 in a set, 2 open\n  ◇ within_these 17 calls -> one of 1 (closed: repo only) [c] w42\n  ⚠ maybe_more: 2 calls (open: type unknown) w43\n  ⚠ plus 44 dynamic calls nearby that could reach anything w44\n  – ruled out: 1 same-name call (proven: other target) [a][c] w45\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/1b1b75-12.md (warning: 1560 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    63,
+    68,
+    88
+   ],
+   "steps": [
+    {
+     "handle": "w42",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/werkzeug/test.py:1231",
+      "expand": "w42"
+     },
+     "ms": 322,
+     "chars": 2301,
+     "text": "llmgraph · w42 lists 17 items\n  ◇ within_these, one of 1 src/werkzeug/test.py:997 Client.run_wsgi_app -> run_wsgi_app (closed: repo only) [c] w46\n  ◇ within_these, one of 1 tests/middleware/test_dispatcher.py:27 test_dispatcher -> run_wsgi_app (closed: repo only) [c] w47\n  ◇ within_these, one of 1 tests/middleware/test_dispatcher.py:31 test_dispatcher -> run_wsgi_app (closed: repo only) [c] w48\n  ◇ within_these, one of 1 tests/middleware/test_lint.py:20 test_lint_middleware -> run_wsgi_app (closed: repo only) [c] w49\n  ◇ within_these, one of 1 tests/middleware/test_lint.py:38 test_lint_middleware_check_environ -> run_wsgi_app (closed: repo only) [c] w50\n  ◇ within_these, one of 1 tests/middleware/test_lint.py:51 test_lint_middleware_invalid_status -> run_wsgi_app (closed: repo only) [c] w51\n  ◇ within_these, one of 1 tests/middleware/test_lint.py:74 test_lint_middleware_http_headers -> run_wsgi_app (closed: repo only) [c] w52\n  ◇ within_these, one of 1 tests/middleware/test_lint.py:86 test_lint_middleware_invalid_location -> run_wsgi_app (closed: repo only) [c] w53\n  ◇ within_these, one of 1 tests/middleware/test_shared_data.py:38 test_shared_data_middleware -> run_wsgi_app (closed: repo only) [c] w54\n  ◇ within_these, one of 1 tests/middleware/test_shared_data.py:50 test_shared_data_middleware -> run_wsgi_app (closed: repo only) [c] w55\n  ◇ within_these, one of 1 tests/middleware/test_shared_data.py:60 test_shared_data_middleware -> run_wsgi_app (closed: repo only) [c] w56\n  ◇ within_these, one of 1 tests/test_test.py:648 test_run_wsgi_apps -> run_wsgi_app (closed: repo only) [c] w57\n  ◇ within_these, one of 1 tests/test_test.py:677 test_lazy_start_response_empty_response_app -> run_wsgi_app (closed: repo only) [c] w58\n  ◇ within_these, one of 1 tests/test_test.py:706 test_run_wsgi_app_closing_iterator -> run_wsgi_app (closed: repo only) [c] w59\n  ◇ within_these, one of 1 tests/test_test.py:716 test_run_wsgi_app_closing_iterator -> run_wsgi_app (closed: repo only) [c] w60\n  ◇ within_these, one of 1 tests/test_wrappers.py:277 test_base_response -> run_wsgi_app (closed: repo only) [c] w61\n  ◇ within_these, one of 1 tests/test_wsgi.py:312 test_closing_iterator -> run_wsgi_app (closed: repo only) [c] w62\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    },
+    {
+     "handle": "w43",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/werkzeug/test.py:1231",
+      "expand": "w43"
+     },
+     "ms": 46,
+     "chars": 222,
+     "text": "llmgraph · w43 lists 2 items\n  ⚠ maybe_more src/werkzeug/wrappers/response.py:286 Response.force_type (open: type unknown) w63\n  ⚠ maybe_more src/werkzeug/wrappers/response.py:312 Response.from_app (open: type unknown) w64",
+     "rpc_error": null
+    }
+   ]
+  },
+  "Client.run_wsgi_app (method)": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/werkzeug/test.py:991",
+     "expand": "reset"
+    },
+    "ms": 53,
+    "chars": 523,
+    "text": "llmgraph · who_calls Client.run_wsgi_app (src/werkzeug/test.py:991): 1 in a set\n  ◇ within_these, one of 1 src/werkzeug/test.py:1125 Client.open -> Client.run_wsgi_app (closed: repo only) [a][c] w69\n  ⚠ plus 44 dynamic calls nearby that could reach anything w70\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    62,
+    62,
+    53
+   ],
+   "steps": []
+  },
+  "Response.close": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/werkzeug/wrappers/response.py:496",
+     "expand": "reset"
+    },
+    "ms": 70,
+    "chars": 874,
+    "text": "llmgraph · who_calls Response.close (src/werkzeug/wrappers/response.py:496): 1 in a set, 31 open\n  ◇ within_these, one of 1 src/werkzeug/wrappers/response.py:517 Response.__exit__ -> Response.close (closed: repo only) [a][c] w83\n  ⚠ maybe_more: 31 calls (open: type unknown) w84\n  ⚠ passed as a value in 1 place: calls through it are not visible w85\n  ⚠ same-name attribute uses, not checked: 1 w86\n  ⚠ plus 19 dynamic calls nearby that could reach anything w87\n  – ruled out: 7 same-name calls (proven: 5 other target, 2 stdlib) [a][c] w88\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/1b1b75-20.md (warning: 1760 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    93,
+    75,
+    70
+   ],
+   "steps": [
+    {
+     "handle": "w84",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/werkzeug/wrappers/response.py:496",
+      "expand": "w84"
+     },
+     "ms": 50,
+     "chars": 2311,
+     "text": "llmgraph · w84 lists 24 of 31 items\n  ⚠ maybe_more examples/cupoftee/db.py:65 Database.close (open: type unknown) w89\n  ⚠ maybe_more examples/cupoftee/network.py:50 ServerBrowser._sync_server_browser (open: type unknown) w90\n  ⚠ maybe_more examples/cupoftee/network.py:82 Server._sync (open: type unknown) w91\n  ⚠ maybe_more src/werkzeug/datastructures/file_storage.py:137 FileStorage.save (open: type unknown) w92\n  ⚠ maybe_more src/werkzeug/datastructures/file_storage.py:142 FileStorage.close (open: type unknown) w93\n  ⚠ maybe_more src/werkzeug/datastructures/file_storage.py:216 FileMultiDict.close (open: type unknown) w94\n  ⚠ maybe_more src/werkzeug/debug/__init__.py:344 DebuggedApplication.debug_application (open: type unknown) w95\n  ⚠ maybe_more src/werkzeug/debug/__init__.py:347 DebuggedApplication.debug_application (open: type unknown) w96\n  ⚠ maybe_more src/werkzeug/formparser.py:379 MultiPartParser.__exit__ (open: type unknown) w97\n  ⚠ maybe_more src/werkzeug/middleware/lint.py:93 InputStream.close (open: type unknown) w98\n  ⚠ maybe_more src/werkzeug/middleware/lint.py:113 ErrorStream.close (open: type unknown) w99\n  ⚠ maybe_more src/werkzeug/middleware/lint.py:164 GuardedIterator.close (open: type unknown) w100\n  ⚠ maybe_more src/werkzeug/middleware/profiler.py:127 ProfilerMiddleware.__call__.runapp (open: type unknown) w101\n  ⚠ maybe_more src/werkzeug/test.py:672 EnvironBuilder.close (open: type unknown) w102\n  ⚠ maybe_more src/werkzeug/test.py:1058 Client.resolve_redirect (open: type unknown) w103\n  ⚠ maybe_more src/werkzeug/test.py:1138 Client.open (open: type unknown) w104\n  ⚠ maybe_more src/werkzeug/utils.py:499 send_file (open: type unknown) w105\n  ⚠ maybe_more src/werkzeug/utils.py:548 send_file (open: type unknown) w106\n  ⚠ maybe_more src/werkzeug/wrappers/request.py:490 Request.close (open: type unknown) w107\n  ⚠ maybe_more src/werkzeug/wrappers/response.py:504 Response.close (open: type unknown) w108\n  ⚠ maybe_more src/werkzeug/wsgi.py:334 _FileWrapper.close (open: type unknown) w109\n  ⚠ maybe_more src/werkzeug/wsgi.py:430 _RangeWrapper.close (open: type unknown) w110\n  ⚠ maybe_more tests/conftest.py:130 DevServerClient.__exit__ (open: type unknown) w111\n  ⚠ maybe_more tests/conftest.py:133 DevServerClient.__exit__ (open: type unknown) w112\n  +7 more w113",
+     "rpc_error": null
+    }
+   ]
+  }
+ },
+ "catchup_wait_ms": 31128,
+ "catchup_converged": true,
+ "exit_ms": 773,
+ "engines_after": 0
+}

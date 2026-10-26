@@ -1,0 +1,61 @@
+{
+ "repo": "requests",
+ "symbols": {
+  "rebuild_proxies": {
+   "head": "llmgraph · who_calls SessionRedirectMixin.rebuild_proxies (src/requests/sessions.py:334): 3 in a set\n  ◇ within_these 3 calls -> one of 1 SessionRedirectMixin.rebuild_proxies (closed: repo only) [a][c] w3\n  ⚠ plus 168 dynamic calls nearby that could reach anything w4\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/ba091a-2.md (warning: 461 tokens if read in full)",
+   "ruled": []
+  },
+  "get_netrc_auth": {
+   "head": "llmgraph · who_calls get_netrc_auth (src/requests/utils.py:231): 5 in a set\n  ◇ within_these 5 calls -> one of 1 get_netrc_auth (closed: repo only) [c] w5\n  ⚠ same-name attribute uses, not checked: 1 w6\n  ⚠ plus 174 dynamic calls nearby that could reach anything w7\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/ba091a-3.md (warning: 533 tokens if read in full)",
+   "ruled": []
+  },
+  "Session.close": {
+   "head": "llmgraph · who_calls Session.close (src/requests/sessions.py:883): 2 in a set, 13 open\n  ◇ within_these 2 calls -> one of 1 (closed: repo only) [a][c] w8\n  ⚠ maybe_more: 13 calls (open: type unknown) w9\n  ⚠ plus 168 dynamic calls nearby that could reach anything w10\n  – ruled out: 4 same-name calls (proven: 3 other target, 1 stdlib) [a][c] w11\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/ba091a-4.md (warning: 1032 tokens if read in full)",
+   "ruled": [
+    {
+     "handle": "w11",
+     "text": "llmgraph · w11 lists 1 items\n  – ruled out: 4 same-name calls (proven: 3 other target, 1 stdlib) [a][c] w12\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    },
+    {
+     "handle": "w12",
+     "text": "llmgraph · w12 lists 1 items\n  – ruled out: 4 same-name calls (proven: 3 other target, 1 stdlib) [a][c] w13\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    },
+    {
+     "handle": "w13",
+     "text": "llmgraph · w13 lists 1 items\n  – ruled out: 4 same-name calls (proven: 3 other target, 1 stdlib) [a][c] w14\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    },
+    {
+     "handle": "w14",
+     "text": "llmgraph · w14 lists 1 items\n  – ruled out: 4 same-name calls (proven: 3 other target, 1 stdlib) [a][c] w15\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    }
+   ]
+  },
+  "HTTPAdapter.send": {
+   "head": "llmgraph · who_calls HTTPAdapter.send (src/requests/adapters.py:634): 1 certain, 23 open\n  ✓ certain src/requests/auth.py:312 HTTPDigestAuth.handle_401 [a] w16\n  ⚠ maybe_more: 23 calls (open: type unknown) w17\n  ⚠ plus 167 dynamic calls nearby that could reach anything w18\n  – ruled out: 19 same-name calls (proven: other target) [a][c] w19\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/ba091a-9.md (warning: 1514 tokens if read in full)",
+   "ruled": [
+    {
+     "handle": "w19",
+     "text": "llmgraph · w19 lists 1 items\n  – ruled out: 19 same-name calls (proven: other target) [a][c] w20\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    },
+    {
+     "handle": "w20",
+     "text": "llmgraph · w20 lists 1 items\n  – ruled out: 19 same-name calls (proven: other target) [a][c] w21\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    },
+    {
+     "handle": "w21",
+     "text": "llmgraph · w21 lists 1 items\n  – ruled out: 19 same-name calls (proven: other target) [a][c] w22\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    },
+    {
+     "handle": "w22",
+     "text": "llmgraph · w22 lists 1 items\n  – ruled out: 19 same-name calls (proven: other target) [a][c] w23\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    }
+   ]
+  },
+  "Response.json": {
+   "head": "llmgraph · who_calls Response.json (src/requests/models.py:1091): 20 open\n  ⚠ maybe_more: 20 calls (open: type unknown) w24\n  ⚠ passed as a value in 6 places: calls through it are not visible w25\n  ⚠ same-name attribute uses, not checked: 2 w26\n  ⚠ plus 170 dynamic calls nearby that could reach anything w27\n  detail: .llmgraph/ba091a-14.md (warning: 1172 tokens if read in full)",
+   "ruled": []
+  }
+ },
+ "error": null,
+ "engines_after": 1
+}

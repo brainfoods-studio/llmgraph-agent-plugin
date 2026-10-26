@@ -1,0 +1,23 @@
+Source: blind test 2026-10-22, requests v2.32.3. Edit: src/requests/utils.py:135 `super_len(o)` -> `super_len(o, strict)`. Tool: check_my_changes {}. Time 4851 ms (fresh session). Unedited answer as reported by the tester; the tester's grep found exactly these 16 calls.
+
+llmgraph · check_my_changes: 1 file changed, 16 calls break
+  [delta] files that differ from the last commit (git HEAD): src/requests/utils.py: super_len signature differs (parameters, types)
+  16 breaks: misses "strict" w1
+  ⚠ breaks if it runs super_len src/requests/models.py:526 PreparedRequest.prepare_body (within_these, one of 1, closed: repo only) [c] w2
+  ⚠ breaks if it runs super_len src/requests/models.py:575 PreparedRequest.prepare_content_length (within_these, one of 1, closed: repo only) [c] w3
+  ⚠ breaks if it runs super_len tests/test_utils.py:62 TestSuperLen.test_io_streams (within_these, one of 1, closed: repo only) [c] w4
+  ⚠ breaks if it runs super_len tests/test_utils.py:63 TestSuperLen.test_io_streams (within_these, one of 1, closed: repo only) [c] w5
+  ⚠ breaks if it runs super_len tests/test_utils.py:69 TestSuperLen.test_super_len_correctly_calculates_len_of_partially_read_file (within_these, one of 1, closed: repo only) [c] w6
+  ⚠ breaks if it runs super_len tests/test_utils.py:82 TestSuperLen.test_super_len_handles_files_raising_weird_errors_in_tell (within_these, one of 1, closed: repo only) [c] w7
+  ⚠ breaks if it runs super_len tests/test_utils.py:95 TestSuperLen.test_super_len_tell_ioerror (within_these, one of 1, closed: repo only) [c] w8
+  ⚠ breaks if it runs super_len tests/test_utils.py:98 TestSuperLen.test_string (within_these, one of 1, closed: repo only) [c] w9
+  ⚠ breaks if it runs super_len tests/test_utils.py:111 TestSuperLen.test_file (within_these, one of 1, closed: repo only) [c] w10
+  ⚠ breaks if it runs super_len tests/test_utils.py:124 TestSuperLen.test_tarfile_member (within_these, one of 1, closed: repo only) [c] w11
+  ⚠ breaks if it runs super_len tests/test_utils.py:128 TestSuperLen.test_super_len_with__len__ (within_these, one of 1, closed: repo only) [c] w12
+  ⚠ breaks if it runs super_len tests/test_utils.py:136 TestSuperLen.test_super_len_with_no__len__ (within_these, one of 1, closed: repo only) [c] w13
+  ⚠ breaks if it runs super_len tests/test_utils.py:140 TestSuperLen.test_super_len_with_tell (within_these, one of 1, closed: repo only) [c] w14
+  ⚠ breaks if it runs super_len tests/test_utils.py:142 TestSuperLen.test_super_len_with_tell (within_these, one of 1, closed: repo only) [c] w15
+  ⚠ breaks if it runs super_len tests/test_utils.py:146 TestSuperLen.test_super_len_with_fileno (within_these, one of 1, closed: repo only) [c] w16
+  ⚠ breaks if it runs super_len tests/test_utils.py:152 TestSuperLen.test_super_len_with_no_matches (within_these, one of 1, closed: repo only) [c] w17
+  ⚠ plus 9 dynamic calls nearby that could reach super_len w18
+  assumes [c]: our own reading, not confirmed by the checker

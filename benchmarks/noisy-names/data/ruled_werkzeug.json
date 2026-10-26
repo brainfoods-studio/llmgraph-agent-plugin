@@ -1,0 +1,61 @@
+{
+ "repo": "werkzeug",
+ "symbols": {
+  "safe_join": {
+   "head": "llmgraph · who_calls safe_join (src/werkzeug/security.py:143): 8 in a set\n  ◇ within_these 8 calls -> one of 1 safe_join (closed: repo only) [c] w3\n  ⚠ plus 5 dynamic calls nearby that could reach anything w4\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/a5869e-2.md (warning: 695 tokens if read in full)",
+   "ruled": []
+  },
+  "http_date": {
+   "head": "llmgraph · who_calls http_date (src/werkzeug/http.py:1033): 8 in a set\n  ◇ within_these 8 calls -> one of 1 http_date (closed: repo only) [c] w5\n  ⚠ passed as a value in 4 places: calls through it are not visible w6\n  ⚠ plus 133 dynamic calls nearby that could reach anything w7\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/a5869e-3.md (warning: 705 tokens if read in full)",
+   "ruled": []
+  },
+  "run_wsgi_app (function)": {
+   "head": "llmgraph · who_calls run_wsgi_app (src/werkzeug/test.py:1231): 17 in a set, 2 open\n  ◇ within_these 17 calls -> one of 1 (closed: repo only) [c] w8\n  ⚠ maybe_more: 2 calls (open: type unknown) w9\n  ⚠ plus 44 dynamic calls nearby that could reach anything w10\n  – ruled out: 1 same-name call (proven: other target) [a][c] w11\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/a5869e-4.md (warning: 1554 tokens if read in full)",
+   "ruled": [
+    {
+     "handle": "w11",
+     "text": "llmgraph · w11 lists 1 items\n  – ruled out: 1 same-name call (proven: other target) [a][c] w12\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    },
+    {
+     "handle": "w12",
+     "text": "llmgraph · w12 lists 1 items\n  – ruled out: 1 same-name call (proven: other target) [a][c] w13\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    },
+    {
+     "handle": "w13",
+     "text": "llmgraph · w13 lists 1 items\n  – ruled out: 1 same-name call (proven: other target) [a][c] w14\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    },
+    {
+     "handle": "w14",
+     "text": "llmgraph · w14 lists 1 items\n  – ruled out: 1 same-name call (proven: other target) [a][c] w15\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    }
+   ]
+  },
+  "Client.run_wsgi_app (method)": {
+   "head": "llmgraph · who_calls Client.run_wsgi_app (src/werkzeug/test.py:991): 1 in a set\n  ◇ within_these, one of 1 src/werkzeug/test.py:1125 Client.open -> Client.run_wsgi_app (closed: repo only) [a][c] w16\n  ⚠ plus 44 dynamic calls nearby that could reach anything w17\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker",
+   "ruled": []
+  },
+  "Response.close": {
+   "head": "llmgraph · who_calls Response.close (src/werkzeug/wrappers/response.py:496): 1 in a set, 28 open\n  ◇ within_these, one of 1 src/werkzeug/wrappers/response.py:517 Response.__exit__ -> Response.close (closed: repo only) [a][c] w18\n  ⚠ maybe_more: 28 calls (open: type unknown) w19\n  ⚠ passed as a value in 1 place: calls through it are not visible w20\n  ⚠ same-name attribute uses, not checked: 1 w21\n  ⚠ plus 19 dynamic calls nearby that could reach anything w22\n  – ruled out: 10 same-name calls (proven: 5 other target, 5 stdlib) [a][c] w23\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/a5869e-10.md (warning: 1632 tokens if read in full)",
+   "ruled": [
+    {
+     "handle": "w23",
+     "text": "llmgraph · w23 lists 1 items\n  – ruled out: 10 same-name calls (proven: 5 other target, 5 stdlib) [a][c] w24\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    },
+    {
+     "handle": "w24",
+     "text": "llmgraph · w24 lists 1 items\n  – ruled out: 10 same-name calls (proven: 5 other target, 5 stdlib) [a][c] w25\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    },
+    {
+     "handle": "w25",
+     "text": "llmgraph · w25 lists 1 items\n  – ruled out: 10 same-name calls (proven: 5 other target, 5 stdlib) [a][c] w26\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    },
+    {
+     "handle": "w26",
+     "text": "llmgraph · w26 lists 1 items\n  – ruled out: 10 same-name calls (proven: 5 other target, 5 stdlib) [a][c] w27\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    }
+   ]
+  }
+ },
+ "error": null,
+ "engines_after": 0
+}

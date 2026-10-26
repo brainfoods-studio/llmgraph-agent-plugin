@@ -1,0 +1,4 @@
+clean (rg naive: 0 wrong-call lines): 10 symbols | rg 1 call 1966 tok (avg 196) | rg 3 calls 3961 | LG head 1231 | LG full 3576 (avg 357) | LG calls 19
+    ['rebuild_proxies', 'get_netrc_auth', 'Response.json', 'strip_control_codes', 'Console.render_str', 'safe_join', 'http_date', 'getCookie', 'Context.notFound', 'parseBody (utils/body.ts)']
+noisy (rg naive: >=1 wrong-call line): 9 symbols | rg 1 call 12234 tok (avg 1359) | rg 3 calls 20795 | LG head 1629 | LG full 5013 (avg 557) | LG calls 20
+    ['Session.close', 'HTTPAdapter.send', 'Console.render', 'ProgressColumn.render', 'run_wsgi_app (function)', 'Client.run_wsgi_app (method)', 'Response.close', 'getPath (url.ts)', 'Context.get']

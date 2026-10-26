@@ -1,0 +1,198 @@
+{
+ "when": "2026-10-20T14:19:08.997Z",
+ "repo": "hono",
+ "marks": {
+  "initialize": 388,
+  "first_answer": 4890,
+  "settled": 4890
+ },
+ "symbols": {
+  "Context.notFound asked as 'notFound'": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "notFound",
+     "expand": "reset"
+    },
+    "ms": 40,
+    "chars": 302,
+    "text": "llmgraph · no function, method, class or component named \"notFound\" (variables and enum members are not tracked); similar: NotFoundHandler, notFoundHandler, NotFoundResponse; 8 files with syntax errors could define it: src/context.ts, src/helper/factory/index.ts, src/helper/ssg/middleware.ts, +5 files",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    39,
+    51,
+    40
+   ],
+   "steps": []
+  },
+  "Context.notFound asked as 'Context.notFound'": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "Context.notFound",
+     "expand": "reset"
+    },
+    "ms": 197,
+    "chars": 306,
+    "text": "llmgraph · no function, method, class or component named \"Context.notFound\" (variables and enum members are not tracked); similar: Context, ClientResponse.text, HonoRequest.text; 8 files with syntax errors could define it: src/context.ts, src/helper/factory/index.ts, src/helper/ssg/middleware.ts, +5 files",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    229,
+    215,
+    197
+   ],
+   "steps": []
+  },
+  "Context.get asked as 'Context.get'": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "Context.get",
+     "expand": "reset"
+    },
+    "ms": 97,
+    "chars": 306,
+    "text": "llmgraph · no function, method, class or component named \"Context.get\" (variables and enum members are not tracked); similar: Context, ClientResponse.text, HonoRequest.text, Get; 8 files with syntax errors could define it: src/context.ts, src/helper/factory/index.ts, src/helper/ssg/middleware.ts, +5 files",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    95,
+    59,
+    97
+   ],
+   "steps": []
+  },
+  "Context.get asked as 'get'": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "get",
+     "expand": "reset"
+    },
+    "ms": 69,
+    "chars": 382,
+    "text": "llmgraph · who_calls createProxy.get (src/client/client.ts:17): 62 open\n  ⚠ type checker is down: now structure-only\n  ⚠ maybe_more: 62 calls (open: no type checker covers this file) w41\n  ⚠ plus 3 dynamic calls nearby that could reach anything w42\n  8 files have syntax errors; symbols there were not compared\n  detail: .llmgraph/22b84d-38.md (warning: 3020 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    45,
+    48,
+    69
+   ],
+   "steps": [
+    {
+     "handle": "w41",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "get",
+      "expand": "w41"
+     },
+     "ms": 24,
+     "chars": 2383,
+     "text": "llmgraph · w41 lists 21 of 62 items\n  ⚠ maybe_more src/adapter/aws-lambda/handler.ts:379 EventProcessor.createResult (open: no type checker covers this file) w43\n  ⚠ maybe_more src/adapter/aws-lambda/handler.ts:384 EventProcessor.createResult (open: no type checker covers this file) w44\n  ⚠ maybe_more src/adapter/cloudflare-workers/utils.ts:51 getContentFromKVAsset (open: no type checker covers this file) w45\n  ⚠ maybe_more src/adapter/lambda-edge/handler.ts:168 createResult (open: no type checker covers this file) w46\n  ⚠ maybe_more src/adapter/lambda-edge/handler.ts:170 createResult (open: no type checker covers this file) w47\n  ⚠ maybe_more src/client/fetch-result-please.ts:81 detectResponseType (open: no type checker covers this file) w48\n  ⚠ maybe_more src/context.ts:583 Context (open: no type checker covers this file) w49\n  ⚠ maybe_more src/helper/cookie/index.ts:28 getCookie (open: no type checker covers this file) w50\n  ⚠ maybe_more src/helper/cookie/index.ts:56 getSignedCookie (open: no type checker covers this file) w51\n  ⚠ maybe_more src/helper/css/index.ts:90 createCssContext.newCssClassNameObject.appendStyle (open: no type checker covers this file) w52\n  ⚠ maybe_more src/helper/css/index.ts:111 createCssContext.newCssClassNameObject.appendStyle (open: no type checker covers this file) w53\n  ⚠ maybe_more src/helper/css/index.ts:128 createCssContext.newCssClassNameObject.addClassNameToContext (open: no type checker covers this file) w54\n  ⚠ maybe_more src/helper/proxy/index.ts:63 buildRequestInitFromRequest (open: no type checker covers this file) w55\n  ⚠ maybe_more src/helper/proxy/index.ts:179 proxy (open: no type checker covers this file) w56\n  ⚠ maybe_more src/helper/route/index.ts:110 basePath (open: no type checker covers this file) w57\n  ⚠ maybe_more src/helper/ssg/plugins.ts:59 redirectPlugin (open: no type checker covers this file) w58\n  ⚠ maybe_more src/helper/ssg/ssg.ts:75 parseResponseContent (open: no type checker covers this file) w59\n  ⚠ maybe_more src/helper/ssg/ssg.ts:270 (open: no type checker covers this file) w60\n  ⚠ maybe_more src/helper/ssg/ssg.ts:283 (open: no type checker covers this file) w61\n  ⚠ maybe_more src/jsx/context.ts:90 getContextValuesIn (open: no type checker covers this file) w62\n  ⚠ maybe_more src/jsx/context.ts:105 readContextValueIn (open: no type checker covers this file) w63\n  +41 more w64",
+     "rpc_error": null
+    }
+   ]
+  }
+ },
+ "job1": null,
+ "job2": null,
+ "error": null,
+ "symbols_early": {
+  "Context.notFound asked as 'notFound'": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "notFound",
+     "expand": "reset"
+    },
+    "ms": 55,
+    "chars": 302,
+    "text": "llmgraph · no function, method, class or component named \"notFound\" (variables and enum members are not tracked); similar: NotFoundHandler, notFoundHandler, NotFoundResponse; 8 files with syntax errors could define it: src/context.ts, src/helper/factory/index.ts, src/helper/ssg/middleware.ts, +5 files",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    40,
+    58,
+    55
+   ],
+   "steps": []
+  },
+  "Context.notFound asked as 'Context.notFound'": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "Context.notFound",
+     "expand": "reset"
+    },
+    "ms": 249,
+    "chars": 306,
+    "text": "llmgraph · no function, method, class or component named \"Context.notFound\" (variables and enum members are not tracked); similar: Context, ClientResponse.text, HonoRequest.text; 8 files with syntax errors could define it: src/context.ts, src/helper/factory/index.ts, src/helper/ssg/middleware.ts, +5 files",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    171,
+    234,
+    249
+   ],
+   "steps": []
+  },
+  "Context.get asked as 'Context.get'": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "Context.get",
+     "expand": "reset"
+    },
+    "ms": 95,
+    "chars": 306,
+    "text": "llmgraph · no function, method, class or component named \"Context.get\" (variables and enum members are not tracked); similar: Context, ClientResponse.text, HonoRequest.text, Get; 8 files with syntax errors could define it: src/context.ts, src/helper/factory/index.ts, src/helper/ssg/middleware.ts, +5 files",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    103,
+    100,
+    95
+   ],
+   "steps": []
+  },
+  "Context.get asked as 'get'": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "get",
+     "expand": "reset"
+    },
+    "ms": 77,
+    "chars": 380,
+    "text": "llmgraph · who_calls createProxy.get (src/client/client.ts:17): 62 open\n  ⚠ type checker is down: now structure-only\n  ⚠ maybe_more: 62 calls (open: no type checker covers this file) w7\n  ⚠ plus 3 dynamic calls nearby that could reach anything w8\n  8 files have syntax errors; symbols there were not compared\n  detail: .llmgraph/22b84d-13.md (warning: 3004 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    93,
+    59,
+    77
+   ],
+   "steps": [
+    {
+     "handle": "w7",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "get",
+      "expand": "w7"
+     },
+     "ms": 33,
+     "chars": 2432,
+     "text": "llmgraph · w7 lists 21 of 62 items\n  ⚠ maybe_more src/adapter/aws-lambda/handler.ts:379 EventProcessor.createResult (open: no type checker covers this file) w9\n  ⚠ maybe_more src/adapter/aws-lambda/handler.ts:384 EventProcessor.createResult (open: no type checker covers this file) w10\n  ⚠ maybe_more src/adapter/cloudflare-workers/utils.ts:51 getContentFromKVAsset (open: no type checker covers this file) w11\n  ⚠ maybe_more src/adapter/lambda-edge/handler.ts:168 createResult (open: no type checker covers this file) w12\n  ⚠ maybe_more src/adapter/lambda-edge/handler.ts:170 createResult (open: no type checker covers this file) w13\n  ⚠ maybe_more src/client/fetch-result-please.ts:81 detectResponseType (open: no type checker covers this file) w14\n  ⚠ maybe_more src/context.ts:583 Context (open: no type checker covers this file) w15\n  ⚠ maybe_more src/helper/cookie/index.ts:28 getCookie (open: no type checker covers this file) w16\n  ⚠ maybe_more src/helper/cookie/index.ts:56 getSignedCookie (open: no type checker covers this file) w17\n  ⚠ maybe_more src/helper/css/index.ts:90 createCssContext.newCssClassNameObject.appendStyle (open: no type checker covers this file) w18\n  ⚠ maybe_more src/helper/css/index.ts:111 createCssContext.newCssClassNameObject.appendStyle (open: no type checker covers this file) w19\n  ⚠ maybe_more src/helper/css/index.ts:128 createCssContext.newCssClassNameObject.addClassNameToContext (open: no type checker covers this file) w20\n  ⚠ maybe_more src/helper/proxy/index.ts:63 buildRequestInitFromRequest (open: no type checker covers this file) w21\n  ⚠ maybe_more src/helper/proxy/index.ts:179 proxy (open: no type checker covers this file) w22\n  ⚠ maybe_more src/helper/route/index.ts:110 basePath (open: no type checker covers this file) w23\n  ⚠ maybe_more src/helper/ssg/plugins.ts:59 redirectPlugin (open: no type checker covers this file) w24\n  ⚠ maybe_more src/helper/ssg/ssg.ts:75 parseResponseContent (open: no type checker covers this file) w25\n  ⚠ maybe_more src/helper/ssg/ssg.ts:270 (open: no type checker covers this file) w26\n  ⚠ maybe_more src/helper/ssg/ssg.ts:283 (open: no type checker covers this file) w27\n  ⚠ maybe_more src/jsx/context.ts:90 getContextValuesIn (open: no type checker covers this file) w28\n  ⚠ maybe_more src/jsx/context.ts:105 readContextValueIn (open: no type checker covers this file) w29\n  +41 more w30\n  index catching up: 3330 calls not yet re-checked",
+     "rpc_error": null
+    }
+   ]
+  }
+ },
+ "catchup_wait_ms": 31100,
+ "catchup_converged": true,
+ "exit_ms": 326,
+ "engines_after": 0
+}

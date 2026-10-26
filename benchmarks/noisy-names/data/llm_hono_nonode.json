@@ -1,0 +1,343 @@
+{
+ "when": "2026-10-20T13:59:41.369Z",
+ "repo": "hono",
+ "marks": {
+  "initialize": 321,
+  "first_answer": 4263,
+  "settled": 4263
+ },
+ "symbols": {
+  "getCookie": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/helper/cookie/index.ts:27",
+     "expand": "reset"
+    },
+    "ms": 45,
+    "chars": 470,
+    "text": "llmgraph · who_calls getCookie (src/helper/cookie/index.ts:27): 9 in a set\n  ⚠ type checker is down: now structure-only; 9 calls unchecked\n  ◇ within_these 9 calls -> one of 1 getCookie (closed: repo only) [c] w191\n  ⚠ plus 1 dynamic call nearby that could reach anything w192\n  8 files have syntax errors; symbols there were not compared\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/ccac2e-43.md (warning: 761 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    35,
+    33,
+    45
+   ],
+   "steps": [
+    {
+     "handle": "w191",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/helper/cookie/index.ts:27",
+      "expand": "w191"
+     },
+     "ms": 18,
+     "chars": 1057,
+     "text": "llmgraph · w191 lists 9 items\n  ◇ within_these, one of 1 src/helper/cookie/index.ts:142 deleteCookie -> getCookie (closed: repo only) [c] w193\n  ◇ within_these, one of 1 src/middleware/jwk/jwk.ts:101 jwk -> getCookie (closed: repo only) [c] w194\n  ◇ within_these, one of 1 src/middleware/jwk/jwk.ts:115 jwk -> getCookie (closed: repo only) [c] w195\n  ◇ within_these, one of 1 src/middleware/jwk/jwk.ts:117 jwk -> getCookie (closed: repo only) [c] w196\n  ◇ within_these, one of 1 src/middleware/jwt/jwt.ts:101 jwt -> getCookie (closed: repo only) [c] w197\n  ◇ within_these, one of 1 src/middleware/jwt/jwt.ts:115 jwt -> getCookie (closed: repo only) [c] w198\n  ◇ within_these, one of 1 src/middleware/jwt/jwt.ts:117 jwt -> getCookie (closed: repo only) [c] w199\n  ◇ within_these, one of 1 src/middleware/language/language.ts:146 detectFromCookie -> getCookie (closed: repo only) [c] w200\n  ◇ within_these, one of 1 src/validator/validator.ts:158 validator -> getCookie (closed: repo only) [c] w201\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    }
+   ]
+  },
+  "Context.notFound": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/context.ts:793",
+     "expand": "reset"
+    },
+    "ms": 82,
+    "chars": 775,
+    "text": "llmgraph · who_calls Context (src/context.ts:293): 1 in a set, 6 open\n  ⚠ type checker is down: now structure-only; 1 call unchecked\n  ◇ within_these, one of 1 src/adapter/cloudflare-pages/handler.ts:70 handleMiddleware -> Context (closed: repo only) [c] w214\n  ⚠ maybe_more: 6 calls (open: file not analysed) w215\n  ⚠ passed as a value in 86 places: calls through it are not visible w216\n  ⚠ same-name attribute uses, not checked: 18 w217\n  ⚠ plus 70 dynamic calls nearby that could reach anything w218\n  not tracked: uses as a type, in isinstance checks and in typeof checks w219\n  8 files have syntax errors; symbols there were not compared\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/ccac2e-47.md (warning: 614 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    56,
+    75,
+    82
+   ],
+   "steps": [
+    {
+     "handle": "w215",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/context.ts:793",
+      "expand": "w215"
+     },
+     "ms": 19,
+     "chars": 630,
+     "text": "llmgraph · w215 lists 6 items\n  ⚠ maybe_more src/context.ts:658 Context (open: file not analysed (a file could not be read)) w220\n  ⚠ maybe_more src/context.ts:685 Context (open: file not analysed (a file could not be read)) w221\n  ⚠ maybe_more src/context.ts:706 Context (open: file not analysed (a file could not be read)) w222\n  ⚠ maybe_more src/context.ts:733 Context (open: file not analysed (a file could not be read)) w223\n  ⚠ maybe_more src/context.ts:746 Context.res (open: file not analysed (a file could not be read)) w224\n  ⚠ maybe_more src/hono-base.ts:440 Hono.#dispatch (open: no type checker covers this file) w225",
+     "rpc_error": null
+    }
+   ]
+  },
+  "getPath (url.ts)": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/utils/url.ts:106",
+     "expand": "reset"
+    },
+    "ms": 43,
+    "chars": 828,
+    "text": "llmgraph · who_calls getPath (src/utils/url.ts:106): 1 in a set, 3 open\n  ⚠ type checker is down: now structure-only; 1 call unchecked\n  ◇ within_these, one of 1 src/utils/url.ts:155 getPathNoStrict -> getPath (closed: repo only) [c] w238\n  ⚠ maybe_more: 2 calls (open: no type checker covers this file) w239\n  ⚠ cannot_see src/adapter/aws-lambda/handler.ts:350 EventProcessor.createRequest (open: file not analysed (a file could not be read)) w240\n  ⚠ passed as a value in 1 place: calls through it are not visible w241\n  ⚠ same-name attribute uses, not checked: 2 w242\n  ⚠ plus 23 dynamic calls nearby that could reach anything w243\n  8 files have syntax errors; symbols there were not compared\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/ccac2e-51.md (warning: 445 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    33,
+    48,
+    43
+   ],
+   "steps": [
+    {
+     "handle": "w239",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/utils/url.ts:106",
+      "expand": "w239"
+     },
+     "ms": 18,
+     "chars": 219,
+     "text": "llmgraph · w239 lists 2 items\n  ⚠ maybe_more src/hono-base.ts:387 Hono.mount (open: no type checker covers this file) w244\n  ⚠ maybe_more src/hono-base.ts:437 Hono.#dispatch (open: no type checker covers this file) w245",
+     "rpc_error": null
+    }
+   ]
+  },
+  "parseBody (utils/body.ts)": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/utils/body.ts:100",
+     "expand": "reset"
+    },
+    "ms": 23,
+    "chars": 553,
+    "text": "llmgraph · who_calls parseBody (src/utils/body.ts:100): 1 in a set, 1 open\n  ⚠ type checker is down: now structure-only; 1 call unchecked\n  ◇ within_these, one of 1 src/middleware/method-override/index.ts:93 methodOverride -> parseBody (closed: repo only) [c] w252\n  ⚠ maybe_more src/request.ts:214 HonoRequest.parseBody (open: no type checker covers this file) w253\n  ⚠ plus 10 dynamic calls nearby that could reach anything w254\n  8 files have syntax errors; symbols there were not compared\n  assumes [c]: our own reading, not confirmed by the checker",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    32,
+    27,
+    23
+   ],
+   "steps": []
+  },
+  "Context.get": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/context.ts:575",
+     "expand": "reset"
+    },
+    "ms": 55,
+    "chars": 775,
+    "text": "llmgraph · who_calls Context (src/context.ts:293): 1 in a set, 6 open\n  ⚠ type checker is down: now structure-only; 1 call unchecked\n  ◇ within_these, one of 1 src/adapter/cloudflare-pages/handler.ts:70 handleMiddleware -> Context (closed: repo only) [c] w267\n  ⚠ maybe_more: 6 calls (open: file not analysed) w268\n  ⚠ passed as a value in 86 places: calls through it are not visible w269\n  ⚠ same-name attribute uses, not checked: 18 w270\n  ⚠ plus 70 dynamic calls nearby that could reach anything w271\n  not tracked: uses as a type, in isinstance checks and in typeof checks w272\n  8 files have syntax errors; symbols there were not compared\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/ccac2e-58.md (warning: 614 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    56,
+    56,
+    55
+   ],
+   "steps": [
+    {
+     "handle": "w268",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/context.ts:575",
+      "expand": "w268"
+     },
+     "ms": 16,
+     "chars": 630,
+     "text": "llmgraph · w268 lists 6 items\n  ⚠ maybe_more src/context.ts:658 Context (open: file not analysed (a file could not be read)) w273\n  ⚠ maybe_more src/context.ts:685 Context (open: file not analysed (a file could not be read)) w274\n  ⚠ maybe_more src/context.ts:706 Context (open: file not analysed (a file could not be read)) w275\n  ⚠ maybe_more src/context.ts:733 Context (open: file not analysed (a file could not be read)) w276\n  ⚠ maybe_more src/context.ts:746 Context.res (open: file not analysed (a file could not be read)) w277\n  ⚠ maybe_more src/hono-base.ts:440 Hono.#dispatch (open: no type checker covers this file) w278",
+     "rpc_error": null
+    }
+   ]
+  }
+ },
+ "job1": {
+  "symbol": "src/helper/cookie/index.ts:27",
+  "head": {
+   "name": "what_breaks_if_changed",
+   "arguments": {
+    "symbol": "src/helper/cookie/index.ts:27",
+    "depth": 2,
+    "expand": "reset"
+   },
+   "ms": 46,
+   "chars": 462,
+   "text": "llmgraph · what_breaks_if_changed getCookie (depth 2): 5 places depend on it\n  ⚠ type checker is down: now structure-only; 5 calls unchecked\n  ◇ within_these 5 calls -> one of 1 (closed: repo only) [c] w279\n  ⚠ plus 1 dynamic call nearby that could reach anything w280\n  8 files have syntax errors; symbols there were not compared\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/ccac2e-60.md (warning: 481 tokens if read in full)",
+   "rpc_error": null
+  },
+  "steps": [
+   {
+    "handle": "w279",
+    "name": "what_breaks_if_changed",
+    "arguments": {
+     "symbol": "src/helper/cookie/index.ts:27",
+     "expand": "w279",
+     "depth": 2
+    },
+    "ms": 20,
+    "chars": 580,
+    "text": "llmgraph · w279 lists 5 items\n  ◇ within_these, one of 1 src/helper/cookie/index.ts:142 deleteCookie (closed: repo only) [c] w281\n  ◇ within_these, one of 1 src/middleware/jwk/jwk.ts:101 jwk (closed: repo only) [c] w282\n  ◇ within_these, one of 1 src/middleware/jwt/jwt.ts:101 jwt (closed: repo only) [c] w283\n  ◇ within_these, one of 1 src/middleware/language/language.ts:146 detectFromCookie (closed: repo only) [c] w284\n  ◇ within_these, one of 1 src/validator/validator.ts:158 validator (closed: repo only) [c] w285\n  assumes [c]: our own reading, not confirmed by the checker",
+    "rpc_error": null
+   }
+  ]
+ },
+ "job2": null,
+ "error": null,
+ "symbols_early": {
+  "getCookie": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/helper/cookie/index.ts:27",
+     "expand": "reset"
+    },
+    "ms": 27,
+    "chars": 465,
+    "text": "llmgraph · who_calls getCookie (src/helper/cookie/index.ts:27): 9 in a set\n  ⚠ type checker is down: now structure-only; 9 calls unchecked\n  ◇ within_these 9 calls -> one of 1 getCookie (closed: repo only) [c] w7\n  ⚠ plus 1 dynamic call nearby that could reach anything w8\n  8 files have syntax errors; symbols there were not compared\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/ccac2e-4.md (warning: 755 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    26,
+    27,
+    27
+   ],
+   "steps": [
+    {
+     "handle": "w7",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/helper/cookie/index.ts:27",
+      "expand": "w7"
+     },
+     "ms": 14,
+     "chars": 1045,
+     "text": "llmgraph · w7 lists 9 items\n  ◇ within_these, one of 1 src/helper/cookie/index.ts:142 deleteCookie -> getCookie (closed: repo only) [c] w9\n  ◇ within_these, one of 1 src/middleware/jwk/jwk.ts:101 jwk -> getCookie (closed: repo only) [c] w10\n  ◇ within_these, one of 1 src/middleware/jwk/jwk.ts:115 jwk -> getCookie (closed: repo only) [c] w11\n  ◇ within_these, one of 1 src/middleware/jwk/jwk.ts:117 jwk -> getCookie (closed: repo only) [c] w12\n  ◇ within_these, one of 1 src/middleware/jwt/jwt.ts:101 jwt -> getCookie (closed: repo only) [c] w13\n  ◇ within_these, one of 1 src/middleware/jwt/jwt.ts:115 jwt -> getCookie (closed: repo only) [c] w14\n  ◇ within_these, one of 1 src/middleware/jwt/jwt.ts:117 jwt -> getCookie (closed: repo only) [c] w15\n  ◇ within_these, one of 1 src/middleware/language/language.ts:146 detectFromCookie -> getCookie (closed: repo only) [c] w16\n  ◇ within_these, one of 1 src/validator/validator.ts:158 validator -> getCookie (closed: repo only) [c] w17\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    }
+   ]
+  },
+  "Context.notFound": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/context.ts:793",
+     "expand": "reset"
+    },
+    "ms": 51,
+    "chars": 768,
+    "text": "llmgraph · who_calls Context (src/context.ts:293): 1 in a set, 6 open\n  ⚠ type checker is down: now structure-only; 1 call unchecked\n  ◇ within_these, one of 1 src/adapter/cloudflare-pages/handler.ts:70 handleMiddleware -> Context (closed: repo only) [c] w30\n  ⚠ maybe_more: 6 calls (open: file not analysed) w31\n  ⚠ passed as a value in 86 places: calls through it are not visible w32\n  ⚠ same-name attribute uses, not checked: 18 w33\n  ⚠ plus 70 dynamic calls nearby that could reach anything w34\n  not tracked: uses as a type, in isinstance checks and in typeof checks w35\n  8 files have syntax errors; symbols there were not compared\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/ccac2e-8.md (warning: 611 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    51,
+    47,
+    51
+   ],
+   "steps": [
+    {
+     "handle": "w31",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/context.ts:793",
+      "expand": "w31"
+     },
+     "ms": 15,
+     "chars": 623,
+     "text": "llmgraph · w31 lists 6 items\n  ⚠ maybe_more src/context.ts:658 Context (open: file not analysed (a file could not be read)) w36\n  ⚠ maybe_more src/context.ts:685 Context (open: file not analysed (a file could not be read)) w37\n  ⚠ maybe_more src/context.ts:706 Context (open: file not analysed (a file could not be read)) w38\n  ⚠ maybe_more src/context.ts:733 Context (open: file not analysed (a file could not be read)) w39\n  ⚠ maybe_more src/context.ts:746 Context.res (open: file not analysed (a file could not be read)) w40\n  ⚠ maybe_more src/hono-base.ts:440 Hono.#dispatch (open: no type checker covers this file) w41",
+     "rpc_error": null
+    }
+   ]
+  },
+  "getPath (url.ts)": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/utils/url.ts:106",
+     "expand": "reset"
+    },
+    "ms": 33,
+    "chars": 822,
+    "text": "llmgraph · who_calls getPath (src/utils/url.ts:106): 1 in a set, 3 open\n  ⚠ type checker is down: now structure-only; 1 call unchecked\n  ◇ within_these, one of 1 src/utils/url.ts:155 getPathNoStrict -> getPath (closed: repo only) [c] w54\n  ⚠ maybe_more: 2 calls (open: no type checker covers this file) w55\n  ⚠ cannot_see src/adapter/aws-lambda/handler.ts:350 EventProcessor.createRequest (open: file not analysed (a file could not be read)) w56\n  ⚠ passed as a value in 1 place: calls through it are not visible w57\n  ⚠ same-name attribute uses, not checked: 2 w58\n  ⚠ plus 23 dynamic calls nearby that could reach anything w59\n  8 files have syntax errors; symbols there were not compared\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/ccac2e-12.md (warning: 443 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    34,
+    29,
+    33
+   ],
+   "steps": [
+    {
+     "handle": "w55",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/utils/url.ts:106",
+      "expand": "w55"
+     },
+     "ms": 12,
+     "chars": 216,
+     "text": "llmgraph · w55 lists 2 items\n  ⚠ maybe_more src/hono-base.ts:387 Hono.mount (open: no type checker covers this file) w60\n  ⚠ maybe_more src/hono-base.ts:437 Hono.#dispatch (open: no type checker covers this file) w61",
+     "rpc_error": null
+    }
+   ]
+  },
+  "parseBody (utils/body.ts)": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/utils/body.ts:100",
+     "expand": "reset"
+    },
+    "ms": 28,
+    "chars": 550,
+    "text": "llmgraph · who_calls parseBody (src/utils/body.ts:100): 1 in a set, 1 open\n  ⚠ type checker is down: now structure-only; 1 call unchecked\n  ◇ within_these, one of 1 src/middleware/method-override/index.ts:93 methodOverride -> parseBody (closed: repo only) [c] w68\n  ⚠ maybe_more src/request.ts:214 HonoRequest.parseBody (open: no type checker covers this file) w69\n  ⚠ plus 10 dynamic calls nearby that could reach anything w70\n  8 files have syntax errors; symbols there were not compared\n  assumes [c]: our own reading, not confirmed by the checker",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    21,
+    31,
+    28
+   ],
+   "steps": []
+  },
+  "Context.get": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "src/context.ts:575",
+     "expand": "reset"
+    },
+    "ms": 51,
+    "chars": 769,
+    "text": "llmgraph · who_calls Context (src/context.ts:293): 1 in a set, 6 open\n  ⚠ type checker is down: now structure-only; 1 call unchecked\n  ◇ within_these, one of 1 src/adapter/cloudflare-pages/handler.ts:70 handleMiddleware -> Context (closed: repo only) [c] w83\n  ⚠ maybe_more: 6 calls (open: file not analysed) w84\n  ⚠ passed as a value in 86 places: calls through it are not visible w85\n  ⚠ same-name attribute uses, not checked: 18 w86\n  ⚠ plus 70 dynamic calls nearby that could reach anything w87\n  not tracked: uses as a type, in isinstance checks and in typeof checks w88\n  8 files have syntax errors; symbols there were not compared\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/ccac2e-19.md (warning: 611 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    48,
+    47,
+    51
+   ],
+   "steps": [
+    {
+     "handle": "w84",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "src/context.ts:575",
+      "expand": "w84"
+     },
+     "ms": 15,
+     "chars": 623,
+     "text": "llmgraph · w84 lists 6 items\n  ⚠ maybe_more src/context.ts:658 Context (open: file not analysed (a file could not be read)) w89\n  ⚠ maybe_more src/context.ts:685 Context (open: file not analysed (a file could not be read)) w90\n  ⚠ maybe_more src/context.ts:706 Context (open: file not analysed (a file could not be read)) w91\n  ⚠ maybe_more src/context.ts:733 Context (open: file not analysed (a file could not be read)) w92\n  ⚠ maybe_more src/context.ts:746 Context.res (open: file not analysed (a file could not be read)) w93\n  ⚠ maybe_more src/hono-base.ts:440 Hono.#dispatch (open: no type checker covers this file) w94",
+     "rpc_error": null
+    }
+   ]
+  }
+ },
+ "catchup_wait_ms": 40845,
+ "catchup_converged": true,
+ "exit_ms": 322,
+ "engines_after": 0
+}

@@ -1,0 +1,10 @@
+Source: lead re-capture 2026-10-22, zod v3.23.8 (fresh copy, node_modules installed), current main (0.4.3 code), LLMGRAPH_TOOLS_DIR + LLMGRAPH_NODE set as the npm launcher does. Tool: who_calls src/helpers/parseUtil.ts:addIssueToContext. Time 3548 ms (fresh session; checker starting). The '[delta] no git baseline' line appears only because the copy is not a git repository. The tester's grep: 71 src calls, 143 lines including the deno/lib copy.
+
+llmgraph · who_calls addIssueToContext (src/helpers/parseUtil.ts:72): 71 in a set
+  [delta] no git baseline here (not a repository, or no commit yet): changes made before this call cannot be listed
+  ⚠ type checker starting: answers use our own reading for now; 71 calls unchecked
+  ◇ within_these 71 calls -> one of 1 (closed: repo only) [c] w1
+  ⚠ plus 7 dynamic calls nearby that could reach anything w2
+  – ruled out: 71 same-name calls (proven: other target) [c] w3
+  assumes [c]: our own reading, not confirmed by the checker
+  detail: .llmgraph/0cd270-1.md (warning: 4901 tokens if read in full)

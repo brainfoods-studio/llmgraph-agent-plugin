@@ -1,0 +1,81 @@
+{
+ "note": "Fixed BEFORE the measured runs. true/undecidable/value_refs come from reading the code (candidate sites listed by our measurement harness, each decided by hand; see report). Keys are file:line. 'other' is everything else.",
+ "repos": {
+  "requests": {
+   "dir": "requests", "repo": "psf/requests", "commit": "611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60", "lang": "py",
+   "wait_symbol": "src/requests/utils.py:885",
+   "symbols": [
+    {"id": "rebuild_proxies", "shape": "unique method", "llm_symbol": "rebuild_proxies", "rg_name": "rebuild_proxies", "kind": "method",
+     "true": ["src/requests/sessions.py:272", "tests/test_requests.py:679", "tests/test_requests.py:2687"], "undecidable": [], "value_refs": 0},
+    {"id": "get_netrc_auth", "shape": "function, monkeypatched as a value in tests", "llm_symbol": "get_netrc_auth", "rg_name": "get_netrc_auth", "kind": "function",
+     "true": ["src/requests/sessions.py:330", "src/requests/sessions.py:538", "tests/test_utils.py:162", "tests/test_utils.py:170", "tests/test_utils.py:180"], "undecidable": [], "value_refs": 3},
+    {"id": "Session.close", "shape": "common name, 4 defs", "llm_symbol": "src/requests/sessions.py:883", "rg_name": "close", "kind": "method",
+     "true": ["src/requests/sessions.py:509", "tests/test_requests.py:2216"], "undecidable": [], "value_refs": 0},
+    {"id": "HTTPAdapter.send", "shape": "overridden method, call through base type", "llm_symbol": "src/requests/adapters.py:634", "rg_name": "send", "kind": "method",
+     "true": ["src/requests/sessions.py:784"], "undecidable": ["src/requests/auth.py:312"], "value_refs": 0},
+    {"id": "Response.json", "shape": "common name, receivers typed by return types", "llm_symbol": "src/requests/models.py:1091", "rg_name": "json", "kind": "method",
+     "true": ["tests/test_lowlevel.py:425","tests/test_requests.py:237","tests/test_requests.py:249","tests/test_requests.py:394","tests/test_requests.py:421","tests/test_requests.py:438","tests/test_requests.py:448","tests/test_requests.py:658","tests/test_requests.py:874","tests/test_requests.py:880","tests/test_requests.py:921","tests/test_requests.py:1099","tests/test_requests.py:1114","tests/test_requests.py:1254","tests/test_requests.py:1768","tests/test_requests.py:2115","tests/test_requests.py:2165","tests/test_requests.py:2239","tests/test_requests.py:2902","tests/test_requests.py:2910"], "undecidable": [], "value_refs": 0}
+   ],
+   "job1": {"llm_symbol": "get_netrc_auth", "rg_name": "get_netrc_auth"},
+   "job2": {"file": "src/requests/utils.py", "func": "get_netrc_auth", "line_delta": 0, "after_line": 0,
+     "old": "    url: _t.UriType, raise_errors: bool = False\n", "new": "    url: _t.UriType, strict: bool, raise_errors: bool = False\n",
+     "broken": ["src/requests/sessions.py:330", "src/requests/sessions.py:538", "tests/test_utils.py:162", "tests/test_utils.py:170", "tests/test_utils.py:180"]}
+  },
+  "rich": {
+   "dir": "rich", "repo": "Textualize/rich", "commit": "9d8f9a372cc5916fd4781fec207ced7ddac2f08f", "lang": "py",
+   "wait_symbol": "rich/control.py:181",
+   "symbols": [
+    {"id": "strip_control_codes", "shape": "unique function", "llm_symbol": "strip_control_codes", "rg_name": "strip_control_codes", "kind": "function",
+     "true": ["rich/text.py:156","rich/text.py:413","rich/text.py:982","rich/text.py:1046","tests/test_control.py:11","tests/test_control.py:12","tests/test_control.py:13"], "undecidable": [], "value_refs": 0},
+    {"id": "Console.render_str", "shape": "method aliased to a local and called through it", "llm_symbol": "rich/console.py:1409", "rg_name": "render_str", "kind": "method",
+     "true": ["rich/columns.py:67","rich/console.py:1321","rich/console.py:1560","rich/live.py:238","rich/measure.py:99","rich/rule.py:68","rich/table.py:501"], "undecidable": [], "value_refs": 1},
+    {"id": "Console.render", "shape": "common name, 29 defs, aliased calls", "llm_symbol": "rich/console.py:1294", "rg_name": "render", "kind": "method",
+     "true": ["rich/align.py:148","rich/console.py:1343","rich/console.py:1371","rich/console.py:1731","rich/console.py:1737","rich/console.py:1869","rich/console.py:2023","rich/constrain.py:29","rich/jupyter.py:48","rich/live_render.py:108","rich/markdown.py:685","rich/markdown.py:700","rich/panel.py:245","rich/panel.py:270","rich/segment.py:773","rich/styled.py:27","rich/syntax.py:692","rich/table.py:505","tests/test_console.py:373","tests/test_console.py:508"], "undecidable": [], "value_refs": 2},
+    {"id": "ProgressColumn.render", "shape": "base method overridden in 12 subclasses", "llm_symbol": "rich/progress.py:545", "rg_name": "render", "kind": "method",
+     "true": ["rich/progress.py:540"], "undecidable": [], "value_refs": 0}
+   ],
+   "job1": {"llm_symbol": "rich/console.py:1409", "rg_name": "render_str"},
+   "job2": {"file": "rich/control.py", "func": "strip_control_codes", "line_delta": 0, "after_line": 0,
+     "old": "    text: str, _translate_table: Dict[int, None] = _CONTROL_STRIP_TRANSLATE\n", "new": "    text: str, strict: bool, _translate_table: Dict[int, None] = _CONTROL_STRIP_TRANSLATE\n",
+     "broken": ["rich/text.py:156","rich/text.py:413","rich/text.py:982","rich/text.py:1046","tests/test_control.py:11","tests/test_control.py:12","tests/test_control.py:13"]}
+  },
+  "werkzeug": {
+   "dir": "werkzeug", "repo": "pallets/werkzeug", "commit": "665e760ca6325a348ce03e5cf780b17e4be01848", "lang": "py",
+   "wait_symbol": "src/werkzeug/security.py:143",
+   "symbols": [
+    {"id": "safe_join", "shape": "unique function", "llm_symbol": "safe_join", "rg_name": "safe_join", "kind": "function",
+     "true": ["src/werkzeug/utils.py:583","src/werkzeug/middleware/shared_data.py:159","src/werkzeug/middleware/shared_data.py:195","tests/test_security.py:55","tests/test_security.py:63","tests/test_security.py:68","tests/test_security.py:77","tests/test_security.py:82"], "undecidable": [], "value_refs": 0},
+    {"id": "http_date", "shape": "function passed as a value (dump_func=http_date)", "llm_symbol": "src/werkzeug/http.py:1033", "rg_name": "http_date", "kind": "function",
+     "true": ["src/werkzeug/http.py:1109","src/werkzeug/http.py:1416","src/werkzeug/http.py:1418","src/werkzeug/datastructures/range.py:75","tests/test_apply_conditions.py:33","tests/test_apply_conditions.py:39","tests/test_http.py:697","tests/test_send_file.py:127"], "undecidable": [], "value_refs": 4},
+    {"id": "run_wsgi_app (function)", "shape": "same name as a method", "llm_symbol": "src/werkzeug/test.py:1231", "rg_name": "run_wsgi_app", "kind": "function",
+     "true": ["src/werkzeug/test.py:997","src/werkzeug/wrappers/response.py:286","src/werkzeug/wrappers/response.py:312","tests/test_test.py:648","tests/test_test.py:677","tests/test_test.py:706","tests/test_test.py:716","tests/test_wrappers.py:277","tests/test_wsgi.py:312","tests/middleware/test_dispatcher.py:27","tests/middleware/test_dispatcher.py:31","tests/middleware/test_lint.py:20","tests/middleware/test_lint.py:38","tests/middleware/test_lint.py:51","tests/middleware/test_lint.py:74","tests/middleware/test_lint.py:86","tests/middleware/test_shared_data.py:38","tests/middleware/test_shared_data.py:50","tests/middleware/test_shared_data.py:60"], "undecidable": [], "value_refs": 0},
+    {"id": "Client.run_wsgi_app (method)", "shape": "same name as a function", "llm_symbol": "src/werkzeug/test.py:991", "rg_name": "run_wsgi_app", "kind": "method",
+     "true": ["src/werkzeug/test.py:1125"], "undecidable": [], "value_refs": 0},
+    {"id": "Response.close", "shape": "common name, 20 defs, hasattr-guarded dynamic calls", "llm_symbol": "src/werkzeug/wrappers/response.py:496", "rg_name": "close", "kind": "method",
+     "true": ["src/werkzeug/wrappers/response.py:517","src/werkzeug/test.py:1138","src/werkzeug/utils.py:548"], "undecidable": ["src/werkzeug/debug/__init__.py:344","src/werkzeug/debug/__init__.py:347","src/werkzeug/middleware/profiler.py:127","tests/test_test.py:656","tests/test_test.py:714"], "value_refs": 1}
+   ],
+   "job1": {"llm_symbol": "safe_join", "rg_name": "safe_join"},
+   "job2": {"file": "src/werkzeug/http.py", "func": "http_date", "line_delta": 1, "after_line": 1033,
+     "old": "    timestamp: dt.datetime | dt.date | int | float | struct_time | None = None,\n) -> str:\n    \"\"\"Format a datetime object or timestamp into an :rfc:`2822` date", "new": "    timestamp: dt.datetime | dt.date | int | float | struct_time | None,\n    strict: bool,\n) -> str:\n    \"\"\"Format a datetime object or timestamp into an :rfc:`2822` date",
+     "broken": ["src/werkzeug/http.py:1109","src/werkzeug/http.py:1416","src/werkzeug/http.py:1418","src/werkzeug/datastructures/range.py:75","tests/test_apply_conditions.py:33","tests/test_apply_conditions.py:39","tests/test_http.py:697","tests/test_send_file.py:127"]}
+  },
+  "hono": {
+   "dir": "hono-src", "repo": "honojs/hono (src/ only, *.test.* files removed, 26387 lines)", "commit": "5ca49b0720755c585c9a9835f0a479ceea36fb52", "lang": "ts",
+   "wait_symbol": "src/helper/cookie/index.ts:27",
+   "symbols": [
+    {"id": "getCookie", "shape": "unique function", "llm_symbol": "src/helper/cookie/index.ts:27", "rg_name": "getCookie", "kind": "function",
+     "true": ["src/helper/cookie/index.ts:142","src/middleware/jwk/jwk.ts:101","src/middleware/jwk/jwk.ts:115","src/middleware/jwk/jwk.ts:117","src/middleware/jwt/jwt.ts:101","src/middleware/jwt/jwt.ts:115","src/middleware/jwt/jwt.ts:117","src/middleware/language/language.ts:146","src/validator/validator.ts:158"], "undecidable": [], "value_refs": 0},
+    {"id": "Context.notFound", "shape": "same name as Hono.notFound", "llm_symbol": "src/context.ts:793", "rg_name": "notFound", "kind": "method",
+     "true": ["src/adapter/cloudflare-pages/handler.ts:129","src/helper/ssg/middleware.ts:46","src/helper/ssg/middleware.ts:67","src/helper/ssg/middleware.ts:80"], "undecidable": [], "value_refs": 0},
+    {"id": "getPath (url.ts)", "shape": "function stored in a property and called through it", "llm_symbol": "src/utils/url.ts:106", "rg_name": "getPath", "kind": "function",
+     "true": ["src/utils/url.ts:155"], "undecidable": ["src/hono-base.ts:387","src/hono-base.ts:437"], "value_refs": 3},
+    {"id": "parseBody (utils/body.ts)", "shape": "function and a same-name method", "llm_symbol": "src/utils/body.ts:100", "rg_name": "parseBody", "kind": "function",
+     "true": ["src/request.ts:214","src/middleware/method-override/index.ts:93"], "undecidable": [], "value_refs": 0},
+    {"id": "Context.get", "shape": "very common name (Map.get, Headers.get)", "llm_symbol": "src/context.ts:575", "rg_name": "get", "kind": "method",
+     "true": ["src/middleware/timing/timing.ts:89","src/middleware/timing/timing.ts:156","src/middleware/timing/timing.ts:188","src/middleware/timing/timing.ts:209","src/middleware/secure-headers/secure-headers.ts:139"], "undecidable": [], "value_refs": 0}
+   ],
+   "job1": {"llm_symbol": "src/helper/cookie/index.ts:27", "rg_name": "getCookie"},
+   "job2": null
+  }
+ }
+}

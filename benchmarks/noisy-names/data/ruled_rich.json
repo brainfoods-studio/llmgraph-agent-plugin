@@ -1,0 +1,57 @@
+{
+ "repo": "rich",
+ "symbols": {
+  "strip_control_codes": {
+   "head": "llmgraph · who_calls strip_control_codes (rich/control.py:181): 7 in a set\n  ◇ within_these 7 calls -> one of 1 strip_control_codes (closed: repo only) [c] w3\n  ⚠ plus 25 dynamic calls nearby that could reach anything w4\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/ba9705-2.md (warning: 607 tokens if read in full)",
+   "ruled": []
+  },
+  "Console.render_str": {
+   "head": "llmgraph · who_calls Console.render_str (rich/console.py:1409): 5 in a set, 1 open\n  ◇ within_these 5 calls -> one of 1 (closed: repo only) [a][c] w5\n  ⚠ maybe_more rich/live.py:238 Live.update (open: type unknown) w6\n  ⚠ same-name attribute uses, not checked: 1 w7\n  ⚠ plus 97 dynamic calls nearby that could reach anything w8\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/ba9705-3.md (warning: 680 tokens if read in full)",
+   "ruled": []
+  },
+  "Console.render": {
+   "head": "llmgraph · who_calls Console.render (rich/console.py:1294): 16 in a set, 9 open\n  ◇ within_these 16 calls -> one of 1 (closed: repo only) [a][c] w9\n  ⚠ maybe_more: 9 calls (open: type unknown) w10\n  ⚠ passed as a value in 13 places: calls through it are not visible w11\n  ⚠ plus 97 dynamic calls nearby that could reach anything w12\n  – ruled out: 19 same-name calls (proven: other target) [a][c] w13\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/ba9705-4.md (warning: 1957 tokens if read in full)",
+   "ruled": [
+    {
+     "handle": "w13",
+     "text": "llmgraph · w13 lists 1 items\n  – ruled out: 19 same-name calls (proven: other target) [a][c] w14\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    },
+    {
+     "handle": "w14",
+     "text": "llmgraph · w14 lists 1 items\n  – ruled out: 19 same-name calls (proven: other target) [a][c] w15\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    },
+    {
+     "handle": "w15",
+     "text": "llmgraph · w15 lists 1 items\n  – ruled out: 19 same-name calls (proven: other target) [a][c] w16\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    },
+    {
+     "handle": "w16",
+     "text": "llmgraph · w16 lists 1 items\n  – ruled out: 19 same-name calls (proven: other target) [a][c] w17\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    }
+   ]
+  },
+  "ProgressColumn.render": {
+   "head": "llmgraph · who_calls ProgressColumn.render (rich/progress.py:545): 1 in a set, 9 open\n  ◇ within_these, one of 13 rich/progress.py:540 ProgressColumn.__call__ (closed: repo only) [a][c] w18\n  ⚠ maybe_more: 9 calls (open: type unknown) w19\n  ⚠ passed as a value in 11 places: calls through it are not visible w20\n  ⚠ same-name attribute uses, not checked: 2 w21\n  ⚠ plus 7 dynamic calls nearby that could reach anything w22\n  – ruled out: 34 same-name calls (proven: other target) [a][c] w23\n  [a] is not confirmed for this repo: ask the user whether every subclass lives in this repo, then repeat with family yes, no or unsure\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/ba9705-9.md (warning: 841 tokens if read in full)",
+   "ruled": [
+    {
+     "handle": "w23",
+     "text": "llmgraph · w23 lists 1 items\n  – ruled out: 34 same-name calls (proven: other target) [a][c] w24\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    },
+    {
+     "handle": "w24",
+     "text": "llmgraph · w24 lists 1 items\n  – ruled out: 34 same-name calls (proven: other target) [a][c] w25\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    },
+    {
+     "handle": "w25",
+     "text": "llmgraph · w25 lists 1 items\n  – ruled out: 34 same-name calls (proven: other target) [a][c] w26\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    },
+    {
+     "handle": "w26",
+     "text": "llmgraph · w26 lists 1 items\n  – ruled out: 34 same-name calls (proven: other target) [a][c] w27\n  assumes [a]: all subclasses are in this repo (project setting)\n  assumes [c]: our own reading, not confirmed by the checker"
+    }
+   ]
+  }
+ },
+ "error": null,
+ "engines_after": 1
+}

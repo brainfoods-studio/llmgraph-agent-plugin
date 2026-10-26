@@ -1,0 +1,129 @@
+{
+ "when": "2026-10-20T14:20:26.544Z",
+ "repo": "werkzeug",
+ "marks": {
+  "initialize": 360,
+  "first_answer": 7309,
+  "settled": 7310
+ },
+ "symbols": {
+  "safe_join": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "safe_join",
+     "expand": "reset"
+    },
+    "ms": 68,
+    "chars": 342,
+    "text": "llmgraph · who_calls safe_join (src/werkzeug/security.py:143): 8 in a set\n  ◇ within_these 8 calls -> one of 1 safe_join (closed: repo only) [c] w27\n  ⚠ plus 5 dynamic calls nearby that could reach anything w28\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/7d58a3-11.md (warning: 697 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    99,
+    64,
+    68
+   ],
+   "steps": [
+    {
+     "handle": "w27",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "safe_join",
+      "expand": "w27"
+     },
+     "ms": 54,
+     "chars": 1123,
+     "text": "llmgraph · w27 lists 8 items\n  ◇ within_these, one of 1 src/werkzeug/middleware/shared_data.py:159 SharedDataMiddleware.get_package_loader.loader -> safe_join (closed: repo only) [c] w29\n  ◇ within_these, one of 1 src/werkzeug/middleware/shared_data.py:195 SharedDataMiddleware.get_directory_loader.loader -> safe_join (closed: repo only) [c] w30\n  ◇ within_these, one of 1 src/werkzeug/utils.py:583 send_from_directory -> safe_join (closed: repo only) [c] w31\n  ◇ within_these, one of 1 tests/test_security.py:55 test_safe_join -> safe_join (closed: repo only) [c] w32\n  ◇ within_these, one of 1 tests/test_security.py:63 test_safe_join_os_sep -> safe_join (closed: repo only) [c] w33\n  ◇ within_these, one of 1 tests/test_security.py:68 test_safe_join_empty_trusted -> safe_join (closed: repo only) [c] w34\n  ◇ within_these, one of 1 tests/test_security.py:77 test_safe_join_windows_special -> safe_join (closed: repo only) [c] w35\n  ◇ within_these, one of 1 tests/test_security.py:82 test_safe_join_not_windows_special -> safe_join (closed: repo only) [c] w36\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    }
+   ]
+  }
+ },
+ "job1": {
+  "symbol": "safe_join",
+  "head": {
+   "name": "what_breaks_if_changed",
+   "arguments": {
+    "symbol": "safe_join",
+    "depth": 2,
+    "expand": "reset"
+   },
+   "ms": 103,
+   "chars": 501,
+   "text": "llmgraph · what_breaks_if_changed safe_join (depth 2): 11 places depend on it\n  ◇ within_these 8 calls -> one of 1 (closed: repo only) [c] w37\n  ⚠ plus 5 dynamic calls nearby that could reach anything w38\n  depth 2, each as strong as its weakest step:\n  ◇ +3 more places at depth 2, as weak as within_these [c] w39\n  ⚠ 2 more deeper calls we can't see: not followed w40\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/7d58a3-13.md (warning: 971 tokens if read in full)",
+   "rpc_error": null
+  },
+  "steps": [
+   {
+    "handle": "w37",
+    "name": "what_breaks_if_changed",
+    "arguments": {
+     "symbol": "safe_join",
+     "expand": "w37",
+     "depth": 2
+    },
+    "ms": 55,
+    "chars": 1019,
+    "text": "llmgraph · w37 lists 8 items\n  ◇ within_these, one of 1 src/werkzeug/middleware/shared_data.py:159 SharedDataMiddleware.get_package_loader.loader (closed: repo only) [c] w41\n  ◇ within_these, one of 1 src/werkzeug/middleware/shared_data.py:195 SharedDataMiddleware.get_directory_loader.loader (closed: repo only) [c] w42\n  ◇ within_these, one of 1 src/werkzeug/utils.py:583 send_from_directory (closed: repo only) [c] w43\n  ◇ within_these, one of 1 tests/test_security.py:55 test_safe_join (closed: repo only) [c] w44\n  ◇ within_these, one of 1 tests/test_security.py:63 test_safe_join_os_sep (closed: repo only) [c] w45\n  ◇ within_these, one of 1 tests/test_security.py:68 test_safe_join_empty_trusted (closed: repo only) [c] w46\n  ◇ within_these, one of 1 tests/test_security.py:77 test_safe_join_windows_special (closed: repo only) [c] w47\n  ◇ within_these, one of 1 tests/test_security.py:82 test_safe_join_not_windows_special (closed: repo only) [c] w48\n  assumes [c]: our own reading, not confirmed by the checker",
+    "rpc_error": null
+   }
+  ]
+ },
+ "job2": {
+  "file": "src/werkzeug/http.py",
+  "head": {
+   "name": "check_my_changes",
+   "arguments": {
+    "paths": [
+     "src/werkzeug/http.py"
+    ],
+    "expand": "reset"
+   },
+   "ms": 2695,
+   "chars": 1700,
+   "text": "llmgraph · check_my_changes: 1 file changed, 8 calls break\n  [delta] files that differ from the last commit (git HEAD): src/werkzeug/http.py: <module> body differs; http_date signature differs (parameters, defaults, types)\n  ⚠ type checker is down: now structure-only; 8 calls unchecked\n  module-level code in src/werkzeug/http.py changed (constants, types, interfaces): not checked; importers to retest: 25 w49\n  8 breaks: misses \"strict\" w50\n  ⚠ breaks if it runs http_date src/werkzeug/datastructures/range.py:75 IfRange.to_header (within_these, one of 1, closed: repo only) [c] w51\n  ⚠ breaks if it runs http_date src/werkzeug/http.py:1110 _dump_retry_after (within_these, one of 1, closed: repo only) [c] w52\n  ⚠ breaks if it runs http_date src/werkzeug/http.py:1417 dump_cookie (within_these, one of 1, closed: repo only) [c] w53\n  ⚠ breaks if it runs http_date src/werkzeug/http.py:1419 dump_cookie (within_these, one of 1, closed: repo only) [c] w54\n  ⚠ breaks if it runs http_date tests/test_apply_conditions.py:33 make_response (within_these, one of 1, closed: repo only) [c] w55\n  ⚠ breaks if it runs http_date tests/test_apply_conditions.py:39 make_response (within_these, one of 1, closed: repo only) [c] w56\n  ⚠ breaks if it runs http_date tests/test_http.py:697 test_http_date (within_these, one of 1, closed: repo only) [c] w57\n  ⚠ breaks if it runs http_date tests/test_send_file.py:127 test_no_cache_conditional_default (within_these, one of 1, closed: repo only) [c] w58\n  ⚠ http_date is passed as a value in 4 places: calls through it are not checked w59\n  ⚠ plus 133 dynamic calls nearby that could reach http_date w60\n  assumes [c]: our own reading, not confirmed by the checker",
+   "rpc_error": null
+  },
+  "steps": []
+ },
+ "error": null,
+ "symbols_early": {
+  "safe_join": {
+   "head": {
+    "name": "who_calls",
+    "arguments": {
+     "symbol": "safe_join",
+     "expand": "reset"
+    },
+    "ms": 406,
+    "chars": 339,
+    "text": "llmgraph · who_calls safe_join (src/werkzeug/security.py:143): 8 in a set\n  ◇ within_these 8 calls -> one of 1 safe_join (closed: repo only) [c] w7\n  ⚠ plus 5 dynamic calls nearby that could reach anything w8\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/7d58a3-4.md (warning: 695 tokens if read in full)",
+    "rpc_error": null
+   },
+   "head_ms_repeats": [
+    93,
+    96,
+    406
+   ],
+   "steps": [
+    {
+     "handle": "w7",
+     "name": "who_calls",
+     "arguments": {
+      "symbol": "safe_join",
+      "expand": "w7"
+     },
+     "ms": 75,
+     "chars": 1121,
+     "text": "llmgraph · w7 lists 8 items\n  ◇ within_these, one of 1 src/werkzeug/middleware/shared_data.py:159 SharedDataMiddleware.get_package_loader.loader -> safe_join (closed: repo only) [c] w9\n  ◇ within_these, one of 1 src/werkzeug/middleware/shared_data.py:195 SharedDataMiddleware.get_directory_loader.loader -> safe_join (closed: repo only) [c] w10\n  ◇ within_these, one of 1 src/werkzeug/utils.py:583 send_from_directory -> safe_join (closed: repo only) [c] w11\n  ◇ within_these, one of 1 tests/test_security.py:55 test_safe_join -> safe_join (closed: repo only) [c] w12\n  ◇ within_these, one of 1 tests/test_security.py:63 test_safe_join_os_sep -> safe_join (closed: repo only) [c] w13\n  ◇ within_these, one of 1 tests/test_security.py:68 test_safe_join_empty_trusted -> safe_join (closed: repo only) [c] w14\n  ◇ within_these, one of 1 tests/test_security.py:77 test_safe_join_windows_special -> safe_join (closed: repo only) [c] w15\n  ◇ within_these, one of 1 tests/test_security.py:82 test_safe_join_not_windows_special -> safe_join (closed: repo only) [c] w16\n  assumes [c]: our own reading, not confirmed by the checker",
+     "rpc_error": null
+    }
+   ]
+  }
+ },
+ "catchup_wait_ms": 30324,
+ "catchup_converged": true,
+ "exit_ms": 867,
+ "engines_after": 0
+}

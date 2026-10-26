@@ -1,0 +1,27 @@
+{
+ "repo": "hono",
+ "symbols": {
+  "getCookie": {
+   "head": "llmgraph · who_calls getCookie (src/helper/cookie/index.ts:27): 9 in a set\n  ⚠ type checker is down: now structure-only; 9 calls unchecked\n  ◇ within_these 9 calls -> one of 1 getCookie (closed: repo only) [c] w3\n  ⚠ plus 1 dynamic call nearby that could reach anything w4\n  8 files have syntax errors; symbols there were not compared\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/88cb54-2.md (warning: 755 tokens if read in full)",
+   "ruled": []
+  },
+  "Context.notFound": {
+   "head": "llmgraph · who_calls Context (src/context.ts:293): 1 in a set, 6 open\n  ⚠ type checker is down: now structure-only; 1 call unchecked\n  ◇ within_these, one of 1 src/adapter/cloudflare-pages/handler.ts:70 handleMiddleware -> Context (closed: repo only) [c] w5\n  ⚠ maybe_more: 6 calls (open: file not analysed) w6\n  ⚠ passed as a value in 86 places: calls through it are not visible w7\n  ⚠ same-name attribute uses, not checked: 18 w8\n  ⚠ plus 70 dynamic calls nearby that could reach anything w9\n  not tracked: uses as a type, in isinstance checks and in typeof checks w10\n  8 files have syntax errors; symbols there were not compared\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/88cb54-3.md (warning: 608 tokens if read in full)",
+   "ruled": []
+  },
+  "getPath (url.ts)": {
+   "head": "llmgraph · who_calls getPath (src/utils/url.ts:106): 1 in a set, 3 open\n  ⚠ type checker is down: now structure-only; 1 call unchecked\n  ◇ within_these, one of 1 src/utils/url.ts:155 getPathNoStrict -> getPath (closed: repo only) [c] w11\n  ⚠ maybe_more: 2 calls (open: no type checker covers this file) w12\n  ⚠ cannot_see src/adapter/aws-lambda/handler.ts:350 EventProcessor.createRequest (open: file not analysed (a file could not be read)) w13\n  ⚠ passed as a value in 1 place: calls through it are not visible w14\n  ⚠ same-name attribute uses, not checked: 2 w15\n  ⚠ plus 23 dynamic calls nearby that could reach anything w16\n  8 files have syntax errors; symbols there were not compared\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/88cb54-4.md (warning: 443 tokens if read in full)",
+   "ruled": []
+  },
+  "parseBody (utils/body.ts)": {
+   "head": "llmgraph · who_calls parseBody (src/utils/body.ts:100): 1 in a set, 1 open\n  ⚠ type checker is down: now structure-only; 1 call unchecked\n  ◇ within_these, one of 1 src/middleware/method-override/index.ts:93 methodOverride -> parseBody (closed: repo only) [c] w17\n  ⚠ maybe_more src/request.ts:214 HonoRequest.parseBody (open: no type checker covers this file) w18\n  ⚠ plus 10 dynamic calls nearby that could reach anything w19\n  8 files have syntax errors; symbols there were not compared\n  assumes [c]: our own reading, not confirmed by the checker",
+   "ruled": []
+  },
+  "Context.get": {
+   "head": "llmgraph · who_calls Context (src/context.ts:293): 1 in a set, 6 open\n  ⚠ type checker is down: now structure-only; 1 call unchecked\n  ◇ within_these, one of 1 src/adapter/cloudflare-pages/handler.ts:70 handleMiddleware -> Context (closed: repo only) [c] w20\n  ⚠ maybe_more: 6 calls (open: file not analysed) w21\n  ⚠ passed as a value in 86 places: calls through it are not visible w22\n  ⚠ same-name attribute uses, not checked: 18 w23\n  ⚠ plus 70 dynamic calls nearby that could reach anything w24\n  not tracked: uses as a type, in isinstance checks and in typeof checks w25\n  8 files have syntax errors; symbols there were not compared\n  assumes [c]: our own reading, not confirmed by the checker\n  detail: .llmgraph/88cb54-6.md (warning: 611 tokens if read in full)",
+   "ruled": []
+  }
+ },
+ "error": null,
+ "engines_after": 0
+}
