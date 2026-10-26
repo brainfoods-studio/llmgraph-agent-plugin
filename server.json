@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.brainfoods-studio/llmgraph",
+  "description": "Every call graph has blind spots. LLMGRAPH tells your coding agent where they are.",
+  "repository": {
+    "url": "https://github.com/brainfoods-studio/llmgraph-agent-plugin",
+    "source": "github"
+  },
+  "version": "0.4.4",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "llmgraph-mcp",
+      "version": "0.4.4",
+      "transport": { "type": "stdio" }
+    }
+  ]
+}

@@ -15,10 +15,20 @@ Before changing a function, method or class:
 
 After editing (save the files first; it reads saved files):
 - `check_my_changes`: callers you did not update, and anything LLMGRAPH cannot see. Pass `paths` to limit it to the files you edited.
+  Pass `tests: true` when you are about to run tests: it lists the tests that call the code you edited.
 
 When an answer says `maybe_more` or `cannot_see`:
 - `what_is_unknown`: where the view is blind (dynamic calls, unknown types, unreadable files) and why.
 - `explain <handle>`: the evidence behind one answer line. The handle (`w1`, `w2`, ...) comes from an answer in this session and stops working when the server restarts.
+
+## Which tool for which job
+
+Use the cheapest tool that can be right:
+- **A plain text search** (grep or your search tool): a name that is unique in the project, a rename that must also change comments, strings and docs, or finding a file. A rename touches text that no code graph lists, so search for it too.
+- **Your editor's own go-to-definition, if you have one:** jumping to where one symbol is defined.
+- **LLMGRAPH:** a name that also appears in unrelated code (a common method name, two copies of a module), "who calls this" before you change a signature, anything indirect (`what_breaks_if_changed`), "did I miss a caller" after editing (`check_my_changes`), and where the view is blind (`what_is_unknown`). On clean, unique names it saves nothing over a text search; on names that also appear in unrelated code it names the real callers and leaves the look-alikes out.
+
+After an edit, finish with `check_my_changes`: the callers you did not update are the ones a search does not show you.
 
 ## How to read an answer
 

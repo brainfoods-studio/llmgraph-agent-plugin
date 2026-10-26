@@ -1,6 +1,6 @@
 {
   "name": "llmgraph",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "LLMGRAPH for Claude Code: connects the local LLMGRAPH engine over MCP and adds a skill that says when to ask each of its five questions and how to read the answers.",
   "author": { "name": "LLMGRAPH" },
   "keywords": ["mcp", "code-intelligence", "callers"]
