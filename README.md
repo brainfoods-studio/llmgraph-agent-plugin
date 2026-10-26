@@ -114,4 +114,4 @@ The plugin offers LLMGRAPH's answer before your agent searches for a function or
 
 **Today's limits:** Windows x64 · Python and TypeScript/JavaScript (other languages are reported as `cannot_see`, not counted as nothing) · repos up to the plan's line limit · invite-only beta, [request an invite](https://beta.llmgraph.in/) · one plan for individuals with a trial, [prices](https://beta.llmgraph.in/pricing/).
 
-This repo holds the open setup files under MIT; **the LLMGRAPH engine is closed source** and runs on your machine under the [EULA](https://beta.llmgraph.in/eula/). Brainfoods Studio, Jaipur · founder@llmgraph.in · security@llmgraph.in
+This repo holds the open setup files under MIT; **the LLMGRAPH engine is closed source** and runs on your machine under the [EULA](https://beta.llmgraph.in/eula/). Brainfoods Studio, India · founder@llmgraph.in · security@llmgraph.in
