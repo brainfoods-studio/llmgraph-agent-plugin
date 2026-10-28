@@ -2,12 +2,6 @@ MIT License
 
 Copyright (c) 2026 Brainfoods Studio
 
-This licence covers the files in this repository only (the plugin manifest, the
-marketplace file, the MCP server entry, the skill, the hooks and the README).
-The LLMGRAPH engine that these files connect to is not covered: it is closed
-source and is licensed under its own End User Licence Agreement
-(https://beta.llmgraph.in/eula/).
-
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights

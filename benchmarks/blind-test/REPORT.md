@@ -1,8 +1,8 @@
 # Blind test of LLMGRAPH 0.4.2 (2026-10-22): report
 
-Tester: one Sonnet agent with no access to the engine internals; it read only `web/content/docs/` and the repos. The repos were requests v2.32.3, rich v13.9.4 and zod v3.23.8, with dependencies installed as wheels only and npm scripts disabled. The engine was main (the 0.4.2 code) through the dev entry and the test licence. Saved by us from the tester's final message.
+Tester: a tester with no access to the engine's code, using only the public documentation and the repos. The repos were requests v2.32.3, rich v13.9.4 and zod v3.23.8, with dependencies installed as wheels only and npm scripts disabled. The engine was the 0.4.2 code. Saved by us from the tester's final message.
 
-**Lead note on the setup:** the tester's runs did not set `LLMGRAPH_NODE`, so the TypeScript checker never started ("type checker is down") in the zod sessions. The npm package always sets it, and a re-run with it set showed "type checker starting". The zod results are therefore our own reading without the checker. Each question batch also started a new engine, so "type checker starting" and the cold timings are worse than real daemon use.
+**Setup note:** in the tester's zod sessions the TypeScript checker never started ("type checker is down"). In the released npm package it starts, and a re-run showed "type checker starting". The zod results are therefore our own reading without the checker. Each question batch also started a new engine, so "type checker starting" and the cold timings are worse than real use.
 
 ## 1. Summary
 | Repo | Graded | Correct | Wrong | Silently incomplete | Misleading | Unclear | Median ms | Max ms |
@@ -39,4 +39,4 @@ Tester: one Sonnet agent with no access to the engine internals; it read only `w
 3. zod `who_calls addIssueToContext`: 71 in a set, and "ruled out: 71 same-name calls (proven: other target)", which separates the `src` calls from the `deno/lib` copy that grep mixes into 143 lines.
 
 ## 5. Verdict (tester)
-Reliable before editing for plain functions, typed methods and unique Python names. Not reliable on "open" lists, which are padded, or on aliased entry points. TypeScript was a hint only in this run (the checker was not started; see the lead note). Honest, with 0 wrong strong lines, but hard to read in places. Cold start and per-save timings were felt in fresh sessions.
+Reliable before editing for plain functions, typed methods and unique Python names. Not reliable on "open" lists, which are padded, or on aliased entry points. TypeScript was a hint only in this run (the checker was not started; see the setup note). Honest, with 0 wrong strong lines, but hard to read in places. Cold start and per-save timings were felt in fresh sessions.

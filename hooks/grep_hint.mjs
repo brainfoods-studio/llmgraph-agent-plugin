@@ -1,4 +1,4 @@
-// LLMGRAPH search hint (WO-151, D13 section 6). A PreToolUse hook for Grep. (A Glob looks for files, and LLMGRAPH's questions are about symbols, so a Glob is never answered.)
+// LLMGRAPH search hint. A PreToolUse hook for Grep. (A Glob looks for files, and LLMGRAPH's questions are about symbols, so a Glob is never answered.)
 //
 // Before the agent searches for a plain name, this asks the LLMGRAPH engine that is already running on this computer whether it knows
 // the name, and offers its answer as extra context. It never blocks the search, never decides permission, never changes the tool input,

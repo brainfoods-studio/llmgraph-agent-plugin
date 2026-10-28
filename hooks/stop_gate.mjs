@@ -1,4 +1,4 @@
-// LLMGRAPH stop check (WO-163). A Stop hook.
+// LLMGRAPH stop check. A Stop hook.
 //
 // When the agent is about to end its turn, this asks the LLMGRAPH engine that is already running on this computer whether the saved edits
 // left calls that are certain to break. If so, it blocks the stop once, with the list, so the agent fixes them or tells the user why each is

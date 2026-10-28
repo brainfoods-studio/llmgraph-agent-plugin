@@ -16,4 +16,4 @@ Tokens an agent reads (`data/token_classes.txt`):
 - **Names that also appear in unrelated code** (9 symbols): ripgrep 12,234, LLMGRAPH 5,013 with expansions.
 - **Clean, unique names** (10 symbols): ripgrep 1,966, LLMGRAPH 3,576 with expansions. **Use grep for these.**
 
-Per-symbol tables: `data/score_tables.md`. Timings depend on the machine and were taken on a shared Windows 11 laptop (16 logical cores); cold first answers took seconds.
+Per-symbol tables: `data/score_tables.md`. Timings depend on the machine; cold first answers took seconds.

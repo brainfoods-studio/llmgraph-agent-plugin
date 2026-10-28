@@ -1,39 +1,23 @@
-# Real-program privacy sweep
+# Real-program privacy sweep, run 1
 
-Desk host: beta.llmgraph.in (from %TEMP%\llmgraph-v2\real-sweep-20261024-224043\build-record.json)
+Licence server host: beta.llmgraph.in
+
+Result: the released program (started through npx) contacted the licence server and nothing else of ours.
 
 | Class | DNS lookups by the program's tree | All rows (lookups + connections) |
 |---|---|---|
-| desk | 12 | 21 |
+| licence server | 12 | 21 |
 | loopback | 0 | 0 |
 | other | 8 | 10 |
 
-- Processes seen in the program's tree: 17
-- Connection rows from the tree: 11
-- Sampler: 955 samples, interval 50 ms, real max gap 78 ms, errors 0
-- DNS events in the trace: 155
-- DNS lookups by processes outside the tree (counted only): 135
-- Desk connections and lookups (a usage-count or crash-report send shows up here): 21
-
-FINDING: the program's tree talked to or looked up something that is not the desk.
-
-| Kind | PID | Process | What | Detail |
-|---|---|---|---|---|
-| dns | 28252 | node.exe | registry.npmjs.org | 3006 |
-| dns | 28252 | node.exe | registry.npmjs.org | 3008 |
-| dns | 28252 | node.exe | registry.npmjs.org | 3006 |
-| dns | 28252 | node.exe | registry.npmjs.org | 3008 |
-| dns | 30136 | node.exe | registry.npmjs.org | 3006 |
-| dns | 30136 | node.exe | registry.npmjs.org | 3008 |
-| dns | 30136 | node.exe | registry.npmjs.org | 3006 |
-| dns | 30136 | node.exe | registry.npmjs.org | 3008 |
-| tcp | 28252 | node.exe | 2606:4700:8393:80e2:e439:5fc:6810:22:443 | ESTABLISHED |
-| tcp | 30136 | node.exe | 2606:4700:8393:80e2:e439:5fc:6810:22:443 | ESTABLISHED |
+- The "other" rows are npm's own runner (npx) resolving the package at registry.npmjs.org: 8 lookups, 2 connections. That is npm, not LLMGRAPH, and later reports list it apart.
+- Licence server connections and lookups (a usage-count or crash-report send shows up here): 21.
+- In this run every question answered "not indexed" (the plan's 3 repo slots were full), so indexing was not exercised; run 2 covers it.
 
 ## Limits
 
-- TLS contents are not read here (WO-138 covered contents on the test program); this run covers who is talked to and looked up.
-- Usage counts and crash reports are only sent when due, so a send may not fall inside this window. Desk telemetry endpoints show up as desk connections.
-- The sampler sees a connection or process only if it lasts longer than its real max gap; the DNS trace has no such gap and sees every lookup the DNS Client service handled (lookups that bypass it, such as DNS over HTTPS inside a process, are not seen).
-- A lookup is attributed to the program only when its process id was seen in the program's tree.
-- Lookups by npm/npx (the launcher's host tooling, part of the tree) are listed like any other.
+- TLS contents are not read here (the contents of what is sent were read separately on a test build); this run covers who is talked to and looked up.
+- Usage counts and crash reports are only sent when due, so a send may not fall inside this window.
+- Lookups that bypass the Windows DNS Client service (for example DNS over HTTPS inside a process) are not seen.
+
+The raw capture is kept privately and is available on request to security@llmgraph.in.

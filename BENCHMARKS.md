@@ -4,7 +4,7 @@ We publish how we measured, what we found, and where LLMGRAPH loses. Raw data is
 
 ## 1. Blind test: 50 questions, three open-source repos (0.4.2, 22 October 2026)
 
-**No confident answer was wrong.** A tester with no access to the engine's internals asked 50 graded questions on requests v2.32.3, rich v13.9.4 and zod v3.23.8, and checked every answer against the code.
+**No confident answer was wrong.** A tester with no access to the engine's code, using only the public docs asked 50 graded questions on requests v2.32.3, rich v13.9.4 and zod v3.23.8, and checked every answer against the code.
 
 | Repo | Graded | Correct | Wrong | Silently incomplete | Misleading | Unclear |
 |---|---|---|---|---|---|---|
@@ -43,7 +43,7 @@ Method, symbols (fixed before the runs) and raw data: [benchmarks/noisy-names/](
 
 ## 3. Privacy on the released program (0.4.3, 24 October 2026)
 
-The founder ran the released npm package twice with a DNS trace and a process-tree sampler. Start-up and the licence check contacted only `beta.llmgraph.in`; reading, checking and answering contacted nothing. A separate run on the test build read the contents of what's sent: no code, paths, symbol or repo names, queries or answers.
+We ran the released npm package twice with a DNS trace and a process-tree sampler. Start-up and the licence check contacted only `beta.llmgraph.in`; reading, checking and answering contacted nothing. A separate run on the test build read the contents of what's sent: no code, paths, symbol or repo names, queries or answers.
 
 Method and logs: [benchmarks/privacy/](benchmarks/privacy/)
 
