@@ -1,12 +1,14 @@
 {
   "name": "llmgraph",
-  "description": "LLMGRAPH plugin for Claude Code",
-  "owner": { "name": "LLMGRAPH" },
+  "description": "LLMGRAPH by Brainfoods Studio: labelled caller answers and a stop check for Claude Code",
+  "owner": {
+    "name": "Brainfoods Studio"
+  },
   "plugins": [
     {
       "name": "llmgraph",
       "source": "./",
-      "description": "Connects the LLMGRAPH engine (npx -y llmgraph-mcp) and adds a skill on when to ask its five questions and how to read the labels."
+      "description": "LLMGRAPH by Brainfoods Studio: a local MCP server for who calls this, what breaks if it changes and which callers an edit missed, with labelled answers and a stop check."
     }
   ]
 }

@@ -1,15 +1,22 @@
 {
   "name": "llmgraph",
   "version": "0.3.0",
-  "description": "LLMGRAPH for Claude Code: connects the local LLMGRAPH engine over MCP and adds a skill that says when to ask each of its five questions and how to read the answers.",
+  "description": "LLMGRAPH by Brainfoods Studio for Claude Code: a local MCP server that answers who calls a function and what breaks if it changes, plus a stop check that holds the agent when its edits left callers certain to break.",
   "author": {
     "name": "Brainfoods Studio",
     "email": "support@llmgraph.in"
   },
   "keywords": [
     "mcp",
+    "claude-code",
     "code-intelligence",
-    "callers"
+    "callers",
+    "find-references",
+    "impact-analysis",
+    "stop-hook",
+    "python",
+    "typescript",
+    "windows"
   ],
   "homepage": "https://beta.llmgraph.in/",
   "repository": "https://github.com/brainfoods-studio/llmgraph-agent-plugin",
