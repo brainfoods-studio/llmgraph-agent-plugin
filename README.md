@@ -89,6 +89,8 @@ Callers are confirmed by the type checker in under a second after your agent ask
 
 How we measured, the raw data, and where LLMGRAPH loses: [BENCHMARKS.md](BENCHMARKS.md).
 
+See real answers, no sign-up needed: [beta.llmgraph.in/docs/real-answers](https://beta.llmgraph.in/docs/real-answers/?ref=gh-readme).
+
 ## What your agent can ask
 
 | Tool | What it answers |
