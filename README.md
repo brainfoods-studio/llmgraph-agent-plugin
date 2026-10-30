@@ -7,6 +7,8 @@
 
 **Every call graph has blind spots. Ours tells you where they are.**
 
+[![Agent Rules](https://img.shields.io/badge/Agent_Rules-lint_preset-2563eb)](https://github.com/brainfoods-studio/agent-readable)
+
 A local MCP server and Claude Code plugin that tells your coding agent who calls a function, what breaks if it changes, which callers an edit missed, and what it can't see. Windows x64; Python and TypeScript/JavaScript. Real answers, no sign-up: [beta.llmgraph.in/docs/real-answers](https://beta.llmgraph.in/docs/real-answers/?ref=gh-readme).
 
 LLMGRAPH inks only the calls it can prove. The ones it can't see, it counts and names in plain words, so your agent sees the blind spots before it edits.
